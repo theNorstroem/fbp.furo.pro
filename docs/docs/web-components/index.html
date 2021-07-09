@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <script type="module" src="/components.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="フロー Furo Web Components #  Furo Web Components provides an enterprise ready set of web components which play seamlessly with Furo. Based on web standards and future proved. Compliant with any technology of choice. With minimal footprint it includes all enterprise standards, i18n, theming and much more.
+The furo web components are a wide set of components which covers everything you need to write a web application. They consume the same types which are defined with furo.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="furo web" />
+<meta property="og:description" content="フロー Furo Web Components #  Furo Web Components provides an enterprise ready set of web components which play seamlessly with Furo. Based on web standards and future proved. Compliant with any technology of choice. With minimal footprint it includes all enterprise standards, i18n, theming and much more.
+The furo web components are a wide set of components which covers everything you need to write a web application. They consume the same types which are defined with furo." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fbp.furo.pro/docs/web-components/" />
+<meta property="article:modified_time" content="2021-07-09T08:34:55+02:00" />
+<title>furo web | フロー FBP</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.966d8ceb5ee6376c5ee67e63a985eab55f0bf8c16f7bc27fbd4069e2254956a9.css" integrity="sha256-lm2M617mN2xe5n5jqYXqtV8L&#43;MFve8J/vUBp4iVJVqk=">
+<script defer src="/en.search.min.f83c72bebd7c626bd99542d4af86aa329d5be19c933c8dde7c397fb2aa0088f9.js" integrity="sha256-&#43;Dxyvr18YmvZlULUr4aqMp1b4ZyTPI3efDl/sqoAiPk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+</head>
+
+<body dir=>
+<fixed-tooltip-display></fixed-tooltip-display>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <div ></div>
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>フロー FBP</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/installation/" class="">Installlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-basics/" class="">Getting Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-data/" class="">Wire Data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-more/" class="">Compatibility</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-events/" class="">Custom Events</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-scripting/" class="">Script interaction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-bestpractice/" class="">Best Practice</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-debugging/" class="">Debugging</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/cred-morrison/" class="">Credits</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://furo.pro" target="_blank" rel="noopener">
+        フロー Furo
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>furo web</strong>
+
+  <label for="toc-control">
+    
+  </label>
+</div>
+
+
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="フロー-furo-web-components">
+  フロー Furo Web Components
+  <a class="anchor" href="#%e3%83%95%e3%83%ad%e3%83%bc-furo-web-components">#</a>
+</h1>
+<p>Furo Web Components provides an enterprise ready set of web components which play seamlessly with Furo.
+Based on web standards and future proved. Compliant with any technology of choice.
+With minimal footprint it includes all enterprise standards, i18n, theming and much more.</p>
+<p>The furo web components are a wide set of components which covers everything you need to write a web application.
+They consume the same types which are defined with furo.</p>
+<div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="powered-by-lithttpslitdev"><a href="https://lit.dev/">Powered by lit</a></h2>
+<p>Many of the world&rsquo;s most forward-looking organizations are building with Lit. We too.
+<img src="https://lit.dev/images/logo.svg" alt="lit"></p>
+<p><em>Most of our components are using lit or elsewhere native web components.</em></p>
+
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="programmable-html">Programmable HTML</h2>
+<p>Furo FBP is like programmable HTML, no deep javascript knowledge is needed to write an application.
+<img src="/viz.png" alt="viz">
+<em>The flowbased programming paradigm results in less complex and more flexible code.</em>
+  </div>
+  
+</div>
+
+<div class="book-columns flex flex-wrap">
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="sap-ui5httpscomponentsfuroprotfuro-ui5-google-materialhttpscomponentsfuroprotfuro-data-input-or-any-other-design-system"><a href="https://components.furo.pro/?t=furo-ui5">SAP UI5</a>, <a href="https://components.furo.pro/?t=furo-data-input">Google Material</a> or any other design system</h2>
+<p>A set of input elements which will work with the furo data structure out of the box, are available for a wide set of types.</p>
+<p>Our ui5 components i.e. are just extending the excellent <a href="https://sap.github.io/ui5-webcomponents/">UI5 Web Components</a>, the Enterprise-flavored sugar on top of native APIs!.</p>
+<p><img src="https://sap.github.io/ui5-webcomponents/assets/images/ui5.png" alt="UI5 Logo"></p>
+<p><em>If this is not enough, it is no problem to write your own components, by using the data adapter.</em></p>
+
+  </div>
+  
+  <div class="flex-even markdown-inner">
+    <h2 id="data-integrationhttpscomponentsfuroprotfuro-data"><a href="https://components.furo.pro/?t=furo-data">Data Integration</a></h2>
+<p>The transparent data agents are responsible for the communication with the APIs and the adapters for the UI interaction.</p>
+<script src="/mermaid.min.js"></script>
+  <script>mermaid.initialize({
+  "flowchart": {
+    "useMaxWidth":true
+  },
+  "theme": "default"
+}
+)</script>
+<p class="mermaid">
+    graph TD
+    UI[UI elements]-- HTML ---agent[Data Agents]
+    agent-- REST ---API
+</p>
+
+  </div>
+  
+</div>
+
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/66a1bb225a239c552923d7b13c121b2088864882" title='Last modified by veith | July 9, 2021' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>July 9, 2021</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

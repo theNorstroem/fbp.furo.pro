@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <script type="module" src="/components.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Best Practice #  The best practices are a result from the feedback of our users, thanks to them.
+Feel free to give us your feedback.
+Wire and event naming #  In fact you can use any string to name wires, but most of the users are using two dashes in front of the wire name and for the name they use camelCase notation.
+For the events they use the dashed-case notation, because you can not write @-camelCase.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Best Practice" />
+<meta property="og:description" content="Best Practice #  The best practices are a result from the feedback of our users, thanks to them.
+Feel free to give us your feedback.
+Wire and event naming #  In fact you can use any string to name wires, but most of the users are using two dashes in front of the wire name and for the name they use camelCase notation.
+For the events they use the dashed-case notation, because you can not write @-camelCase." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fbp.furo.pro/docs/fbp-bestpractice/" />
+<meta property="article:published_time" content="2017-04-17T14:02:04+02:00" />
+<meta property="article:modified_time" content="2021-07-09T13:22:37+02:00" />
+<title>Best Practice | フロー FBP</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.966d8ceb5ee6376c5ee67e63a985eab55f0bf8c16f7bc27fbd4069e2254956a9.css" integrity="sha256-lm2M617mN2xe5n5jqYXqtV8L&#43;MFve8J/vUBp4iVJVqk=">
+<script defer src="/en.search.min.f83c72bebd7c626bd99542d4af86aa329d5be19c933c8dde7c397fb2aa0088f9.js" integrity="sha256-&#43;Dxyvr18YmvZlULUr4aqMp1b4ZyTPI3efDl/sqoAiPk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+</head>
+
+<body dir=>
+<fixed-tooltip-display></fixed-tooltip-display>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <div ></div>
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>フロー FBP</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/installation/" class="">Installlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-basics/" class="">Getting Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-data/" class="">Wire Data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-more/" class="">Compatibility</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-events/" class="">Custom Events</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-scripting/" class="">Script interaction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-bestpractice/" class=" active">Best Practice</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-debugging/" class="">Debugging</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/cred-morrison/" class="">Credits</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://furo.pro" target="_blank" rel="noopener">
+        フロー Furo
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Best Practice</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#best-practice">Best Practice</a>
+      <ul>
+        <li><a href="#wire-and-event-naming">Wire and event naming</a></li>
+        <li><a href="#use-declarative-wire-names-dont-be-imperative">Use declarative wire names, don&rsquo;t be imperative</a></li>
+        <li><a href="#use-event-delegation">Use <em>event delegation</em></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="best-practice">
+  Best Practice
+  <a class="anchor" href="#best-practice">#</a>
+</h1>
+<p>The best practices are a result from the feedback of our users, thanks to them.</p>
+<p>Feel free to give us your feedback.</p>
+<h2 id="wire-and-event-naming">
+  Wire and event naming
+  <a class="anchor" href="#wire-and-event-naming">#</a>
+</h2>
+<p>In fact you can use any string to name wires, but most of the users are using two dashes in front of the wire name and for the name they use camelCase notation.</p>
+<p>For the events they use the dashed-case notation, because you can not write <code>@-camelCase</code>.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">furo-button</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-click</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--buttonClicked, ^^fired-event&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">furo-button</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><p>With this notation they can see the difference between a <strong>&ndash;wire</strong> to an <strong>event</strong> they fire directly.</p>
+<h2 id="use-declarative-wire-names-dont-be-imperative">
+  Use declarative wire names, don&rsquo;t be imperative
+  <a class="anchor" href="#use-declarative-wire-names-dont-be-imperative">#</a>
+</h2>
+<p>When you use declarative names, it would be easier to read and modify a wired program.</p>
+<p><strong>bad example</strong></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">furo-button</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-click</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--closeView&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">furo-button</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">my-view</span> <span style="color:#c4a000">ƒ-close</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--closeView&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">my-view</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">data-component</span> <span style="color:#c4a000">ƒ-save</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--closeView&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">data-component</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><p><strong>good example</strong></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">furo-button</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-click</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--closeButtonClicked&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">furo-button</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">my-view</span> <span style="color:#c4a000">ƒ-close</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--closeButtonClicked&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">my-view</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">data-component</span> <span style="color:#c4a000">ƒ-save</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--closeButtonClicked&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">data-component</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><p><em>It is a subtile but relevant difference between this two examles.</em></p>
+<h2 id="use-event-delegation">
+  Use <em>event delegation</em>
+  <a class="anchor" href="#use-event-delegation">#</a>
+</h2>
+<p>When you use a set of components, you don&rsquo;t have to wire every single component to the appropriate target. Use <em>event delegation</em> whenever possible. It is faster and easier to read.</p>
+<p><strong>without event delegation</strong>
+
+  <img src="/_doc/images/withoutEventDelegation.png" alt="without event delegation" /></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">mole-hole</span> <span style="color:#c4a000">key</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;a&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-closed</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--moleClosed&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-continue</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--continue&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-miss</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--missed&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-whack</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--whacked&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">mole-hole</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">mole-hole</span> <span style="color:#c4a000">key</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;s&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-closed</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--moleClosed&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-continue</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--continue&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-miss</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--missed&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-whack</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--whacked&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">mole-hole</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">mole-hole</span> <span style="color:#c4a000">key</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;d&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-closed</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--moleClosed&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-continue</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--continue&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-miss</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--missed&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-whack</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--whacked&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">mole-hole</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">mole-hole</span> <span style="color:#c4a000">key</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;f&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-closed</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--moleClosed&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-continue</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--continue&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-miss</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--missed&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-whack</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--whacked&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">mole-hole</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">mole-hole</span> <span style="color:#c4a000">key</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;g&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-closed</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--moleClosed&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-continue</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--continue&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-miss</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--missed&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-whack</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--whacked&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">mole-hole</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">mole-hole</span> <span style="color:#c4a000">key</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;w&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-closed</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--moleClosed&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-continue</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--continue&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-miss</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--missed&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-whack</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--whacked&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">mole-hole</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><p><strong>with event delegation</strong>
+
+  <img src="/_doc/images/eventDelegation.png" alt="with event delegation" /></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-closed</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--moleClosed&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-continue</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--continue&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-miss</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--missed&#34;</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-whack</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--whacked&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">mole-hole</span> <span style="color:#c4a000">key</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;a&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">mole-hole</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">mole-hole</span> <span style="color:#c4a000">key</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;s&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">mole-hole</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">mole-hole</span> <span style="color:#c4a000">key</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;d&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">mole-hole</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">mole-hole</span> <span style="color:#c4a000">key</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;f&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">mole-hole</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">mole-hole</span> <span style="color:#c4a000">key</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;g&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">mole-hole</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">mole-hole</span> <span style="color:#c4a000">key</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;w&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">mole-hole</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/354bf542917659c86b07612771427ff83da067f2" title='Last modified by veith | July 9, 2021' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>July 9, 2021</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#best-practice">Best Practice</a>
+      <ul>
+        <li><a href="#wire-and-event-naming">Wire and event naming</a></li>
+        <li><a href="#use-declarative-wire-names-dont-be-imperative">Use declarative wire names, don&rsquo;t be imperative</a></li>
+        <li><a href="#use-event-delegation">Use <em>event delegation</em></a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

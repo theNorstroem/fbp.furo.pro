@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <script type="module" src="/components.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Data on wires #  Wires are not limited to triggering something, they also transport information.
+Note
+By default the content of EVENT.detail is passed to the target. If an event does not have a detail property, the receiver will get a undefined.
+ Passing useful data to target #       The color picker dispatches a value-changed event, with the color as payload.
+Send the complete event instead of event.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Wire Data" />
+<meta property="og:description" content="Data on wires #  Wires are not limited to triggering something, they also transport information.
+Note
+By default the content of EVENT.detail is passed to the target. If an event does not have a detail property, the receiver will get a undefined.
+ Passing useful data to target #       The color picker dispatches a value-changed event, with the color as payload.
+Send the complete event instead of event." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fbp.furo.pro/docs/fbp-wires-data/" />
+<meta property="article:modified_time" content="2021-07-09T13:22:37+02:00" />
+<title>Wire Data | フロー FBP</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.966d8ceb5ee6376c5ee67e63a985eab55f0bf8c16f7bc27fbd4069e2254956a9.css" integrity="sha256-lm2M617mN2xe5n5jqYXqtV8L&#43;MFve8J/vUBp4iVJVqk=">
+<script defer src="/en.search.min.f83c72bebd7c626bd99542d4af86aa329d5be19c933c8dde7c397fb2aa0088f9.js" integrity="sha256-&#43;Dxyvr18YmvZlULUr4aqMp1b4ZyTPI3efDl/sqoAiPk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+</head>
+
+<body dir=>
+<fixed-tooltip-display></fixed-tooltip-display>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <div ></div>
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>フロー FBP</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/installation/" class="">Installlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-basics/" class="">Getting Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-data/" class=" active">Wire Data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-more/" class="">Compatibility</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-events/" class="">Custom Events</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-scripting/" class="">Script interaction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-bestpractice/" class="">Best Practice</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-debugging/" class="">Debugging</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/cred-morrison/" class="">Credits</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://furo.pro" target="_blank" rel="noopener">
+        フロー Furo
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Wire Data</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#data-on-wires">Data on wires</a>
+      <ul>
+        <li><a href="#passing-useful-data-to-target">Passing useful data to target</a></li>
+        <li><a href="#send-the-complete-event-instead-of-eventdetail">Send the complete <em>event</em> instead of <em>event.detail</em></a>
+          <ul>
+            <li><a href="#producer--">Producer (@-)</a></li>
+            <li><a href="#receiver-ƒ-">Receiver (ƒ-)</a></li>
+          </ul>
+        </li>
+        <li><a href="#storing-event-data-on-a-class-member-property--aka-parking">Storing event data on a class member property  (aka parking)</a></li>
+        <li><a href="#sending-host-member-properties-with-events">Sending host member properties with events</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="data-on-wires">
+  Data on wires
+  <a class="anchor" href="#data-on-wires">#</a>
+</h1>
+<p>Wires are not limited to triggering something, they also transport information.</p>
+<blockquote class="book-hint info">
+  <p><strong>Note</strong></p>
+<p>By default the content of  <strong>EVENT.detail</strong> is passed to the target. If an event does not have a detail property, the
+receiver will get a <code>undefined</code>.</p>
+
+</blockquote>
+
+<h2 id="passing-useful-data-to-target">
+  Passing useful data to target
+  <a class="anchor" href="#passing-useful-data-to-target">#</a>
+</h2>
+<furo-demo-snippet flow>
+<template>
+  <furo-color-input label="choose a color"  @-value-changed="--newColor"></furo-color-input> 
+  <light-bulb on  ƒ-set-color="--newColor"></light-bulb>
+</template>
+</furo-demo-snippet>
+<p><em>The color picker dispatches a <code>value-changed</code> event, with the color as payload.</em></p>
+<h2 id="send-the-complete-event-instead-of-eventdetail">
+  Send the complete <em>event</em> instead of <em>event.detail</em>
+  <a class="anchor" href="#send-the-complete-event-instead-of-eventdetail">#</a>
+</h2>
+<p>You can put the complete <em>event</em> or any <em>sub.property</em> of the event on the wire by defining the details
+at the producer / triggerer.</p>
+<h3 id="producer--">
+  Producer (@-)
+  <a class="anchor" href="#producer--">#</a>
+</h3>
+<p>You can define exactly what you want to put on the wire on the producing side.</p>
+<ul>
+<li><strong>@-event=&quot;&ndash;wireName(*)&quot;</strong> will send the complete event.</li>
+<li><strong>@-event=&quot;&ndash;wireName(*.key)&quot;</strong> will send the property key of the event.</li>
+</ul>
+<h3 id="receiver-ƒ-">
+  Receiver (ƒ-)
+  <a class="anchor" href="#receiver-%c6%92-">#</a>
+</h3>
+<p>You can pass a subset of the data on a wire to a receiver.</p>
+<ul>
+<li><strong>ƒ-doit=&quot;&ndash;wireName(*.title)&quot;</strong> will call <code>doit(wiredata.title)</code>on the receiver.</li>
+<li><strong>ƒ-doit=&quot;&ndash;wireName(*.page.2.title)&quot;</strong> will call <code>doit(wiredata.page[2].title)</code> on the receiver with checks that index 2 and the sub property really exist.</li>
+</ul>
+<h2 id="storing-event-data-on-a-class-member-property--aka-parking">
+  Storing event data on a class member property  (aka parking)
+  <a class="anchor" href="#storing-event-data-on-a-class-member-property--aka-parking">#</a>
+</h2>
+<p>Sometimes you want to store data for later usage. To store data from an event
+write the property that you want to update in a double bracket  <code>((targetProperty))</code>.</p>
+<ul>
+<li><strong>@-value-changed=&quot;((color1))</strong> will update the component property <code>color1</code> with the value of <code>EVENT.detail</code>.</li>
+</ul>
+<blockquote class="book-hint danger">
+  <p><strong>Note</strong></p>
+<p>Keep in mind that you will overwrite existing properties of your host. A name like shadowRoot can cause problems.</p>
+
+</blockquote>
+
+<furo-demo-snippet flow style="height:200px">
+<template>
+  <!-- the color input will store the value on the varable color -->
+  <furo-color-input label="choose color 1"  @-value-changed="((color))"></furo-color-input>
+</template>
+</furo-demo-snippet>
+<p><em>Look at the example below to see how you can use parked data</em></p>
+<h2 id="sending-host-member-properties-with-events">
+  Sending host member properties with events
+  <a class="anchor" href="#sending-host-member-properties-with-events">#</a>
+</h2>
+<p>To send parked data, write the property name in brackets after the wire.</p>
+<ul>
+<li><strong>@-click=&quot;&ndash;newColor(color1)&quot;</strong> will put the value of <code>color1</code> on the wire <code>--newColor</code> instead of the detail value of the click event.</li>
+</ul>
+<furo-demo-snippet flow style="height:300px">
+<template>
+  <!-- the color input will store the value on the varable color -->
+  <furo-color-input label="choose color 1"  @-value-changed="((color))"></furo-color-input>
+  <!-- the button will put the value of color on the wire --newColor -->
+  <furo-button @-click="--newColor(color)" label="setColor"></furo-button>
+  <light-bulb ƒ-set-color="--newColor" on></light-bulb>
+</template>
+</furo-demo-snippet>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/354bf542917659c86b07612771427ff83da067f2" title='Last modified by veith | July 9, 2021' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>July 9, 2021</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#data-on-wires">Data on wires</a>
+      <ul>
+        <li><a href="#passing-useful-data-to-target">Passing useful data to target</a></li>
+        <li><a href="#send-the-complete-event-instead-of-eventdetail">Send the complete <em>event</em> instead of <em>event.detail</em></a>
+          <ul>
+            <li><a href="#producer--">Producer (@-)</a></li>
+            <li><a href="#receiver-ƒ-">Receiver (ƒ-)</a></li>
+          </ul>
+        </li>
+        <li><a href="#storing-event-data-on-a-class-member-property--aka-parking">Storing event data on a class member property  (aka parking)</a></li>
+        <li><a href="#sending-host-member-properties-with-events">Sending host member properties with events</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

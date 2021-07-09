@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <script type="module" src="/components.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Fireing custom events #  Web Components use events to communicate state changes up the DOM tree to parent elements.
+Furo also provides a notation for events which allows you to specify events in a declarative manner. This is very useful when you want to trigger a event with a more specific name then the originating event has.
+*On the first view, it does not make sense to rename events. Take a look at the example below to get a better understanding.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Custom Events" />
+<meta property="og:description" content="Fireing custom events #  Web Components use events to communicate state changes up the DOM tree to parent elements.
+Furo also provides a notation for events which allows you to specify events in a declarative manner. This is very useful when you want to trigger a event with a more specific name then the originating event has.
+*On the first view, it does not make sense to rename events. Take a look at the example below to get a better understanding." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fbp.furo.pro/docs/fbp-events/" />
+<meta property="article:modified_time" content="2021-07-09T13:22:37+02:00" />
+<title>Custom Events | フロー FBP</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.966d8ceb5ee6376c5ee67e63a985eab55f0bf8c16f7bc27fbd4069e2254956a9.css" integrity="sha256-lm2M617mN2xe5n5jqYXqtV8L&#43;MFve8J/vUBp4iVJVqk=">
+<script defer src="/en.search.min.f83c72bebd7c626bd99542d4af86aa329d5be19c933c8dde7c397fb2aa0088f9.js" integrity="sha256-&#43;Dxyvr18YmvZlULUr4aqMp1b4ZyTPI3efDl/sqoAiPk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+</head>
+
+<body dir=>
+<fixed-tooltip-display></fixed-tooltip-display>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <div ></div>
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>フロー FBP</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/installation/" class="">Installlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-basics/" class="">Getting Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-data/" class="">Wire Data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-more/" class="">Compatibility</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-events/" class=" active">Custom Events</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-scripting/" class="">Script interaction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-bestpractice/" class="">Best Practice</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-debugging/" class="">Debugging</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/cred-morrison/" class="">Credits</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://furo.pro" target="_blank" rel="noopener">
+        フロー Furo
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Custom Events</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#fireing-custom-events">Fireing custom events</a>
+      <ul>
+        <li><a href="#non-bubbling-events">Non bubbling events</a></li>
+        <li><a href="#bubbling-events">Bubbling events</a></li>
+        <li><a href="#non-bubbling-host-events">Non bubbling host events</a></li>
+        <li><a href="#sending-host-data-with-events">Sending host data with events</a></li>
+        <li><a href="#sending-multiple-events-from-a-single-source">Sending multiple events from a single source</a></li>
+        <li><a href="#stop-propagation">Stop propagation</a></li>
+        <li><a href="#prevent-default">Prevent Default</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="fireing-custom-events">
+  Fireing custom events
+  <a class="anchor" href="#fireing-custom-events">#</a>
+</h1>
+<p>Web Components use events to communicate state changes up the DOM tree to parent elements.</p>
+<p>Furo also provides a notation for events which allows you to specify events in a declarative manner.
+This is very useful when you want to trigger a event with a more specific name then the originating event has.</p>
+<p>*On the first view, it does not make sense to <em>rename</em> events. Take a look at the example below to get a better understanding.
+<strong>controller-component</strong></p>
+<furo-demo-snippet no-demo source style="height:200px">
+<template>
+   <!-- The inner part of the controller is not accessible from outside -->
+    <button @-click="^^playClicked">play</button>
+    <button @-click="^^pauseClicked">pause</button>
+    <button @-click="^^stopClicked">stop</button> 
+</template>
+</furo-demo-snippet>
+<p><strong>my-player</strong></p>
+<furo-demo-snippet no-demo flow style="height:200px">
+<template>
+   <!-- The inner part of the controller is not accessible from outside -->
+    <controller-component @-play-clicked="--playClicked" @-pause-clicked="--pauseClicked"></controller-component>
+    <music-player ƒ-play="--playClicked" ƒ-pause="--pauseClicked"></music-player>
+</template>
+</furo-demo-snippet>
+<p><em>Imagine a simple controller component with some buttons.</em>
+<em>Each of them will dispatch a simple <code>click</code>.</em>
+<em>Using @-click on the controller inside of the my-player can not distinguish which button was pressed.</em></p>
+<p>
+  <a href="https://developer.mozilla.org/en-US/docs/Web/Events">learn more about events&hellip;</a></p>
+<h2 id="non-bubbling-events">
+  Non bubbling events
+  <a class="anchor" href="#non-bubbling-events">#</a>
+</h2>
+<p>Non bubbling events will, as the name says, not bubble and stop at the next dom parent.</p>
+<p>To fire a non-bubbling-event use <strong>^event-name</strong>.</p>
+<furo-demo-snippet flow no-demo description="*non bubbling example">
+<template>
+<my-button @-click="--searchClicked">Search</my-button>
+<!-- when my-searcher fires the response event, the data-received event will be fired -->
+<my-searcher url="https://www.googleapis.com/youtube/v3/search"
+ƒ-search="--searchClicked"
+@-response="^data-received">                   
+</my-searcher>
+</template>
+</furo-demo-snippet>
+<h2 id="bubbling-events">
+  Bubbling events
+  <a class="anchor" href="#bubbling-events">#</a>
+</h2>
+<p>To fire a bubbling-event use <strong>^^event-name</strong>. Bubbling is useful if you want or have to use the event in a parent component. It is a good practice to document the bubbling events from the child components.</p>
+<furo-demo-snippet flow no-demo description="*non bubbling example">
+<template>
+<my-button @-click="--searchClicked">Search</my-button>
+<!-- when my-searcher fires the response event, the general-error event will be fired -->
+<my-searcher url="https://www.googleapis.com/youtube/v3/search"
+ƒ-search="--searchClicked"
+@-error="^^general-error">                   
+</my-searcher>
+</template>
+</furo-demo-snippet>
+<p><em>the</em> <em><strong>general-error</strong></em> <em>event will bubble.</em></p>
+<h2 id="non-bubbling-host-events">
+  Non bubbling host events
+  <a class="anchor" href="#non-bubbling-host-events">#</a>
+</h2>
+<p>With <strong>-^</strong> you can dispatch an event, which is available on the host only, but does not bubble. This is useful when you want
+to mimic the blur event (which does not bubble) on the outside of your component.</p>
+<h2 id="sending-host-data-with-events">
+  Sending host data with events
+  <a class="anchor" href="#sending-host-data-with-events">#</a>
+</h2>
+<p>Sometimes you want to send some values with your event, when the default <strong>event.detail</strong> is not useful.
+You can send any host property with your event by giving the property name in brackets like  ^^some-event(<strong>propertyName</strong>) .</p>
+<p><strong>bubbling event with custom data</strong></p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">   <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">paper-button</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-click</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;^^some-event(_privateProperty)&#34;</span><span style="color:#000;font-weight:bold">&gt;</span> check <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">paper-button</span><span style="color:#000;font-weight:bold">&gt;</span> 
+</code></pre></div><p><em>The click event sends usually a number for the amount of clicks with a certain time distance. So it will send 1 for a click, 2 for a doubleClick, 3 for a trippleClick,&hellip;</em></p>
+<h2 id="sending-multiple-events-from-a-single-source">
+  Sending multiple events from a single source
+  <a class="anchor" href="#sending-multiple-events-from-a-single-source">#</a>
+</h2>
+<p>You can also send multiple events from a single source.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">   <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">paper-button</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-click</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;^^some-event(_privateProperty),^other-event,--checkTapped&#34;</span><span style="color:#000;font-weight:bold">&gt;</span> check <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">paper-button</span><span style="color:#000;font-weight:bold">&gt;</span> 
+</code></pre></div><p><em>When the button is tapped,</em> <em><strong>some-event</strong></em> <em>and</em> <em><strong>other-event</strong></em> <em>will be fired and the wire</em> <em><strong>&ndash;checkTapped</strong></em> <em>will be triggered.</em></p>
+<h2 id="stop-propagation">
+  Stop propagation
+  <a class="anchor" href="#stop-propagation">#</a>
+</h2>
+<p>To stop the event propagation to parent elements, add a <strong>:STOP</strong> to the event wires <code>@-error=&quot;--errorOccured, :STOP&quot;</code>.
+The wires in this event-chain will be triggered. But the propagation will be stopped.</p>
+<h2 id="prevent-default">
+  Prevent Default
+  <a class="anchor" href="#prevent-default">#</a>
+</h2>
+<p>Prevent default can be achieved by using <strong>:PREVENTDEFAULT</strong>.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/354bf542917659c86b07612771427ff83da067f2" title='Last modified by veith | July 9, 2021' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>July 9, 2021</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#fireing-custom-events">Fireing custom events</a>
+      <ul>
+        <li><a href="#non-bubbling-events">Non bubbling events</a></li>
+        <li><a href="#bubbling-events">Bubbling events</a></li>
+        <li><a href="#non-bubbling-host-events">Non bubbling host events</a></li>
+        <li><a href="#sending-host-data-with-events">Sending host data with events</a></li>
+        <li><a href="#sending-multiple-events-from-a-single-source">Sending multiple events from a single source</a></li>
+        <li><a href="#stop-propagation">Stop propagation</a></li>
+        <li><a href="#prevent-default">Prevent Default</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

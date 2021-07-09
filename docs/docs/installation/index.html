@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <script type="module" src="/components.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Installation #  First of all you need the npm module @furo/fbp.
+npm i -S @furo/fbp FBP with lit-element #  To use FBP with lit, just extend your class.
+class MyComponent extends FBP(LitElement) { } window.customElements.define(&#39;my-component&#39;, MyComponent); FBP with native web-components #  To use furo-fbp with native components, call this._appendFBP(this.shadowRoot); to enable fbp.
+class MyComponent extends FBP(HTMLElement) { constructor() { super(); // Create a shadow root to the element.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Installlation" />
+<meta property="og:description" content="Installation #  First of all you need the npm module @furo/fbp.
+npm i -S @furo/fbp FBP with lit-element #  To use FBP with lit, just extend your class.
+class MyComponent extends FBP(LitElement) { } window.customElements.define(&#39;my-component&#39;, MyComponent); FBP with native web-components #  To use furo-fbp with native components, call this._appendFBP(this.shadowRoot); to enable fbp.
+class MyComponent extends FBP(HTMLElement) { constructor() { super(); // Create a shadow root to the element." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fbp.furo.pro/docs/installation/" />
+<meta property="article:modified_time" content="2021-07-09T13:22:37+02:00" />
+<title>Installlation | フロー FBP</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.966d8ceb5ee6376c5ee67e63a985eab55f0bf8c16f7bc27fbd4069e2254956a9.css" integrity="sha256-lm2M617mN2xe5n5jqYXqtV8L&#43;MFve8J/vUBp4iVJVqk=">
+<script defer src="/en.search.min.f83c72bebd7c626bd99542d4af86aa329d5be19c933c8dde7c397fb2aa0088f9.js" integrity="sha256-&#43;Dxyvr18YmvZlULUr4aqMp1b4ZyTPI3efDl/sqoAiPk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+</head>
+
+<body dir=>
+<fixed-tooltip-display></fixed-tooltip-display>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <div ></div>
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>フロー FBP</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/installation/" class=" active">Installlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-basics/" class="">Getting Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-data/" class="">Wire Data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-more/" class="">Compatibility</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-events/" class="">Custom Events</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-scripting/" class="">Script interaction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-bestpractice/" class="">Best Practice</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-debugging/" class="">Debugging</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/cred-morrison/" class="">Credits</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://furo.pro" target="_blank" rel="noopener">
+        フロー Furo
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Installlation</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#installation">Installation</a>
+      <ul>
+        <li><a href="#fbp-with-lit-element">FBP with lit-element</a></li>
+        <li><a href="#fbp-with-native-web-components">FBP with native web-components</a></li>
+        <li><a href="#fbp-within-html">FBP within HTML</a></li>
+        <li><a href="#fbp-with-polymer">FBP with polymer</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="installation">
+  Installation
+  <a class="anchor" href="#installation">#</a>
+</h1>
+<p>First of all you need the npm module <strong>@furo/fbp</strong>.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -S @furo/fbp
+</code></pre></div><h2 id="fbp-with-lit-element">
+  FBP with lit-element
+  <a class="anchor" href="#fbp-with-lit-element">#</a>
+</h2>
+<p>To use FBP with lit, just extend your class.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyComponent</span> <span style="color:#204a87;font-weight:bold">extends</span> <span style="color:#000">FBP</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">LitElement</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+  
+<span style="color:#000;font-weight:bold">}</span>
+<span style="color:#204a87">window</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">customElements</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">define</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;my-component&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">MyComponent</span><span style="color:#000;font-weight:bold">);</span>
+</code></pre></div><h2 id="fbp-with-native-web-components">
+  FBP with native web-components
+  <a class="anchor" href="#fbp-with-native-web-components">#</a>
+</h2>
+<p>To use furo-fbp with native components, call <code>this._appendFBP(this.shadowRoot);</code> to enable fbp.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyComponent</span> <span style="color:#204a87;font-weight:bold">extends</span> <span style="color:#000">FBP</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">HTMLElement</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+
+  <span style="color:#000">constructor</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">super</span><span style="color:#000;font-weight:bold">();</span>
+    <span style="color:#8f5902;font-style:italic">// Create a shadow root to the element.
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">attachShadow</span><span style="color:#000;font-weight:bold">({</span><span style="color:#000">mode</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;open&#39;</span><span style="color:#000;font-weight:bold">});</span>
+    <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">shadowRoot</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">appendChild</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">template</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">content</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">cloneNode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">));</span>
+    <span style="color:#8f5902;font-style:italic">// Append FBP to my-component
+</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">_appendFBP</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">shadowRoot</span><span style="color:#000;font-weight:bold">);</span>
+  <span style="color:#000;font-weight:bold">}</span>
+ 
+<span style="color:#000;font-weight:bold">}</span>
+
+<span style="color:#204a87">window</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">customElements</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">define</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;my-component&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">MyComponent</span><span style="color:#000;font-weight:bold">);</span>
+
+</code></pre></div><h2 id="fbp-within-html">
+  FBP within HTML
+  <a class="anchor" href="#fbp-within-html">#</a>
+</h2>
+<p>You can use furo FBP inside your HTML by using <code>flow-bind</code>. Make sure that you have
+imported the component that you want to use.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">flow-bind</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">template</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">button</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-click</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--btnClicked&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>sender<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">button</span><span style="color:#000;font-weight:bold">&gt;</span>
+    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">div</span> <span style="color:#c4a000">ƒ-remove</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--btnClicked&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>receiver<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">div</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">template</span><span style="color:#000;font-weight:bold">&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">flow-bind</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div><h2 id="fbp-with-polymer">
+  FBP with polymer
+  <a class="anchor" href="#fbp-with-polymer">#</a>
+</h2>
+<p>To use FBP with polymer, just extend your class.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyComponent</span> <span style="color:#204a87;font-weight:bold">extends</span> <span style="color:#000">FBP</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">PolymerElement</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+  
+<span style="color:#000;font-weight:bold">}</span>
+<span style="color:#204a87">window</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">customElements</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">define</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;my-component&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">MyComponent</span><span style="color:#000;font-weight:bold">);</span>
+</code></pre></div><p>The appender is automatically triggered from FBP via the _attachDom method.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8f5902;font-style:italic">// you dont have to write this, its already done in furo-fbp
+</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">_attachDom</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">dom</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+    <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">_appendFBP</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">dom</span><span style="color:#000;font-weight:bold">);</span>
+    <span style="color:#204a87;font-weight:bold">super</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">_attachDom</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">dom</span><span style="color:#000;font-weight:bold">);</span>
+<span style="color:#000;font-weight:bold">}</span>
+</code></pre></div></article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/354bf542917659c86b07612771427ff83da067f2" title='Last modified by veith | July 9, 2021' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>July 9, 2021</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#installation">Installation</a>
+      <ul>
+        <li><a href="#fbp-with-lit-element">FBP with lit-element</a></li>
+        <li><a href="#fbp-with-native-web-components">FBP with native web-components</a></li>
+        <li><a href="#fbp-within-html">FBP within HTML</a></li>
+        <li><a href="#fbp-with-polymer">FBP with polymer</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

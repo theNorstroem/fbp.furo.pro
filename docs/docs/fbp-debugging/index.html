@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <script type="module" src="/components.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Debugging strategies #  You can use the debugging tools you always used for web development. The eventListeners from furo-fbp are the same eventListeners you have had before.
+ img[src*=&#34;#max&#34;]{max-width:600px} $0 is the selected element from the elements tab.
+  getEventListeners($0) shows you the attached eventListeners
+ Show the fbp listeners on a host #  Use $0.__FBPEventlistener to show all listeners on the host component
+ Show the wires on a host #  Use $0.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Debugging" />
+<meta property="og:description" content="Debugging strategies #  You can use the debugging tools you always used for web development. The eventListeners from furo-fbp are the same eventListeners you have had before.
+ img[src*=&#34;#max&#34;]{max-width:600px} $0 is the selected element from the elements tab.
+  getEventListeners($0) shows you the attached eventListeners
+ Show the fbp listeners on a host #  Use $0.__FBPEventlistener to show all listeners on the host component
+ Show the wires on a host #  Use $0." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fbp.furo.pro/docs/fbp-debugging/" />
+<meta property="article:modified_time" content="2021-07-09T13:22:37+02:00" />
+<title>Debugging | フロー FBP</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.966d8ceb5ee6376c5ee67e63a985eab55f0bf8c16f7bc27fbd4069e2254956a9.css" integrity="sha256-lm2M617mN2xe5n5jqYXqtV8L&#43;MFve8J/vUBp4iVJVqk=">
+<script defer src="/en.search.min.f83c72bebd7c626bd99542d4af86aa329d5be19c933c8dde7c397fb2aa0088f9.js" integrity="sha256-&#43;Dxyvr18YmvZlULUr4aqMp1b4ZyTPI3efDl/sqoAiPk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+</head>
+
+<body dir=>
+<fixed-tooltip-display></fixed-tooltip-display>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <div ></div>
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>フロー FBP</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/installation/" class="">Installlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-basics/" class="">Getting Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-data/" class="">Wire Data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-more/" class="">Compatibility</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-events/" class="">Custom Events</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-scripting/" class="">Script interaction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-bestpractice/" class="">Best Practice</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-debugging/" class=" active">Debugging</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/cred-morrison/" class="">Credits</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://furo.pro" target="_blank" rel="noopener">
+        フロー Furo
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Debugging</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#debugging-strategies">Debugging strategies</a>
+      <ul>
+        <li><a href="#show-the-fbp-listeners-on-a-host">Show the fbp listeners on a host</a></li>
+        <li><a href="#show-the-wires-on-a-host">Show the wires on a host</a></li>
+        <li><a href="#debugging-a-single-wire">Debugging a single wire</a></li>
+        <li><a href="#tracing">Tracing</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="debugging-strategies">
+  Debugging strategies
+  <a class="anchor" href="#debugging-strategies">#</a>
+</h1>
+<p>You can use the debugging tools you always used for web development.
+The eventListeners from furo-fbp are the same eventListeners you have had before.</p>
+<style> img[src*="#max"]{max-width:600px}</style>
+<p><code>$0</code> is the selected element from the elements tab.</p>
+<p>
+  <img src="/debug.png#max" alt="debug" /></p>
+<blockquote>
+<p><code>getEventListeners($0)</code> shows you the attached eventListeners</p>
+</blockquote>
+<h2 id="show-the-fbp-listeners-on-a-host">
+  Show the fbp listeners on a host
+  <a class="anchor" href="#show-the-fbp-listeners-on-a-host">#</a>
+</h2>
+<p>Use <code>$0.__FBPEventlistener</code> to show all listeners on the host component</p>
+<p>
+  <img src="/fbpEventListeners.png#max" alt="debug" /></p>
+<h2 id="show-the-wires-on-a-host">
+  Show the wires on a host
+  <a class="anchor" href="#show-the-wires-on-a-host">#</a>
+</h2>
+<p>Use <code>$0.__wirebundle</code> to show all registered wires.</p>
+<p>
+  <img src="/wirebundle.png#max" alt="debug" /></p>
+<blockquote>
+<p>Keep in mind that wires without receivers will <strong>not</strong> show in this list.</p>
+</blockquote>
+<h2 id="debugging-a-single-wire">
+  Debugging a single wire
+  <a class="anchor" href="#debugging-a-single-wire">#</a>
+</h2>
+<p>To debug a single wire write <code>$0._FBPDebug(&quot;--markdown&quot;)</code>.</p>
+<p>
+  <img src="/fbpDebug.png#max" alt="debug" /></p>
+<blockquote>
+<p>Every time this wire triggers, you will see the following information in your console.</p>
+</blockquote>
+<h2 id="tracing">
+  Tracing
+  <a class="anchor" href="#tracing">#</a>
+</h2>
+<p>To trace all wires in a host use <code>$0._FBPTraceWires()</code>.</p>
+<p>
+  <img src="/fbpTrace.png#max" alt="debug" /></p>
+<blockquote>
+<p>This will log every triggering wire to the console.
+In most of the cases, the problems you have solve, are typos in wire names.</p>
+</blockquote>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/354bf542917659c86b07612771427ff83da067f2" title='Last modified by veith | July 9, 2021' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>July 9, 2021</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#debugging-strategies">Debugging strategies</a>
+      <ul>
+        <li><a href="#show-the-fbp-listeners-on-a-host">Show the fbp listeners on a host</a></li>
+        <li><a href="#show-the-wires-on-a-host">Show the wires on a host</a></li>
+        <li><a href="#debugging-a-single-wire">Debugging a single wire</a></li>
+        <li><a href="#tracing">Tracing</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

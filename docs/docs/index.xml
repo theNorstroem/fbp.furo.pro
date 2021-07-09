@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Docs on フロー FBP</title>
+    <link>http://fbp.furo.pro/docs/</link>
+    <description>Recent content in Docs on フロー FBP</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Apr 2017 14:02:04 +0200</lastBuildDate><atom:link href="http://fbp.furo.pro/docs/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Installlation</title>
+      <link>http://fbp.furo.pro/docs/installation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fbp.furo.pro/docs/installation/</guid>
+      <description>Installation #  First of all you need the npm module @furo/fbp.
+npm i -S @furo/fbp FBP with lit-element #  To use FBP with lit, just extend your class.
+class MyComponent extends FBP(LitElement) { } window.customElements.define(&amp;#39;my-component&amp;#39;, MyComponent); FBP with native web-components #  To use furo-fbp with native components, call this._appendFBP(this.shadowRoot); to enable fbp.
+class MyComponent extends FBP(HTMLElement) { constructor() { super(); // Create a shadow root to the element.</description>
+    </item>
+    
+    <item>
+      <title>Getting Started</title>
+      <link>http://fbp.furo.pro/docs/fbp-basics/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fbp.furo.pro/docs/fbp-basics/</guid>
+      <description>Getting Started #  Write your applications like you make the concept for your application. Normaly you draw a few components and some arrows to connect the components, to describe your intention. Why you don’t do the same to write your app or component? Use existing web-components and wire them to build up your application.
+Furo FBP 101 #  In furo-FBP you connect events from one component to methods of anohter component.</description>
+    </item>
+    
+    <item>
+      <title>furo web</title>
+      <link>http://fbp.furo.pro/docs/web-components/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fbp.furo.pro/docs/web-components/</guid>
+      <description>フロー Furo Web Components #  Furo Web Components provides an enterprise ready set of web components which play seamlessly with Furo. Based on web standards and future proved. Compliant with any technology of choice. With minimal footprint it includes all enterprise standards, i18n, theming and much more.
+The furo web components are a wide set of components which covers everything you need to write a web application. They consume the same types which are defined with furo.</description>
+    </item>
+    
+    <item>
+      <title>Wire Data</title>
+      <link>http://fbp.furo.pro/docs/fbp-wires-data/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fbp.furo.pro/docs/fbp-wires-data/</guid>
+      <description>Data on wires #  Wires are not limited to triggering something, they also transport information.
+Note
+By default the content of EVENT.detail is passed to the target. If an event does not have a detail property, the receiver will get a undefined.
+ Passing useful data to target #       The color picker dispatches a value-changed event, with the color as payload.
+Send the complete event instead of event.</description>
+    </item>
+    
+    <item>
+      <title>Compatibility</title>
+      <link>http://fbp.furo.pro/docs/fbp-wires-more/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fbp.furo.pro/docs/fbp-wires-more/</guid>
+      <description>Working with sub optimal components #  Some components that you may want or have to use are not dispatching events. Therefore, furo FBP has some features to work with them too.
+Wireing responses from method calls #  When the method that you have wired only returns data that you want to use, you can wire the response with @-ƒ-methodname.
+ calculate sqrt      The response of the calculate(n) method is avaliable on the wire --calculatedSqrRoot.</description>
+    </item>
+    
+    <item>
+      <title>Custom Events</title>
+      <link>http://fbp.furo.pro/docs/fbp-events/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fbp.furo.pro/docs/fbp-events/</guid>
+      <description>Fireing custom events #  Web Components use events to communicate state changes up the DOM tree to parent elements.
+Furo also provides a notation for events which allows you to specify events in a declarative manner. This is very useful when you want to trigger a event with a more specific name then the originating event has.
+*On the first view, it does not make sense to rename events. Take a look at the example below to get a better understanding.</description>
+    </item>
+    
+    <item>
+      <title>Script interaction</title>
+      <link>http://fbp.furo.pro/docs/fbp-scripting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fbp.furo.pro/docs/fbp-scripting/</guid>
+      <description>Interaction with javascript #  The wires can be hooked and triggered from the script part of your component. This also comes very handy when you are writing tests.
+Trigger a wire imperatively #  To trigger a wire from the javascript part of your component or from a test, call the _FBPTriggerWire method. You can also trigger the wire in the constructor, then the wire will be queued until the flow is parsed and ready.</description>
+    </item>
+    
+    <item>
+      <title>Best Practice</title>
+      <link>http://fbp.furo.pro/docs/fbp-bestpractice/</link>
+      <pubDate>Mon, 17 Apr 2017 14:02:04 +0200</pubDate>
+      
+      <guid>http://fbp.furo.pro/docs/fbp-bestpractice/</guid>
+      <description>Best Practice #  The best practices are a result from the feedback of our users, thanks to them.
+Feel free to give us your feedback.
+Wire and event naming #  In fact you can use any string to name wires, but most of the users are using two dashes in front of the wire name and for the name they use camelCase notation.
+For the events they use the dashed-case notation, because you can not write @-camelCase.</description>
+    </item>
+    
+    <item>
+      <title>Debugging</title>
+      <link>http://fbp.furo.pro/docs/fbp-debugging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fbp.furo.pro/docs/fbp-debugging/</guid>
+      <description>Debugging strategies #  You can use the debugging tools you always used for web development. The eventListeners from furo-fbp are the same eventListeners you have had before.
+ img[src*=&#34;#max&#34;]{max-width:600px} $0 is the selected element from the elements tab.
+  getEventListeners($0) shows you the attached eventListeners
+ Show the fbp listeners on a host #  Use $0.__FBPEventlistener to show all listeners on the host component
+ Show the wires on a host #  Use $0.</description>
+    </item>
+    
+    <item>
+      <title>Lifecycle</title>
+      <link>http://fbp.furo.pro/docs/fbp-lifecycle/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fbp.furo.pro/docs/fbp-lifecycle/</guid>
+      <description>FBP Lifecycle #  _FBPReady() #  _FBPReady() is called, when the wires are registered and the components are able to receive wire data. This is also the earliest point to enable the tracing.
+class MyComponent extends FBP(LitElement) { // trace all wires  _FBPReady(){ super._FBPReady(); this._FBPTraceWires(); } } window.customElements.define(&amp;#39;my-component&amp;#39;, MyComponent); The &amp;ndash;FBPready magic wire #  The wire &amp;ndash;FBPready is also triggered when your component is ready.</description>
+    </item>
+    
+    <item>
+      <title>Credits</title>
+      <link>http://fbp.furo.pro/docs/cred-morrison/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fbp.furo.pro/docs/cred-morrison/</guid>
+      <description>J. Paul Rodker Morrison #  Furo FBP was inspired by the work of Paul Morrison. You will find a lot of interesting material on his page.
+  Flow-Based Programming  J. Paul Rodker Morrison  Some words from the discoverer of Flow Based Programming #   – Just as in the preparation and consumption of food there are the two roles of cook and diner, in FBP application development there are two distinct roles: the component builder and the component user or application designer.</description>
+    </item>
+    
+  </channel>
+</rss>

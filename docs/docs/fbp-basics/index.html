@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <script type="module" src="/components.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Getting Started #  Write your applications like you make the concept for your application. Normaly you draw a few components and some arrows to connect the components, to describe your intention. Why you don’t do the same to write your app or component? Use existing web-components and wire them to build up your application.
+Furo FBP 101 #  In furo-FBP you connect events from one component to methods of anohter component.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Getting Started" />
+<meta property="og:description" content="Getting Started #  Write your applications like you make the concept for your application. Normaly you draw a few components and some arrows to connect the components, to describe your intention. Why you don’t do the same to write your app or component? Use existing web-components and wire them to build up your application.
+Furo FBP 101 #  In furo-FBP you connect events from one component to methods of anohter component." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fbp.furo.pro/docs/fbp-basics/" />
+<meta property="article:modified_time" content="2021-07-09T13:22:37+02:00" />
+<title>Getting Started | フロー FBP</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.966d8ceb5ee6376c5ee67e63a985eab55f0bf8c16f7bc27fbd4069e2254956a9.css" integrity="sha256-lm2M617mN2xe5n5jqYXqtV8L&#43;MFve8J/vUBp4iVJVqk=">
+<script defer src="/en.search.min.f83c72bebd7c626bd99542d4af86aa329d5be19c933c8dde7c397fb2aa0088f9.js" integrity="sha256-&#43;Dxyvr18YmvZlULUr4aqMp1b4ZyTPI3efDl/sqoAiPk="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+</head>
+
+<body dir=>
+<fixed-tooltip-display></fixed-tooltip-display>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <div ></div>
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>フロー FBP</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/installation/" class="">Installlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-basics/" class=" active">Getting Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-data/" class="">Wire Data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-more/" class="">Compatibility</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-events/" class="">Custom Events</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-scripting/" class="">Script interaction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-bestpractice/" class="">Best Practice</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-debugging/" class="">Debugging</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/cred-morrison/" class="">Credits</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://furo.pro" target="_blank" rel="noopener">
+        フロー Furo
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Getting Started</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#furo-fbp-101">Furo FBP 101</a></li>
+        <li><a href="#connecting-things">Connecting things</a></li>
+        <li><a href="#multiple-targets">Multiple targets</a></li>
+        <li><a href="#multiple-sources">Multiple sources</a></li>
+        <li><a href="#multiple-sources-and-targets">Multiple sources and targets</a></li>
+        <li><a href="#triggering-multiple-wires-from-one-source-event">Triggering multiple wires from one source event</a></li>
+        <li><a href="#receiving-multiple-wires-on-a-target">Receiving multiple wires on a target</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="getting-started">
+  Getting Started
+  <a class="anchor" href="#getting-started">#</a>
+</h1>
+<p>Write your applications like you make the concept for your application.
+Normaly you draw a few components and some arrows to connect the components, to describe your intention.
+Why you don’t do the same to write your app or component?
+Use existing web-components and wire them to build up your application.</p>
+<h2 id="furo-fbp-101">
+  Furo FBP 101
+  <a class="anchor" href="#furo-fbp-101">#</a>
+</h2>
+<p>In furo-FBP you connect events from one component to methods of anohter component.
+If you get this simple concept, you have understand already 90% of the things you need to write a program.</p>
+<h2 id="connecting-things">
+  Connecting things
+  <a class="anchor" href="#connecting-things">#</a>
+</h2>
+<p>We have a lightswitch <code>furo-button</code> and a light bulb <code>light-bulb</code> which we want to toggle when the switch is clicked.</p>
+<p>When the button fires a <strong>click</strong> event, the action will trigger the <strong>toggle</strong> method of the <code>light-bulb</code> because it is
+connected by the <strong>wire</strong> <code>--lightSwitchClicked</code>.</p>
+<furo-demo-snippet flow>
+<template>
+  <!-- This button acts as a light switch -->
+  <furo-button @-click="--lightSwitchClicked" label="i am a lightswitch"></furo-button>
+  <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>  
+</template>
+</furo-demo-snippet>
+<p><em>This doesnt look very impressive in the first moment.
+But as you can see, there is no scripting involved and there are no id&rsquo;s assigned to the components.</em></p>
+<blockquote class="book-hint info">
+  <p><strong>Hint</strong></p>
+<ul>
+<li>Click on demo to see the flow in action.</li>
+<li>Click on source to see the corresponding source.</li>
+<li>Click on flow to see the resulting flow of the source.</li>
+</ul>
+
+</blockquote>
+
+<h2 id="multiple-targets">
+  Multiple targets
+  <a class="anchor" href="#multiple-targets">#</a>
+</h2>
+<p>A wire can have as many targets as you want.</p>
+<p>So the wire <code>--lightSwitchClicked</code> can trigger multiple targets if you want.</p>
+<furo-demo-snippet flow style="height:400px">
+<template>
+  <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
+  <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
+  <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
+  <furo-button @-click="--lightSwitchClicked" label="i am a lightswitch"></furo-button> 
+  <light-bulb ƒ-toggle="--noSource"></light-bulb>
+</template>
+</furo-demo-snippet>
+<p><em>When you press the button, all elements which are connected to the wire will trigger the defined function. In this example the last light-bulb is not connected.</em></p>
+<blockquote class="book-hint info">
+  <p><strong>Name of the wire</strong></p>
+<p>You can name a wire with alphanumeric characters without a &ldquo;space&rdquo;.</p>
+<p>It is a good practice to name the wire by the thing that happened like <code>--saveClicked</code> or by
+the values it will transport like <code>--responseData</code>. The dashes are not needed, but it makes the code easier to read too.</p>
+
+</blockquote>
+
+<blockquote class="book-hint danger">
+  <p><strong>Name of the wire</strong></p>
+<p>Sometimes people tend to name the wire by the target action that the wire will trigger (<code>--saveData</code>).
+THIS IS NOT a good idea and will result in unreadable flows.</p>
+<p>Assume that your team want to introduce some other features, like playing a animation.</p>
+<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#8f5902;font-style:italic">&lt;!-- bad wire name--&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">some-animation</span> <span style="color:#c4a000">ƒ-play</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--saveData&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">some-animation</span><span style="color:#000;font-weight:bold">&gt;</span>
+
+<span style="color:#8f5902;font-style:italic">&lt;!-- good wire name --&gt;</span>
+<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">some-animation</span> <span style="color:#c4a000">ƒ-play</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--saveClicked&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">some-animation</span><span style="color:#000;font-weight:bold">&gt;</span>
+</code></pre></div>
+</blockquote>
+
+<h2 id="multiple-sources">
+  Multiple sources
+  <a class="anchor" href="#multiple-sources">#</a>
+</h2>
+<p>A wire is not limited as a point to point connection and can have multiple sources.</p>
+<furo-demo-snippet flow style="height:400px">
+<template>
+  <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
+  <furo-button @-click="--lightSwitchClicked" label="i am a light switch"></furo-button> 
+  <furo-button @-click="--lightSwitchClicked" label="i am a light switch too"></furo-button>  
+</template>
+</furo-demo-snippet>
+<p><em>It doesn&rsquo;t matter if you press the first or the second light switch.
+Both of them will trigger the wire<code>--lightSwitchClicked</code>, which will invoke the <code>toggle</code> method on the light-bulb.</em></p>
+<h2 id="multiple-sources-and-targets">
+  Multiple sources and targets
+  <a class="anchor" href="#multiple-sources-and-targets">#</a>
+</h2>
+<p>A wire is not limited as a point to point connection and can have multiple sources and also
+have multiple targets.</p>
+<furo-demo-snippet source style="height:500px">
+<template>
+  <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
+  <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
+  <furo-button @-click="--lightSwitchClicked" label="i am a lightswitch"></furo-button> 
+  <furo-button @-click="--lightSwitchClicked" label="i am a lightswitch too"></furo-button>  
+  <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
+  <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
+</template>
+</furo-demo-snippet>
+<p><em>If you look at the source of this example, it doesn&rsquo;t look very complex,
+the resulting flow of this example is quite complex.</em></p>
+<h2 id="triggering-multiple-wires-from-one-source-event">
+  Triggering multiple wires from one source event
+  <a class="anchor" href="#triggering-multiple-wires-from-one-source-event">#</a>
+</h2>
+<p>Sometimes you want to trigger multiple wires from one source event.
+You can do this by separating them with a comma.
+<code>@-click=&quot;--lightSwitchClicked, --blinkerClicked&quot;</code></p>
+<furo-demo-snippet flow style="height:500px">
+<template>
+  <light-bulb ƒ-toggle="--lightSwitchClicked, --intervallPulse"></light-bulb>  
+  <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
+  <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
+  <furo-button @-click="--lightSwitchClicked, --blinkerClicked" label="i am a lightswitch"></furo-button>   
+  <furo-interval-pulse ƒ-start="--blinkerClicked" ƒ-stop="--stopBlinkerClicked" @-tick="--intervallPulse" interval="500"></furo-interval-pulse>
+  <furo-button danger  @-click="--stopBlinkerClicked" label="Stop the blinking"></furo-button>   
+</template>
+</furo-demo-snippet>
+<p><em>When you press the button, it will trigger the <code>--lightSwitchClicked</code> and the <code>--blinkerClicked</code> wire.</em></p>
+<h2 id="receiving-multiple-wires-on-a-target">
+  Receiving multiple wires on a target
+  <a class="anchor" href="#receiving-multiple-wires-on-a-target">#</a>
+</h2>
+<p>You can receive from multiple wires by comma separating them.</p>
+<furo-demo-snippet flow style="height:400px">
+<template>
+  <furo-button @-click="--lightSwitchClicked" label="i am a lightswitch"></furo-button>   
+  <furo-button @-click="--blinkerClicked" label="i am a blinkswitch"></furo-button>   
+  <furo-interval-pulse ƒ-start="--blinkerClicked" ƒ-stop="--stopBlinkerClicked" @-tick="--intervallPulse" interval="500"></furo-interval-pulse>
+  <furo-button danger  @-click="--stopBlinkerClicked" label="Stop the blinking"></furo-button>   
+  <light-bulb ƒ-toggle="--lightSwitchClicked, --intervallPulse"></light-bulb>  
+  <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>  
+</template>
+</furo-demo-snippet>
+<p>*The light bulb on the top right will be triggered by the <code>--lightSwitchClicked</code> and <code>--intervallPulse</code> wire *</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/354bf542917659c86b07612771427ff83da067f2" title='Last modified by veith | July 9, 2021' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>July 9, 2021</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#getting-started">Getting Started</a>
+      <ul>
+        <li><a href="#furo-fbp-101">Furo FBP 101</a></li>
+        <li><a href="#connecting-things">Connecting things</a></li>
+        <li><a href="#multiple-targets">Multiple targets</a></li>
+        <li><a href="#multiple-sources">Multiple sources</a></li>
+        <li><a href="#multiple-sources-and-targets">Multiple sources and targets</a></li>
+        <li><a href="#triggering-multiple-wires-from-one-source-event">Triggering multiple wires from one source event</a></li>
+        <li><a href="#receiving-multiple-wires-on-a-target">Receiving multiple wires on a target</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
