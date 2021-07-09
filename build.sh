@@ -7,7 +7,7 @@ rm -rf tmp
 git clone --depth 1 git@github.com:eclipse/eclipsefuro.git ./tmp
 
 # build docs
-hugo -s ./tmp/docs/furo -d ../../../docs
+hugo -s ./tmp/docs/fbp -d ../../../docs
 rm -rf tmp
 
 # add changes
