@@ -13,12 +13,12 @@ Furo FBP 101 #  In furo-FBP you connect events from one component to methods of 
 Furo FBP 101 #  In furo-FBP you connect events from one component to methods of anohter component." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://fbp.furo.pro/docs/fbp-basics/" />
-<meta property="article:modified_time" content="2021-07-10T13:11:24+02:00" />
+<meta property="article:modified_time" content="2021-07-10T17:51:46+02:00" />
 <title>Getting Started | フロー FBP</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.966d8ceb5ee6376c5ee67e63a985eab55f0bf8c16f7bc27fbd4069e2254956a9.css" integrity="sha256-lm2M617mN2xe5n5jqYXqtV8L&#43;MFve8J/vUBp4iVJVqk=">
-<script defer src="/en.search.min.c2ffb98d378b06e827c928ef5d62752ccb74d375d022d5aeddb125add5479482.js" integrity="sha256-wv&#43;5jTeLBugnySjvXWJ1LMt003XQItWu3bElrdVHlII="></script>
+<script defer src="/en.search.min.47bccdd940edce651a92deeda2105bb8fe54dc39721ea823f6cdabe60df45e89.js" integrity="sha256-R7zN2UDtzmUakt7tohBbuP5U3DlyHqgj9s2r5g30Xok="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -349,12 +349,23 @@ the values it will transport like <code>--responseData</code>. The dashes are no
 <p>Sometimes people tend to name the wire by the target action that the wire will trigger (<code>--saveData</code>).
 THIS IS NOT a good idea and will result in unreadable flows.</p>
 <p>Assume that your team want to introduce some other features, like playing a animation.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#8f5902;font-style:italic">&lt;!-- bad wire name--&gt;</span>
-<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">some-animation</span> <span style="color:#c4a000">ƒ-play</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--saveData&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">some-animation</span><span style="color:#000;font-weight:bold">&gt;</span>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#998;font-style:italic">&lt;!-- bad wire name--&gt;</span>
+&lt;<span style="color:#000080">some-animation</span> <span style="color:#008080">ƒ-play</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--saveData&#34;</span>&gt;&lt;/<span style="color:#000080">some-animation</span>&gt;
 
-<span style="color:#8f5902;font-style:italic">&lt;!-- good wire name --&gt;</span>
-<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">some-animation</span> <span style="color:#c4a000">ƒ-play</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--saveClicked&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">some-animation</span><span style="color:#000;font-weight:bold">&gt;</span>
-</code></pre></div>
+<span style="color:#998;font-style:italic">&lt;!-- good wire name --&gt;</span>
+&lt;<span style="color:#000080">some-animation</span> <span style="color:#008080">ƒ-play</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--saveClicked&#34;</span>&gt;&lt;/<span style="color:#000080">some-animation</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div>
 </blockquote>
 
 <h2 id="multiple-sources">
@@ -433,7 +444,7 @@ You can do this by separating them with a comma.
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/a50c712ad34a5f6b486e1779955e26528396fecc" title='Last modified by veith | July 10, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/7b4df928870da7c4fbf1b95352fac8859d48c6f2" title='Last modified by veith | July 10, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>July 10, 2021</span>
     </a>

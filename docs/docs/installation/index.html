@@ -7,22 +7,22 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Installation #  First of all you need the npm module @furo/fbp.
-npm i -S @furo/fbp FBP with lit-element #  To use FBP with lit, just extend your class.
-class MyComponent extends FBP(LitElement) { } window.customElements.define(&#39;my-component&#39;, MyComponent); FBP with native web-components #  To use furo-fbp with native components, call this._appendFBP(this.shadowRoot); to enable fbp.
-class MyComponent extends FBP(HTMLElement) { constructor() { super(); // Create a shadow root to the element.">
+1  npm i -S @furo/fbp   FBP with lit-element #  To use FBP with lit, just extend your class.
+1 2 3 4  class MyComponent extends FBP(LitElement) {  } window.customElements.define(&#39;my-component&#39;, MyComponent);   FBP with native web-components #  To use furo-fbp with native components, call this._appendFBP(this.shadowRoot); to enable fbp.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class MyComponent extends FBP(HTMLElement) { constructor() { super(); // Create a shadow root to the element.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Installlation" />
 <meta property="og:description" content="Installation #  First of all you need the npm module @furo/fbp.
-npm i -S @furo/fbp FBP with lit-element #  To use FBP with lit, just extend your class.
-class MyComponent extends FBP(LitElement) { } window.customElements.define(&#39;my-component&#39;, MyComponent); FBP with native web-components #  To use furo-fbp with native components, call this._appendFBP(this.shadowRoot); to enable fbp.
-class MyComponent extends FBP(HTMLElement) { constructor() { super(); // Create a shadow root to the element." />
+1  npm i -S @furo/fbp   FBP with lit-element #  To use FBP with lit, just extend your class.
+1 2 3 4  class MyComponent extends FBP(LitElement) {  } window.customElements.define(&#39;my-component&#39;, MyComponent);   FBP with native web-components #  To use furo-fbp with native components, call this._appendFBP(this.shadowRoot); to enable fbp.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class MyComponent extends FBP(HTMLElement) { constructor() { super(); // Create a shadow root to the element." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://fbp.furo.pro/docs/installation/" />
-<meta property="article:modified_time" content="2021-07-10T13:11:24+02:00" />
+<meta property="article:modified_time" content="2021-07-10T17:51:46+02:00" />
 <title>Installlation | フロー FBP</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.966d8ceb5ee6376c5ee67e63a985eab55f0bf8c16f7bc27fbd4069e2254956a9.css" integrity="sha256-lm2M617mN2xe5n5jqYXqtV8L&#43;MFve8J/vUBp4iVJVqk=">
-<script defer src="/en.search.min.c2ffb98d378b06e827c928ef5d62752ccb74d375d022d5aeddb125add5479482.js" integrity="sha256-wv&#43;5jTeLBugnySjvXWJ1LMt003XQItWu3bElrdVHlII="></script>
+<script defer src="/en.search.min.47bccdd940edce651a92deeda2105bb8fe54dc39721ea823f6cdabe60df45e89.js" integrity="sha256-R7zN2UDtzmUakt7tohBbuP5U3DlyHqgj9s2r5g30Xok="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -286,80 +286,176 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#installation">#</a>
 </h1>
 <p>First of all you need the npm module <strong>@furo/fbp</strong>.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -S @furo/fbp
-</code></pre></div><h2 id="fbp-with-lit-element">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -S @furo/fbp
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="fbp-with-lit-element">
   FBP with lit-element
   <a class="anchor" href="#fbp-with-lit-element">#</a>
 </h2>
 <p>To use FBP with lit, just extend your class.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyComponent</span> <span style="color:#204a87;font-weight:bold">extends</span> <span style="color:#000">FBP</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">LitElement</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-  
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#204a87">window</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">customElements</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">define</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;my-component&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">MyComponent</span><span style="color:#000;font-weight:bold">);</span>
-</code></pre></div><h2 id="fbp-with-native-web-components">
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="display:block;width:100%;background-color:#e5e5e5"><span style="color:#000;font-weight:bold">class</span> MyComponent <span style="color:#000;font-weight:bold">extends</span> FBP(LitElement) {
+</span>  
+}
+<span style="color:#0086b3">window</span>.customElements.define(<span style="color:#d14">&#39;my-component&#39;</span>, MyComponent);
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="fbp-with-native-web-components">
   FBP with native web-components
   <a class="anchor" href="#fbp-with-native-web-components">#</a>
 </h2>
 <p>To use furo-fbp with native components, call <code>this._appendFBP(this.shadowRoot);</code> to enable fbp.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyComponent</span> <span style="color:#204a87;font-weight:bold">extends</span> <span style="color:#000">FBP</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">HTMLElement</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000;font-weight:bold">class</span> MyComponent <span style="color:#000;font-weight:bold">extends</span> FBP(HTMLElement) {
 
-  <span style="color:#000">constructor</span><span style="color:#000;font-weight:bold">()</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">super</span><span style="color:#000;font-weight:bold">();</span>
-    <span style="color:#8f5902;font-style:italic">// Create a shadow root to the element.
-</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">attachShadow</span><span style="color:#000;font-weight:bold">({</span><span style="color:#000">mode</span><span style="color:#ce5c00;font-weight:bold">:</span> <span style="color:#4e9a06">&#39;open&#39;</span><span style="color:#000;font-weight:bold">});</span>
-    <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">shadowRoot</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">appendChild</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">template</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">content</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">cloneNode</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">true</span><span style="color:#000;font-weight:bold">));</span>
-    <span style="color:#8f5902;font-style:italic">// Append FBP to my-component
-</span><span style="color:#8f5902;font-style:italic"></span>    <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">_appendFBP</span><span style="color:#000;font-weight:bold">(</span><span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">shadowRoot</span><span style="color:#000;font-weight:bold">);</span>
-  <span style="color:#000;font-weight:bold">}</span>
+  constructor() {
+    <span style="color:#000;font-weight:bold">super</span>();
+    <span style="color:#998;font-style:italic">// Create a shadow root to the element.
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">this</span>.attachShadow({mode<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#39;open&#39;</span>});
+    <span style="color:#000;font-weight:bold">this</span>.shadowRoot.appendChild(template.content.cloneNode(<span style="color:#000;font-weight:bold">true</span>));
+<span style="display:block;width:100%;background-color:#e5e5e5">    <span style="color:#998;font-style:italic">// Append FBP to my-component
+</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">this</span>._appendFBP(<span style="color:#000;font-weight:bold">this</span>.shadowRoot);
+</span>  }
  
-<span style="color:#000;font-weight:bold">}</span>
+}
 
-<span style="color:#204a87">window</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">customElements</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">define</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;my-component&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">MyComponent</span><span style="color:#000;font-weight:bold">);</span>
+<span style="color:#0086b3">window</span>.customElements.define(<span style="color:#d14">&#39;my-component&#39;</span>, MyComponent);
 
-</code></pre></div><h2 id="fbp-within-html">
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="fbp-within-html">
   FBP within HTML
   <a class="anchor" href="#fbp-within-html">#</a>
 </h2>
 <p>You can use furo FBP inside your HTML by using <code>furo-fbp</code>. Make sure that you have
 imported the components that you want to use.</p>
 <p>You can import furo-fbp from the CDN or npm. Note the <strong>type=&ldquo;module&rdquo;</strong></p>
-<p><strong>CDN</strong></p>
-<p><code>&lt;script type=&quot;module&quot; src=&quot;https://cdn.jsdelivr.net/npm/@furo/fbp@5.8.1/assets/furo-fbp.js&quot;&gt;&lt;/script&gt;</code></p>
-<p><strong>npm</strong></p>
-<p><code>&lt;script type=&quot;module&quot; src=&quot;/node_modules/@furo/fbp/src/furo-fbp.js&quot;&gt;&lt;/script&gt;</code></p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"><span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">head</span><span style="color:#000;font-weight:bold">&gt;</span>
-    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">script</span> <span style="color:#c4a000">type</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;module&#34;</span> <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://cdn.jsdelivr.net/npm/@furo/fbp@5.8.1/assets/furo-fbp.js&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">script</span><span style="color:#000;font-weight:bold">&gt;</span>
-<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">head</span><span style="color:#000;font-weight:bold">&gt;</span>
-<span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">body</span><span style="color:#000;font-weight:bold">&gt;</span>
-  <span style="color:#8f5902;font-style:italic">&lt;!-- use the component as many times you want, even before the definition--&gt;</span>
-  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">language-sample</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">language-sample</span><span style="color:#000;font-weight:bold">&gt;</span>
-  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">hey-component</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">hey-component</span><span style="color:#000;font-weight:bold">&gt;</span>
+<p><strong>With CDN</strong></p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://cdn.jsdelivr.net/npm/@furo/fbp@5.8.1/assets/furo-fbp.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt; 
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>With npm</strong></p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;/node_modules/@furo/fbp/src/furo-fbp.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p><em>index.html with cdn example</em></p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">head</span>&gt;
+<span style="display:block;width:100%;background-color:#e5e5e5">    &lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://cdn.jsdelivr.net/npm/@furo/fbp@5.8.1/assets/furo-fbp.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
+</span>&lt;/<span style="color:#000080">head</span>&gt;
+&lt;<span style="color:#000080">body</span>&gt;
+  <span style="color:#998;font-style:italic">&lt;!-- use the component as many times you want, even before the definition--&gt;</span>
+  &lt;<span style="color:#000080">language-sample</span>&gt;&lt;/<span style="color:#000080">language-sample</span>&gt;
+<span style="display:block;width:100%;background-color:#e5e5e5">  &lt;<span style="color:#000080">hey-component</span>&gt;&lt;/<span style="color:#000080">hey-component</span>&gt;
+</span>  
   
-  
-  <span style="color:#8f5902;font-style:italic">&lt;!-- define the component --&gt;</span>
-  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">furo-fbp</span> <span style="color:#c4a000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;language-sample&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
-    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">template</span><span style="color:#000;font-weight:bold">&gt;</span>
-      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">button</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-click</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--playClicked&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>play<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">button</span><span style="color:#000;font-weight:bold">&gt;</span>
-      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">button</span> <span style="color:#a40000">@</span><span style="color:#c4a000">-click</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--pauseClicked&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>pause<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">button</span><span style="color:#000;font-weight:bold">&gt;</span>
-      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">audio</span> <span style="color:#c4a000">ƒ-play</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--playClicked&#34;</span> 
-             <span style="color:#c4a000">ƒ-pause</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;--pauseClicked&#34;</span> 
-             <span style="color:#c4a000">src</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;https://upload.wikimedia.org/wikipedia/commons/9/92/German_alphabet-2.ogg&#34;</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">audio</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#998;font-style:italic">&lt;!-- define the component --&gt;</span>
+  &lt;<span style="color:#000080">furo-fbp</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;language-sample&#34;</span>&gt;
+    &lt;<span style="color:#000080">template</span>&gt;
+      &lt;<span style="color:#000080">button</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--playClicked&#34;</span>&gt;play&lt;/<span style="color:#000080">button</span>&gt;
+      &lt;<span style="color:#000080">button</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--pauseClicked&#34;</span>&gt;pause&lt;/<span style="color:#000080">button</span>&gt;
+      &lt;<span style="color:#000080">audio</span> <span style="color:#008080">ƒ-play</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--playClicked&#34;</span> 
+             <span style="color:#008080">ƒ-pause</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--pauseClicked&#34;</span> 
+             <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://upload.wikimedia.org/wikipedia/commons/9/92/German_alphabet-2.ogg&#34;</span>&gt;&lt;/<span style="color:#000080">audio</span>&gt;
       
-      <span style="color:#8f5902;font-style:italic">&lt;!-- use other components that you have defined --&gt;</span>
-      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">hey-component</span><span style="color:#000;font-weight:bold">&gt;&lt;/</span><span style="color:#204a87;font-weight:bold">hey-component</span><span style="color:#000;font-weight:bold">&gt;</span>
-    <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">template</span><span style="color:#000;font-weight:bold">&gt;</span>
-  <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">furo-fbp</span><span style="color:#000;font-weight:bold">&gt;</span>
+      <span style="color:#998;font-style:italic">&lt;!-- use other components that you have defined --&gt;</span>
+<span style="display:block;width:100%;background-color:#e5e5e5">      &lt;<span style="color:#000080">hey-component</span>&gt;&lt;/<span style="color:#000080">hey-component</span>&gt;
+</span>    &lt;/<span style="color:#000080">template</span>&gt;
+  &lt;/<span style="color:#000080">furo-fbp</span>&gt;
   
   
-  <span style="color:#8f5902;font-style:italic">&lt;!-- define the component --&gt;</span>
-  <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">furo-fbp</span> <span style="color:#c4a000">name</span><span style="color:#ce5c00;font-weight:bold">=</span><span style="color:#4e9a06">&#34;hey-component&#34;</span><span style="color:#000;font-weight:bold">&gt;</span>
-    <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">template</span><span style="color:#000;font-weight:bold">&gt;</span>
-      <span style="color:#000;font-weight:bold">&lt;</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;</span>Hej<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">span</span><span style="color:#000;font-weight:bold">&gt;</span>
-    <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">template</span><span style="color:#000;font-weight:bold">&gt;</span>
-  <span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">furo-fbp</span><span style="color:#000;font-weight:bold">&gt;</span>
-<span style="color:#000;font-weight:bold">&lt;/</span><span style="color:#204a87;font-weight:bold">body</span><span style="color:#000;font-weight:bold">&gt;</span>
+  <span style="color:#998;font-style:italic">&lt;!-- define the component --&gt;</span>
+<span style="display:block;width:100%;background-color:#e5e5e5">  &lt;<span style="color:#000080">furo-fbp</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;hey-component&#34;</span>&gt;
+</span><span style="display:block;width:100%;background-color:#e5e5e5">    &lt;<span style="color:#000080">template</span>&gt;
+</span><span style="display:block;width:100%;background-color:#e5e5e5">      &lt;<span style="color:#000080">span</span>&gt;Hej&lt;/<span style="color:#000080">span</span>&gt;
+</span><span style="display:block;width:100%;background-color:#e5e5e5">    &lt;/<span style="color:#000080">template</span>&gt;
+</span><span style="display:block;width:100%;background-color:#e5e5e5">  &lt;/<span style="color:#000080">furo-fbp</span>&gt;
+</span>&lt;/<span style="color:#000080">body</span>&gt;
 
-</code></pre></div> <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/fbp@5.8.1/assets/furo-fbp.js"></script>
+</code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>line 2: load furo-fbp via cdn</li>
+<li>line 7: use the <code>hey-component</code></li>
+<li>line 26-30: define the <code>hey-component</code></li>
+</ul>
+ <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/fbp@5.8.1/assets/furo-fbp.js"></script>
 <p><strong>The result of the example from above:</strong></p>
 <div style="border:2px solid rebeccapurple; padding:10px">
 <language-sample></language-sample>
@@ -385,17 +481,21 @@ imported the components that you want to use.</p>
   <a class="anchor" href="#fbp-with-polymer">#</a>
 </h2>
 <p>To use FBP with polymer, just extend your class.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#204a87;font-weight:bold">class</span> <span style="color:#000">MyComponent</span> <span style="color:#204a87;font-weight:bold">extends</span> <span style="color:#000">FBP</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">PolymerElement</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-  
-<span style="color:#000;font-weight:bold">}</span>
-<span style="color:#204a87">window</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">customElements</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">define</span><span style="color:#000;font-weight:bold">(</span><span style="color:#4e9a06">&#39;my-component&#39;</span><span style="color:#000;font-weight:bold">,</span> <span style="color:#000">MyComponent</span><span style="color:#000;font-weight:bold">);</span>
-</code></pre></div><p>The appender is automatically triggered from FBP via the _attachDom method.</p>
-<div class="highlight"><pre style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#8f5902;font-style:italic">// you dont have to write this, its already done in furo-fbp
-</span><span style="color:#8f5902;font-style:italic"></span><span style="color:#000">_attachDom</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">dom</span><span style="color:#000;font-weight:bold">)</span> <span style="color:#000;font-weight:bold">{</span>
-    <span style="color:#204a87;font-weight:bold">this</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">_appendFBP</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">dom</span><span style="color:#000;font-weight:bold">);</span>
-    <span style="color:#204a87;font-weight:bold">super</span><span style="color:#000;font-weight:bold">.</span><span style="color:#000">_attachDom</span><span style="color:#000;font-weight:bold">(</span><span style="color:#000">dom</span><span style="color:#000;font-weight:bold">);</span>
-<span style="color:#000;font-weight:bold">}</span>
-</code></pre></div></article>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="display:block;width:100%;background-color:#e5e5e5"><span style="color:#000;font-weight:bold">class</span> MyComponent <span style="color:#000;font-weight:bold">extends</span> FBP(PolymerElement) {
+</span>  
+}
+<span style="color:#0086b3">window</span>.customElements.define(<span style="color:#d14">&#39;my-component&#39;</span>, MyComponent);
+</code></pre></td></tr></table>
+</div>
+</div></article>
  
       
 
@@ -405,7 +505,7 @@ imported the components that you want to use.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/a50c712ad34a5f6b486e1779955e26528396fecc" title='Last modified by veith | July 10, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/7b4df928870da7c4fbf1b95352fac8859d48c6f2" title='Last modified by veith | July 10, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
       <span>July 10, 2021</span>
     </a>

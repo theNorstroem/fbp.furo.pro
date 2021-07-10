@@ -14,9 +14,9 @@
       
       <guid>http://fbp.furo.pro/docs/installation/</guid>
       <description>Installation #  First of all you need the npm module @furo/fbp.
-npm i -S @furo/fbp FBP with lit-element #  To use FBP with lit, just extend your class.
-class MyComponent extends FBP(LitElement) { } window.customElements.define(&amp;#39;my-component&amp;#39;, MyComponent); FBP with native web-components #  To use furo-fbp with native components, call this._appendFBP(this.shadowRoot); to enable fbp.
-class MyComponent extends FBP(HTMLElement) { constructor() { super(); // Create a shadow root to the element.</description>
+1  npm i -S @furo/fbp   FBP with lit-element #  To use FBP with lit, just extend your class.
+1 2 3 4  class MyComponent extends FBP(LitElement) {  } window.customElements.define(&amp;#39;my-component&amp;#39;, MyComponent);   FBP with native web-components #  To use furo-fbp with native components, call this._appendFBP(this.shadowRoot); to enable fbp.
+1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class MyComponent extends FBP(HTMLElement) { constructor() { super(); // Create a shadow root to the element.</description>
     </item>
     
     <item>
@@ -116,7 +116,7 @@ For the events they use the dashed-case notation, because you can not write @-ca
       
       <guid>http://fbp.furo.pro/docs/fbp-lifecycle/</guid>
       <description>FBP Lifecycle #  _FBPReady() #  _FBPReady() is called, when the wires are registered and the components are able to receive wire data. This is also the earliest point to enable the tracing.
-class MyComponent extends FBP(LitElement) { // trace all wires  _FBPReady(){ super._FBPReady(); this._FBPTraceWires(); } } window.customElements.define(&amp;#39;my-component&amp;#39;, MyComponent); The &amp;ndash;FBPready magic wire #  The wire &amp;ndash;FBPready is also triggered when your component is ready.</description>
+1 2 3 4 5 6 7 8 9  class MyComponent extends FBP(LitElement) { // trace all wires  _FBPReady(){ super._FBPReady(); this._FBPTraceWires(); } } window.customElements.define(&amp;#39;my-component&amp;#39;, MyComponent);   The &amp;ndash;FBPready magic wire #  The wire &amp;ndash;FBPready is also triggered when your component is ready.</description>
     </item>
     
     <item>
