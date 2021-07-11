@@ -14,7 +14,7 @@
       
       <guid>http://fbp.furo.pro/docs/installation/</guid>
       <description>Installation #  You can use furo FBP directly in your HTML documents or within your own web-components.
-FBP within HTML #  You can use furo FBP inside your HTML by using furo-fbp. Make sure that you have imported the components that you want to use.
+FBP within HTML #  You can use furo FBP inside your HTML by using furo-fbp. Make sure that you have imported the web-components that you want to use correctly.
 furo-fbp is a web-component which will generate and register the defined component. These components can be directly used in your HTML documents.  You can import furo-fbp from the CDN or npm.</description>
     </item>
     
