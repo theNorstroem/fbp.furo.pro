@@ -6,23 +6,21 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Installation #  First of all you need the npm module @furo/fbp.
-1  npm i -S @furo/fbp   FBP with lit-element #  To use FBP with lit, just extend your class.
-1 2 3 4  class MyComponent extends FBP(LitElement) {  } window.customElements.define(&#39;my-component&#39;, MyComponent);   FBP with native web-components #  To use furo-fbp with native components, call this._appendFBP(this.shadowRoot); to enable fbp.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class MyComponent extends FBP(HTMLElement) { constructor() { super(); // Create a shadow root to the element.">
+<meta name="description" content="Installation #  You can use furo FBP directly in your HTML documents or within your own web-components.
+FBP within HTML #  You can use furo FBP inside your HTML by using furo-fbp. Make sure that you have imported the components that you want to use.
+furo-fbp is a web-component which will generate and register the defined component. These components can be directly used in your HTML documents.  You can import furo-fbp from the CDN or npm.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Installlation" />
-<meta property="og:description" content="Installation #  First of all you need the npm module @furo/fbp.
-1  npm i -S @furo/fbp   FBP with lit-element #  To use FBP with lit, just extend your class.
-1 2 3 4  class MyComponent extends FBP(LitElement) {  } window.customElements.define(&#39;my-component&#39;, MyComponent);   FBP with native web-components #  To use furo-fbp with native components, call this._appendFBP(this.shadowRoot); to enable fbp.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class MyComponent extends FBP(HTMLElement) { constructor() { super(); // Create a shadow root to the element." />
+<meta property="og:description" content="Installation #  You can use furo FBP directly in your HTML documents or within your own web-components.
+FBP within HTML #  You can use furo FBP inside your HTML by using furo-fbp. Make sure that you have imported the components that you want to use.
+furo-fbp is a web-component which will generate and register the defined component. These components can be directly used in your HTML documents.  You can import furo-fbp from the CDN or npm." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://fbp.furo.pro/docs/installation/" />
-<meta property="article:modified_time" content="2021-07-10T17:51:46+02:00" />
+<meta property="article:modified_time" content="2021-07-11T10:49:43+02:00" />
 <title>Installlation | フロー FBP</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.966d8ceb5ee6376c5ee67e63a985eab55f0bf8c16f7bc27fbd4069e2254956a9.css" integrity="sha256-lm2M617mN2xe5n5jqYXqtV8L&#43;MFve8J/vUBp4iVJVqk=">
-<script defer src="/en.search.min.47bccdd940edce651a92deeda2105bb8fe54dc39721ea823f6cdabe60df45e89.js" integrity="sha256-R7zN2UDtzmUakt7tohBbuP5U3DlyHqgj9s2r5g30Xok="></script>
+<script defer src="/en.search.min.20172319d2a3a46e53fee30dd3f4a62c6069ff31470bd1e08905e8b326884188.js" integrity="sha256-IBcjGdKjpG5T/uMN0/SmLGBp/zFHC9HgiQXosyaIQYg="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -264,9 +262,10 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#installation">Installation</a>
       <ul>
+        <li><a href="#fbp-within-html">FBP within HTML</a></li>
+        <li><a href="#install-the-npm-module">Install the npm module</a></li>
         <li><a href="#fbp-with-lit-element">FBP with lit-element</a></li>
         <li><a href="#fbp-with-native-web-components">FBP with native web-components</a></li>
-        <li><a href="#fbp-within-html">FBP within HTML</a></li>
         <li><a href="#fbp-with-polymer">FBP with polymer</a></li>
       </ul>
     </li>
@@ -285,82 +284,19 @@ https://github.com/alex-shpak/hugo-book
   Installation
   <a class="anchor" href="#installation">#</a>
 </h1>
-<p>First of all you need the npm module <strong>@furo/fbp</strong>.</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -S @furo/fbp
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="fbp-with-lit-element">
-  FBP with lit-element
-  <a class="anchor" href="#fbp-with-lit-element">#</a>
-</h2>
-<p>To use FBP with lit, just extend your class.</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="display:block;width:100%;background-color:#e5e5e5"><span style="color:#000;font-weight:bold">class</span> MyComponent <span style="color:#000;font-weight:bold">extends</span> FBP(LitElement) {
-</span>  
-}
-<span style="color:#0086b3">window</span>.customElements.define(<span style="color:#d14">&#39;my-component&#39;</span>, MyComponent);
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="fbp-with-native-web-components">
-  FBP with native web-components
-  <a class="anchor" href="#fbp-with-native-web-components">#</a>
-</h2>
-<p>To use furo-fbp with native components, call <code>this._appendFBP(this.shadowRoot);</code> to enable fbp.</p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000;font-weight:bold">class</span> MyComponent <span style="color:#000;font-weight:bold">extends</span> FBP(HTMLElement) {
-
-  constructor() {
-    <span style="color:#000;font-weight:bold">super</span>();
-    <span style="color:#998;font-style:italic">// Create a shadow root to the element.
-</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">this</span>.attachShadow({mode<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#39;open&#39;</span>});
-    <span style="color:#000;font-weight:bold">this</span>.shadowRoot.appendChild(template.content.cloneNode(<span style="color:#000;font-weight:bold">true</span>));
-<span style="display:block;width:100%;background-color:#e5e5e5">    <span style="color:#998;font-style:italic">// Append FBP to my-component
-</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">this</span>._appendFBP(<span style="color:#000;font-weight:bold">this</span>.shadowRoot);
-</span>  }
- 
-}
-
-<span style="color:#0086b3">window</span>.customElements.define(<span style="color:#d14">&#39;my-component&#39;</span>, MyComponent);
-
-</code></pre></td></tr></table>
-</div>
-</div><h2 id="fbp-within-html">
+<p>You can use furo FBP directly in your HTML documents or within your own web-components.</p>
+<h2 id="fbp-within-html">
   FBP within HTML
   <a class="anchor" href="#fbp-within-html">#</a>
 </h2>
 <p>You can use furo FBP inside your HTML by using <code>furo-fbp</code>. Make sure that you have
 imported the components that you want to use.</p>
-<p>You can import furo-fbp from the CDN or npm. Note the <strong>type=&ldquo;module&rdquo;</strong></p>
+<blockquote class="book-hint ">
+  <code>furo-fbp</code> is a web-component which will generate and register the defined component. These components can be directly used in
+your HTML documents.
+</blockquote>
+
+<p>You can import <code>furo-fbp</code> from the CDN or npm. Note the <strong>type=&ldquo;module&rdquo;</strong></p>
 <p><strong>With CDN</strong></p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
@@ -452,7 +388,8 @@ imported the components that you want to use.</p>
 </div>
 </div><ul>
 <li>line 2: load furo-fbp via cdn</li>
-<li>line 7: use the <code>hey-component</code></li>
+<li>line 7: use the <code>hey-component</code> directly</li>
+<li>line 7: use the <code>hey-component</code> inside of the language-sample component</li>
 <li>line 26-30: define the <code>hey-component</code></li>
 </ul>
  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/fbp@5.8.1/assets/furo-fbp.js"></script>
@@ -469,6 +406,7 @@ imported the components that you want to use.</p>
       <audio ƒ-play="--playClicked" 
              ƒ-pause="--pauseClicked" 
              src="https://upload.wikimedia.org/wikipedia/commons/9/92/German_alphabet-2.ogg"></audio>
+    <hey-component></hey-component>
     </template>
   </furo-fbp>
   <furo-fbp name="hey-component">
@@ -476,7 +414,80 @@ imported the components that you want to use.</p>
       <span>Hej</span>
     </template>
   </furo-fbp>
-<h2 id="fbp-with-polymer">
+<h2 id="install-the-npm-module">
+  Install the npm module
+  <a class="anchor" href="#install-the-npm-module">#</a>
+</h2>
+<p>To work with lit or native web components you need the npm module <strong>@furo/fbp</strong>.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -S @furo/fbp
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="fbp-with-lit-element">
+  FBP with lit-element
+  <a class="anchor" href="#fbp-with-lit-element">#</a>
+</h2>
+<p>To use FBP with lit, just extend your class.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="display:block;width:100%;background-color:#e5e5e5"><span style="color:#000;font-weight:bold">class</span> MyComponent <span style="color:#000;font-weight:bold">extends</span> FBP(LitElement) {
+</span>  
+}
+<span style="color:#0086b3">window</span>.customElements.define(<span style="color:#d14">&#39;my-component&#39;</span>, MyComponent);
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="fbp-with-native-web-components">
+  FBP with native web-components
+  <a class="anchor" href="#fbp-with-native-web-components">#</a>
+</h2>
+<p>To use furo-fbp with native components, call <code>this._appendFBP(this.shadowRoot);</code> to enable fbp.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000;font-weight:bold">class</span> MyComponent <span style="color:#000;font-weight:bold">extends</span> FBP(HTMLElement) {
+
+  constructor() {
+    <span style="color:#000;font-weight:bold">super</span>();
+    <span style="color:#998;font-style:italic">// Create a shadow root to the element.
+</span><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">this</span>.attachShadow({mode<span style="color:#000;font-weight:bold">:</span> <span style="color:#d14">&#39;open&#39;</span>});
+    <span style="color:#000;font-weight:bold">this</span>.shadowRoot.appendChild(template.content.cloneNode(<span style="color:#000;font-weight:bold">true</span>));
+<span style="display:block;width:100%;background-color:#e5e5e5">    <span style="color:#998;font-style:italic">// Append FBP to my-component
+</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="color:#998;font-style:italic"></span>    <span style="color:#000;font-weight:bold">this</span>._appendFBP(<span style="color:#000;font-weight:bold">this</span>.shadowRoot);
+</span>  }
+ 
+}
+
+<span style="color:#0086b3">window</span>.customElements.define(<span style="color:#d14">&#39;my-component&#39;</span>, MyComponent);
+
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="fbp-with-polymer">
   FBP with polymer
   <a class="anchor" href="#fbp-with-polymer">#</a>
 </h2>
@@ -505,9 +516,9 @@ imported the components that you want to use.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/7b4df928870da7c4fbf1b95352fac8859d48c6f2" title='Last modified by veith | July 10, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/b0bd481df42962f13332f3d70701e6bfa3fdfd20" title='Last modified by veith | July 11, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>July 10, 2021</span>
+      <span>July 11, 2021</span>
     </a>
   </div>
 
@@ -537,9 +548,10 @@ imported the components that you want to use.</p>
   <ul>
     <li><a href="#installation">Installation</a>
       <ul>
+        <li><a href="#fbp-within-html">FBP within HTML</a></li>
+        <li><a href="#install-the-npm-module">Install the npm module</a></li>
         <li><a href="#fbp-with-lit-element">FBP with lit-element</a></li>
         <li><a href="#fbp-with-native-web-components">FBP with native web-components</a></li>
-        <li><a href="#fbp-within-html">FBP within HTML</a></li>
         <li><a href="#fbp-with-polymer">FBP with polymer</a></li>
       </ul>
     </li>

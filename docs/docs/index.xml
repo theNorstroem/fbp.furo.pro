@@ -13,10 +13,9 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fbp.furo.pro/docs/installation/</guid>
-      <description>Installation #  First of all you need the npm module @furo/fbp.
-1  npm i -S @furo/fbp   FBP with lit-element #  To use FBP with lit, just extend your class.
-1 2 3 4  class MyComponent extends FBP(LitElement) {  } window.customElements.define(&amp;#39;my-component&amp;#39;, MyComponent);   FBP with native web-components #  To use furo-fbp with native components, call this._appendFBP(this.shadowRoot); to enable fbp.
-1 2 3 4 5 6 7 8 9 10 11 12 13 14 15  class MyComponent extends FBP(HTMLElement) { constructor() { super(); // Create a shadow root to the element.</description>
+      <description>Installation #  You can use furo FBP directly in your HTML documents or within your own web-components.
+FBP within HTML #  You can use furo FBP inside your HTML by using furo-fbp. Make sure that you have imported the components that you want to use.
+furo-fbp is a web-component which will generate and register the defined component. These components can be directly used in your HTML documents.  You can import furo-fbp from the CDN or npm.</description>
     </item>
     
     <item>
@@ -58,9 +57,9 @@ Send the complete event instead of event.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fbp.furo.pro/docs/fbp-wires-more/</guid>
-      <description>Working with sub optimal components #  Some components that you may want or have to use are not dispatching events. Therefore, furo FBP has some features to work with them too.
-Wireing responses from method calls #  When the method that you have wired only returns data that you want to use, you can wire the response with @-ƒ-methodname.
- calculate sqrt      The response of the calculate(n) method is avaliable on the wire --calculatedSqrRoot.</description>
+      <description>Working with suboptimal components #  Some components that you may want or have to use are not dispatching events or receiving data by methods. Therefore, furo FBP has some features to work with them too.
+Setting a member value #  To set a value of a component you use can be done with the ƒ-.property.
+ A click counter   Note, a property is not an attribute.</description>
     </item>
     
     <item>

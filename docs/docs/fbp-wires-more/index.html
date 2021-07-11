@@ -6,21 +6,21 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Working with sub optimal components #  Some components that you may want or have to use are not dispatching events. Therefore, furo FBP has some features to work with them too.
-Wireing responses from method calls #  When the method that you have wired only returns data that you want to use, you can wire the response with @-ƒ-methodname.
- calculate sqrt      The response of the calculate(n) method is avaliable on the wire --calculatedSqrRoot.">
+<meta name="description" content="Working with suboptimal components #  Some components that you may want or have to use are not dispatching events or receiving data by methods. Therefore, furo FBP has some features to work with them too.
+Setting a member value #  To set a value of a component you use can be done with the ƒ-.property.
+ A click counter   Note, a property is not an attribute.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Compatibility" />
-<meta property="og:description" content="Working with sub optimal components #  Some components that you may want or have to use are not dispatching events. Therefore, furo FBP has some features to work with them too.
-Wireing responses from method calls #  When the method that you have wired only returns data that you want to use, you can wire the response with @-ƒ-methodname.
- calculate sqrt      The response of the calculate(n) method is avaliable on the wire --calculatedSqrRoot." />
+<meta property="og:description" content="Working with suboptimal components #  Some components that you may want or have to use are not dispatching events or receiving data by methods. Therefore, furo FBP has some features to work with them too.
+Setting a member value #  To set a value of a component you use can be done with the ƒ-.property.
+ A click counter   Note, a property is not an attribute." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://fbp.furo.pro/docs/fbp-wires-more/" />
-<meta property="article:modified_time" content="2021-07-10T17:51:46+02:00" />
+<meta property="article:modified_time" content="2021-07-11T10:49:43+02:00" />
 <title>Compatibility | フロー FBP</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.966d8ceb5ee6376c5ee67e63a985eab55f0bf8c16f7bc27fbd4069e2254956a9.css" integrity="sha256-lm2M617mN2xe5n5jqYXqtV8L&#43;MFve8J/vUBp4iVJVqk=">
-<script defer src="/en.search.min.47bccdd940edce651a92deeda2105bb8fe54dc39721ea823f6cdabe60df45e89.js" integrity="sha256-R7zN2UDtzmUakt7tohBbuP5U3DlyHqgj9s2r5g30Xok="></script>
+<script defer src="/en.search.min.20172319d2a3a46e53fee30dd3f4a62c6069ff31470bd1e08905e8b326884188.js" integrity="sha256-IBcjGdKjpG5T/uMN0/SmLGBp/zFHC9HgiQXosyaIQYg="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -260,8 +260,9 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#working-with-sub-optimal-components">Working with sub optimal components</a>
+    <li><a href="#working-with-suboptimal-components">Working with suboptimal components</a>
       <ul>
+        <li><a href="#setting-a-member-value">Setting a member value</a></li>
         <li><a href="#wireing-responses-from-method-calls">Wireing responses from method calls</a></li>
         <li><a href="#spread-arguments">Spread arguments</a></li>
       </ul>
@@ -277,12 +278,30 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="working-with-sub-optimal-components">
-  Working with sub optimal components
-  <a class="anchor" href="#working-with-sub-optimal-components">#</a>
+  <article class="markdown"><h1 id="working-with-suboptimal-components">
+  Working with suboptimal components
+  <a class="anchor" href="#working-with-suboptimal-components">#</a>
 </h1>
-<p>Some components that you may want or have to use are not dispatching events.
+<p>Some components that you may want or have to use are not dispatching events or receiving data by methods.
 Therefore, furo FBP has some features to work with them too.</p>
+<h2 id="setting-a-member-value">
+  Setting a member value
+  <a class="anchor" href="#setting-a-member-value">#</a>
+</h2>
+<p>To set a value of a component you use can be done with the <strong>ƒ-.property</strong>.</p>
+<furo-demo-snippet  flow style="height:150px">
+<template>
+  <button @-click="--bntClicked">A</button>
+  <span ƒ-.inner-text="--bntClicked">click counter</span>
+</template>
+</furo-demo-snippet>
+<blockquote class="book-hint info">
+  <p><strong>Note, a property is not an attribute.</strong></p>
+<p>You have to know what you do. This is a direct manipulation of a component and maybe there is some reason
+why it does not expose the property.</p>
+
+</blockquote>
+
 <h2 id="wireing-responses-from-method-calls">
   Wireing responses from method calls
   <a class="anchor" href="#wireing-responses-from-method-calls">#</a>
@@ -315,9 +334,9 @@ furo FBP will handle this for you correctly.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/7b4df928870da7c4fbf1b95352fac8859d48c6f2" title='Last modified by veith | July 10, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/b0bd481df42962f13332f3d70701e6bfa3fdfd20" title='Last modified by veith | July 11, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>July 10, 2021</span>
+      <span>July 11, 2021</span>
     </a>
   </div>
 
@@ -345,8 +364,9 @@ furo FBP will handle this for you correctly.</p>
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#working-with-sub-optimal-components">Working with sub optimal components</a>
+    <li><a href="#working-with-suboptimal-components">Working with suboptimal components</a>
       <ul>
+        <li><a href="#setting-a-member-value">Setting a member value</a></li>
         <li><a href="#wireing-responses-from-method-calls">Wireing responses from method calls</a></li>
         <li><a href="#spread-arguments">Spread arguments</a></li>
       </ul>
