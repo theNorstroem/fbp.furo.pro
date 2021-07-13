@@ -7,18 +7,18 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="FBP Lifecycle #  _FBPReady() #  _FBPReady() is called, when the wires are registered and the components are able to receive wire data. This is also the earliest point to enable the tracing.
-1 2 3 4 5 6 7 8 9  class MyComponent extends FBP(LitElement) { // trace all wires  _FBPReady(){ super._FBPReady(); this._FBPTraceWires(); } } window.customElements.define(&#39;my-component&#39;, MyComponent);   The &ndash;FBPready magic wire #  The wire &ndash;FBPready is also triggered when your component is ready.">
+1 2 3 4 5 6 7 8 9  class MyComponent extends FBP(LitElement) { // trace all wires  _FBPReady(){ this._FBPTraceWires(); super._FBPReady(); } } window.customElements.define(&#39;my-component&#39;, MyComponent);   The &ndash;FBPready magic wire #  The wire --FBPready is also triggered when your component is ready.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Lifecycle" />
 <meta property="og:description" content="FBP Lifecycle #  _FBPReady() #  _FBPReady() is called, when the wires are registered and the components are able to receive wire data. This is also the earliest point to enable the tracing.
-1 2 3 4 5 6 7 8 9  class MyComponent extends FBP(LitElement) { // trace all wires  _FBPReady(){ super._FBPReady(); this._FBPTraceWires(); } } window.customElements.define(&#39;my-component&#39;, MyComponent);   The &ndash;FBPready magic wire #  The wire &ndash;FBPready is also triggered when your component is ready." />
+1 2 3 4 5 6 7 8 9  class MyComponent extends FBP(LitElement) { // trace all wires  _FBPReady(){ this._FBPTraceWires(); super._FBPReady(); } } window.customElements.define(&#39;my-component&#39;, MyComponent);   The &ndash;FBPready magic wire #  The wire --FBPready is also triggered when your component is ready." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://fbp.furo.pro/docs/fbp-lifecycle/" />
-<meta property="article:modified_time" content="2021-07-11T11:28:12+02:00" />
+<meta property="article:modified_time" content="2021-07-13T10:58:48+02:00" />
 <title>Lifecycle | フロー FBP</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
-<link rel="stylesheet" href="/book.min.966d8ceb5ee6376c5ee67e63a985eab55f0bf8c16f7bc27fbd4069e2254956a9.css" integrity="sha256-lm2M617mN2xe5n5jqYXqtV8L&#43;MFve8J/vUBp4iVJVqk=">
-<script defer src="/en.search.min.1d9f2b386fb8c1917c0f14ad7c64bfb134be73d3d50bd5fec05c09743d2bd5ff.js" integrity="sha256-HZ8rOG&#43;4wZF8DxStfGS/sTS&#43;c9PVC9X&#43;wFwJdD0r1f8="></script>
+<link rel="stylesheet" href="/book.min.d917efb76f69f2afa7b6886371b327a3f18051eaa11d48b3ffe6a21842c74412.css" integrity="sha256-2Rfvt29p8q&#43;ntohjcbMno/GAUeqhHUiz/&#43;aiGELHRBI=">
+<script defer src="/en.search.min.e08b4571df26883761c19e11e179c3cd145f346c61f4fcf7162df7bc105fc625.js" integrity="sha256-4ItFcd8miDdhwZ4R4XnDzRRfNGxh9Pz3Fi33vBBfxiU="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -301,8 +301,8 @@ This is also the earliest point to enable the tracing.</p>
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000;font-weight:bold">class</span> MyComponent <span style="color:#000;font-weight:bold">extends</span> FBP(LitElement) {  
   <span style="color:#998;font-style:italic">// trace all wires
 </span><span style="color:#998;font-style:italic"></span>  _FBPReady(){
-    <span style="color:#000;font-weight:bold">super</span>._FBPReady();
     <span style="color:#000;font-weight:bold">this</span>._FBPTraceWires();
+    <span style="color:#000;font-weight:bold">super</span>._FBPReady();
   }
 }
 <span style="color:#0086b3">window</span>.customElements.define(<span style="color:#d14">&#39;my-component&#39;</span>, MyComponent);
@@ -313,7 +313,7 @@ This is also the earliest point to enable the tracing.</p>
   The <strong>&ndash;FBPready</strong> <em>magic</em> wire
   <a class="anchor" href="#the---fbpready-magic-wire">#</a>
 </h2>
-<p>The wire &ndash;FBPready is also triggered when your component is ready.</p>
+<p>The wire <code>--FBPready</code> is also triggered when your component is ready.</p>
 </article>
  
       
@@ -324,9 +324,9 @@ This is also the earliest point to enable the tracing.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/cb5cc85fc5065292ba1182fbb0cec85a90105b8b" title='Last modified by veith | July 11, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/c86b5d89b8f55640385bde6f54a44c29fdfe3a1b" title='Last modified by veith | July 13, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>July 11, 2021</span>
+      <span>July 13, 2021</span>
     </a>
   </div>
 

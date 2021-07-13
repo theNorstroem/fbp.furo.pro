@@ -115,7 +115,7 @@ For the events they use the dashed-case notation, because you can not write @-ca
       
       <guid>http://fbp.furo.pro/docs/fbp-lifecycle/</guid>
       <description>FBP Lifecycle #  _FBPReady() #  _FBPReady() is called, when the wires are registered and the components are able to receive wire data. This is also the earliest point to enable the tracing.
-1 2 3 4 5 6 7 8 9  class MyComponent extends FBP(LitElement) { // trace all wires  _FBPReady(){ super._FBPReady(); this._FBPTraceWires(); } } window.customElements.define(&amp;#39;my-component&amp;#39;, MyComponent);   The &amp;ndash;FBPready magic wire #  The wire &amp;ndash;FBPready is also triggered when your component is ready.</description>
+1 2 3 4 5 6 7 8 9  class MyComponent extends FBP(LitElement) { // trace all wires  _FBPReady(){ this._FBPTraceWires(); super._FBPReady(); } } window.customElements.define(&amp;#39;my-component&amp;#39;, MyComponent);   The &amp;ndash;FBPready magic wire #  The wire --FBPready is also triggered when your component is ready.</description>
     </item>
     
     <item>
