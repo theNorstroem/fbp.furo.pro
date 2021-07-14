@@ -2,25 +2,30 @@
 <html lang="en" dir=>
 
 <head>
-  <script type="module" src="/components.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@1.4.3/dist/input.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@1.4.3/dist/doc-helper.js"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Installation #  You can use furo FBP directly in your HTML documents or within your own web-components.
-FBP within HTML #  You can use furo FBP inside your HTML by using furo-fbp. Make sure that you have imported the web-components that you want to use correctly.
-furo-fbp is a web-component which will generate and register the defined component. These components can be directly used in your HTML documents.  You can import furo-fbp from the CDN or npm.">
+FBP and eclipsefuro-web in HTML without a installation #  You can use furo-fbp and the furo-web-components without a direct installation by using the precompiled variant of the furo web components.
+This is the simplest way to get up and running.
+ Read more about that here.
+Install the npm module #  To work with lit or native web components you need the npm module @furo/fbp.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Installlation" />
 <meta property="og:description" content="Installation #  You can use furo FBP directly in your HTML documents or within your own web-components.
-FBP within HTML #  You can use furo FBP inside your HTML by using furo-fbp. Make sure that you have imported the web-components that you want to use correctly.
-furo-fbp is a web-component which will generate and register the defined component. These components can be directly used in your HTML documents.  You can import furo-fbp from the CDN or npm." />
+FBP and eclipsefuro-web in HTML without a installation #  You can use furo-fbp and the furo-web-components without a direct installation by using the precompiled variant of the furo web components.
+This is the simplest way to get up and running.
+ Read more about that here.
+Install the npm module #  To work with lit or native web components you need the npm module @furo/fbp." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://fbp.furo.pro/docs/installation/" />
-<meta property="article:modified_time" content="2021-07-13T10:58:48+02:00" />
+<meta property="article:modified_time" content="2021-07-14T23:24:20+02:00" />
 <title>Installlation | フロー FBP</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.d917efb76f69f2afa7b6886371b327a3f18051eaa11d48b3ffe6a21842c74412.css" integrity="sha256-2Rfvt29p8q&#43;ntohjcbMno/GAUeqhHUiz/&#43;aiGELHRBI=">
-<script defer src="/en.search.min.e08b4571df26883761c19e11e179c3cd145f346c61f4fcf7162df7bc105fc625.js" integrity="sha256-4ItFcd8miDdhwZ4R4XnDzRRfNGxh9Pz3Fi33vBBfxiU="></script>
+<script defer src="/en.search.min.f9a00a15566f1dbcdfec05dbcaf1fd4effed1eb728f5020cccb3086356f5b2fd.js" integrity="sha256-&#43;aAKFVZvHbzf7AXbyvH9Tv/tHrco9QIMzLMIY1b1sv0="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -262,7 +267,7 @@ https://github.com/alex-shpak/hugo-book
   <ul>
     <li><a href="#installation">Installation</a>
       <ul>
-        <li><a href="#fbp-within-html">FBP within HTML</a></li>
+        <li><a href="#fbp-and-eclipsefuro-web-in-html-without-a-installation">FBP and eclipsefuro-web in HTML without a <em>installation</em></a></li>
         <li><a href="#install-the-npm-module">Install the npm module</a></li>
         <li><a href="#fbp-with-lit-element">FBP with lit-element</a></li>
         <li><a href="#fbp-with-native-web-components">FBP with native web-components</a></li>
@@ -285,144 +290,15 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#installation">#</a>
 </h1>
 <p>You can use furo FBP directly in your HTML documents or within your own web-components.</p>
-<h2 id="fbp-within-html">
-  FBP within HTML
-  <a class="anchor" href="#fbp-within-html">#</a>
+<h2 id="fbp-and-eclipsefuro-web-in-html-without-a-installation">
+  FBP and eclipsefuro-web in HTML without a <em>installation</em>
+  <a class="anchor" href="#fbp-and-eclipsefuro-web-in-html-without-a-installation">#</a>
 </h2>
-<p>You can use furo FBP inside your HTML by using <code>furo-fbp</code>. Make sure that you have
-imported the web-components that you want to use correctly.</p>
-<blockquote class="book-hint ">
-  <code>furo-fbp</code> is a web-component which will generate and register the defined component. These components can be directly used in
-your HTML documents.
-</blockquote>
-
-<p>You can import <code>furo-fbp</code> from the CDN or npm. Note the <strong>type=&ldquo;module&rdquo;</strong></p>
-<p><strong>With CDN</strong></p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://cdn.jsdelivr.net/npm/@furo/fbp@5.8.1/assets/furo-fbp.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt; 
-</code></pre></td></tr></table>
-</div>
-</div><p><strong>With npm</strong></p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;/node_modules/@furo/fbp/src/furo-fbp.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
-</code></pre></td></tr></table>
-</div>
-</div><p><em>index.html with cdn example</em></p>
-<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
-<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
-</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
-</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
-</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
-</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
-</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
-</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
-</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
-</span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
-</span></span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
-</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">head</span>&gt;
-<span style="display:block;width:100%;background-color:#e5e5e5">    &lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://cdn.jsdelivr.net/npm/@furo/fbp@5.8.1/assets/furo-fbp.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
-</span>&lt;/<span style="color:#000080">head</span>&gt;
-&lt;<span style="color:#000080">body</span>&gt;
-  <span style="color:#998;font-style:italic">&lt;!-- use the component as many times you want, even before the definition--&gt;</span>
-  &lt;<span style="color:#000080">language-sample</span>&gt;&lt;/<span style="color:#000080">language-sample</span>&gt;
-<span style="display:block;width:100%;background-color:#e5e5e5">  &lt;<span style="color:#000080">hey-component</span>&gt;&lt;/<span style="color:#000080">hey-component</span>&gt;
-</span>  
-  
-  <span style="color:#998;font-style:italic">&lt;!-- define the component --&gt;</span>
-  &lt;<span style="color:#000080">furo-fbp</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;language-sample&#34;</span>&gt;
-    &lt;<span style="color:#000080">template</span>&gt;
-      &lt;<span style="color:#000080">button</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--playClicked&#34;</span>&gt;play&lt;/<span style="color:#000080">button</span>&gt;
-      &lt;<span style="color:#000080">button</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--pauseClicked&#34;</span>&gt;pause&lt;/<span style="color:#000080">button</span>&gt;
-      &lt;<span style="color:#000080">audio</span> <span style="color:#008080">ƒ-play</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--playClicked&#34;</span> 
-             <span style="color:#008080">ƒ-pause</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--pauseClicked&#34;</span> 
-             <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://upload.wikimedia.org/wikipedia/commons/9/92/German_alphabet-2.ogg&#34;</span>&gt;&lt;/<span style="color:#000080">audio</span>&gt;
-      
-      <span style="color:#998;font-style:italic">&lt;!-- use other components that you have defined --&gt;</span>
-<span style="display:block;width:100%;background-color:#e5e5e5">      &lt;<span style="color:#000080">hey-component</span>&gt;&lt;/<span style="color:#000080">hey-component</span>&gt;
-</span>    &lt;/<span style="color:#000080">template</span>&gt;
-  &lt;/<span style="color:#000080">furo-fbp</span>&gt;
-  
-  
-  <span style="color:#998;font-style:italic">&lt;!-- define the component --&gt;</span>
-<span style="display:block;width:100%;background-color:#e5e5e5">  &lt;<span style="color:#000080">furo-fbp</span> <span style="color:#008080">name</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;hey-component&#34;</span>&gt;
-</span><span style="display:block;width:100%;background-color:#e5e5e5">    &lt;<span style="color:#000080">template</span>&gt;
-</span><span style="display:block;width:100%;background-color:#e5e5e5">      &lt;<span style="color:#000080">span</span>&gt;Hej&lt;/<span style="color:#000080">span</span>&gt;
-</span><span style="display:block;width:100%;background-color:#e5e5e5">    &lt;/<span style="color:#000080">template</span>&gt;
-</span><span style="display:block;width:100%;background-color:#e5e5e5">  &lt;/<span style="color:#000080">furo-fbp</span>&gt;
-</span>&lt;/<span style="color:#000080">body</span>&gt;
-
-</code></pre></td></tr></table>
-</div>
-</div><ul>
-<li>line 2: load furo-fbp via cdn</li>
-<li>line 7: use the <code>hey-component</code> directly</li>
-<li>line 7: use the <code>hey-component</code> inside of the language-sample component</li>
-<li>line 26-30: define the <code>hey-component</code></li>
-</ul>
- <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/fbp@5.8.1/assets/furo-fbp.js"></script>
-<p><strong>The result of the example from above:</strong></p>
-<div style="border:2px solid rebeccapurple; padding:10px">
-<language-sample></language-sample>
-<hey-component></hey-component>
-</div>
-  <!-- define the component -->
-  <furo-fbp name="language-sample">
-    <template>
-      <button @-click="--playClicked">play</button>
-      <button @-click="--pauseClicked">pause</button>
-      <audio ƒ-play="--playClicked" 
-             ƒ-pause="--pauseClicked" 
-             src="https://upload.wikimedia.org/wikipedia/commons/9/92/German_alphabet-2.ogg"></audio>
-    <hey-component></hey-component>
-    </template>
-  </furo-fbp>
-  <furo-fbp name="hey-component">
-    <template>
-      <span>Hej</span>
-    </template>
-  </furo-fbp>
-<blockquote class="book-hint warning">
-  <p><strong>HINT</strong></p>
-<p>Due to the fact that most of the components are available via <strong>npm</strong> and are not installable via a simple <code>script</code> tag ,
-the usefulness in static HTML limited to the components that you can import.</p>
-<p>By using a development server like <a href="https://modern-web.dev/docs/dev-server/overview/">Web Dev Server</a> and introducing a build step,
-you will be able to use a enormous amount of very good components.</p>
-
-</blockquote>
-
+<p>You can use furo-fbp and the furo-web-components without a direct installation by using the
+precompiled variant of the furo web components.</p>
+<p>This is the simplest way to get up and running.</p>
+<p>
+  <a href="/docs/precompiled/">Read more about that here</a>.</p>
 <h2 id="install-the-npm-module">
   Install the npm module
   <a class="anchor" href="#install-the-npm-module">#</a>
@@ -525,9 +401,9 @@ you will be able to use a enormous amount of very good components.</p>
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/c86b5d89b8f55640385bde6f54a44c29fdfe3a1b" title='Last modified by veith | July 13, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/1dfeda4f12a4ecefe958ce6cfbdeb5b5837a80f4" title='Last modified by veith | July 14, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>July 13, 2021</span>
+      <span>July 14, 2021</span>
     </a>
   </div>
 
@@ -557,7 +433,7 @@ you will be able to use a enormous amount of very good components.</p>
   <ul>
     <li><a href="#installation">Installation</a>
       <ul>
-        <li><a href="#fbp-within-html">FBP within HTML</a></li>
+        <li><a href="#fbp-and-eclipsefuro-web-in-html-without-a-installation">FBP and eclipsefuro-web in HTML without a <em>installation</em></a></li>
         <li><a href="#install-the-npm-module">Install the npm module</a></li>
         <li><a href="#fbp-with-lit-element">FBP with lit-element</a></li>
         <li><a href="#fbp-with-native-web-components">FBP with native web-components</a></li>

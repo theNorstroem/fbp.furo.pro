@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@1.4.3/dist/input.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@1.4.3/dist/doc-helper.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="@furo/precompiled #  The @furo/precompiled package is for those who want to use the furo componetnt directly in HTML. There is no build step needed. It is a convenient way to use the components to prototype some ideas or just play around with FBP without a complex installation procedure. When you know that your ideas work, transfer them 1:1 to a web component, so others can install, use and extend them.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Precompiled" />
+<meta property="og:description" content="@furo/precompiled #  The @furo/precompiled package is for those who want to use the furo componetnt directly in HTML. There is no build step needed. It is a convenient way to use the components to prototype some ideas or just play around with FBP without a complex installation procedure. When you know that your ideas work, transfer them 1:1 to a web component, so others can install, use and extend them." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fbp.furo.pro/docs/precompiled/" />
+<meta property="article:modified_time" content="2021-07-14T23:24:20+02:00" />
+<title>Precompiled | フロー FBP</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.d917efb76f69f2afa7b6886371b327a3f18051eaa11d48b3ffe6a21842c74412.css" integrity="sha256-2Rfvt29p8q&#43;ntohjcbMno/GAUeqhHUiz/&#43;aiGELHRBI=">
+<script defer src="/en.search.min.f9a00a15566f1dbcdfec05dbcaf1fd4effed1eb728f5020cccb3086356f5b2fd.js" integrity="sha256-&#43;aAKFVZvHbzf7AXbyvH9Tv/tHrco9QIMzLMIY1b1sv0="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+</head>
+
+<body dir=>
+<fixed-tooltip-display></fixed-tooltip-display>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <div ></div>
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>フロー FBP</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/installation/" class="">Installlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-basics/" class="">Getting Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-data/" class="">Wire Data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-more/" class="">Compatibility</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-events/" class="">Custom Events</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-scripting/" class="">Script interaction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-bestpractice/" class="">Best Practice</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-debugging/" class="">Debugging</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/cred-morrison/" class="">Credits</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://furo.pro" target="_blank" rel="noopener">
+        フロー Furo
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Precompiled</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#furoprecompiled">@furo/precompiled</a>
+      <ul>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#installation">Installation</a>
+          <ul>
+            <li><a href="#cdn">CDN</a></li>
+            <li><a href="#npm">NPM</a></li>
+            <li><a href="#build-by-your-self-and-using-dist">Build by your self and using <code>/dist</code></a></li>
+          </ul>
+        </li>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#the-init-file-optional">The init file [optional]</a></li>
+        <li><a href="#compatibility-table">Compatibility Table</a></li>
+        <li><a href="#package-structure">Package Structure</a>
+          <ul>
+            <li><a href="#addtional-files">Addtional files:</a></li>
+            <li><a href="#collectionjs">collection.js</a></li>
+            <li><a href="#appjs">app.js</a></li>
+            <li><a href="#configjs">config.js</a></li>
+            <li><a href="#datajs">data.js</a></li>
+            <li><a href="#data-inputjs">data-input.js</a></li>
+            <li><a href="#data-uijs">data-ui.js</a></li>
+            <li><a href="#data-utiljs">data-util.js</a></li>
+            <li><a href="#doc-helperjs">doc-helper.js</a></li>
+            <li><a href="#experimentsjs">experiments.js</a></li>
+            <li><a href="#formjs">form.js</a></li>
+            <li><a href="#frameworkjs">framework.js</a></li>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#furo-fbpjs">furo-fbp.js</a></li>
+            <li><a href="#iconjs">icon.js</a></li>
+            <li><a href="#inputjs">input.js</a></li>
+            <li><a href="#layoutjs">layout.js</a></li>
+            <li><a href="#navigationjs">navigation.js</a></li>
+            <li><a href="#notificationjs">notification.js</a></li>
+            <li><a href="#routejs">route.js</a></li>
+            <li><a href="#timingjs">timing.js</a></li>
+            <li><a href="#utiljs">util.js</a></li>
+            <li><a href="#ui5js">ui5.js</a></li>
+          </ul>
+        </li>
+        <li><a href="#what-is-inside">What is inside</a>
+          <ul>
+            <li></li>
+            <li><a href="#compositions">Compositions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="furoprecompiled">
+  @furo/precompiled
+  <a class="anchor" href="#furoprecompiled">#</a>
+</h1>
+<p>The 
+  <a href="https://github.com/theNorstroem/precompiled-furo-web-components">@furo/precompiled</a> package is for those who want to use the furo componetnt directly in HTML.
+There is no build step needed. It is a convenient way to use the components to prototype some ideas or just play around
+with FBP without a complex installation procedure. When you know that your ideas work, transfer them 1:1 to a web component,
+so others can install, use and extend them.</p>
+<p>Look at the sample folder in the repo to see an example of what is possible.</p>
+<blockquote>
+<p><strong>Warning</strong> This package was created teach furo FBP and for creating our demo systems , so we can use and show our components in a HUGO generated page.
+Some of the files are very big at the moment, because they are not optimized for file size yet.</p>
+</blockquote>
+<h2 id="demo">
+  Demo
+  <a class="anchor" href="#demo">#</a>
+</h2>
+<p>This documentation uses @furo/precompiled at any place wher you can see a demo/source/flow panel.
+All that was needed was to load the precompiled scripts via CDN.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://cdn.jsdelivr.net/npm/@furo/precompiled@1.4.3/dist/input.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
+&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://cdn.jsdelivr.net/npm/@furo/precompiled@1.4.3/dist/doc-helper.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt; 
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="installation">
+  Installation
+  <a class="anchor" href="#installation">#</a>
+</h2>
+<p>The version of this package represents the versioning of @furo/collection.</p>
+<blockquote>
+<p><strong>Note</strong>
+Keep in mind that you can not mix CDN , NPM and self builded variants of the installation.</p>
+</blockquote>
+<h3 id="cdn">
+  CDN
+  <a class="anchor" href="#cdn">#</a>
+</h3>
+<p>You can use the components by refering to them via the CDN. This is good when your project is public and your server is slower then the CDN.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;/config/init.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
+&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://cdn.jsdelivr.net/npm/@furo/precompiled@1.4.3/dist/furo-fbp.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
+&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://cdn.jsdelivr.net/npm/@furo/precompiled@1.4.3/dist/framework.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
+
+&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://cdn.jsdelivr.net/npm/@furo/precompiled@1.4.3/dist/layout.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
+&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;https://cdn.jsdelivr.net/npm/@furo/precompiled@1.4.3/dist/app.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="npm">
+  NPM
+  <a class="anchor" href="#npm">#</a>
+</h3>
+<p>When your clients are in a closed environment and can not reach the real internet, prefer this variant. All files are delivered
+from your servers.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">npm i -S @furo/precompiled
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="build-by-your-self-and-using-dist">
+  Build by your self and using <code>/dist</code>
+  <a class="anchor" href="#build-by-your-self-and-using-dist">#</a>
+</h3>
+<p>When you need some other components, which are not installable as precompiled versions. Or you want to add your own components or compositions,
+you can clone this repository and extend it by your own component, or the installed components.</p>
+<p>Make sure that they are referenced by <code>collection.js</code> via a file that represents your <em>package</em>.
+You can also add it as an entry point in the <code>rollup.config.js</code>.</p>
+<p>You can copy the /dist folder to your project or make it available for your projects on some other way. Do this by pushing them to npm or by serving them via your CDN.</p>
+<blockquote>
+<p>This kind of installation is only one step away from a set up with open wc and working with 
+  <a href="https://modern-web.dev/docs/dev-server/overview/">web dev server</a>, which
+do not need a build step during the development phase. Consider to switch to this variant if your project gains complexity.</p>
+</blockquote>
+<h2 id="usage">
+  Usage
+  <a class="anchor" href="#usage">#</a>
+</h2>
+<p>To use the components you have to load the package where they reside in. You will notice, that some components have their
+own js file. This is because they are used from different packages and is needed to keep a clean dependeny tree. It is ok
+to load this components directly, when you do not need something other, or load the package where they reside. It has no
+side effect if load them twice. Your browser knows what it have to do.</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;/config/init.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
+&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;/node_modules/@furo/precompiled/dist/furo-fbp.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
+&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;/node_modules/@furo/precompiled/dist/framework.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
+
+&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;/node_modules/@furo/precompiled/dist/layout.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
+&lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;/node_modules/@furo/precompiled/dist/app.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="the-init-file-optional">
+  The init file [optional]
+  <a class="anchor" href="#the-init-file-optional">#</a>
+</h2>
+<p>When you want to use the <strong>data</strong> components you have to install the specs that you have gerated with furo. This is a good
+place to do it. Maybe you want to set the locales or install your translations too.</p>
+<p>To load the <code>init.js</code> from your page, do the following in your index.html.</p>
+<blockquote>
+<p>Load the init.js before you load the other packages.
+Because some of them are dependant to the settings you do in the init and some will switch to a default setup.</p>
+</blockquote>
+<p>[<em>index.html</em>]</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html"> <span style="color:#998;font-style:italic">&lt;!-- init is needed because we use data components --&gt;</span>
+  &lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;/config/init.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
+  &lt;<span style="color:#000080">script</span> <span style="color:#008080">type</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;module&#34;</span> <span style="color:#008080">src</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;dist/furo-fbp.js&#34;</span>&gt;&lt;/<span style="color:#000080">script</span>&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>[<em>/config/init.js</em>]</p>
+<div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
+<table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35
+</span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36
+</span></code></pre></td>
+<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-javascript" data-lang="javascript"><span style="color:#000;font-weight:bold">import</span> { Init, i18n,  Env } from <span style="color:#d14">&#39;/dist/framework.js&#39;</span>
+<span style="color:#000;font-weight:bold">import</span> {Types,Services} from <span style="color:#d14">&#34;./data_environment.js&#34;</span>;
+
+<span style="color:#998;font-style:italic">/**
+</span><span style="color:#998;font-style:italic"> * Register resource bundle i18n
+</span><span style="color:#998;font-style:italic"> */</span>
+<span style="color:#000;font-weight:bold">import</span> { Translations } from <span style="color:#d14">&#39;./translations.js&#39;</span>;
+i18n.registerResBundle(Translations);
+
+<span style="color:#998;font-style:italic">/**
+</span><span style="color:#998;font-style:italic"> * Register the types and services which was generated by furo
+</span><span style="color:#998;font-style:italic"> */</span>
+Init.registerApiTypes(Types);
+Init.registerApiServices(Services);
+
+<span style="color:#998;font-style:italic">/**
+</span><span style="color:#998;font-style:italic"> * register the API prefix based on the APPROOT.
+</span><span style="color:#998;font-style:italic"> * This information is used for furo-deep-link and furo-reverse-deep-link to resolve the api address.
+</span><span style="color:#998;font-style:italic"> *
+</span><span style="color:#998;font-style:italic"> * We use /api here, because we do not have a dedicated host like api.xxx.com for the api services
+</span><span style="color:#998;font-style:italic"> * @type {string}
+</span><span style="color:#998;font-style:italic"> */</span>
+Env.api.prefix <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">`/api`</span>;
+Init.applyCustomApiPrefixToServicesAndTypes(Env.api.prefix);
+
+
+<span style="color:#998;font-style:italic">/**
+</span><span style="color:#998;font-style:italic"> * Translate static messages in SPEC
+</span><span style="color:#998;font-style:italic"> */</span>
+<span style="color:#000;font-weight:bold">let</span> locale <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#39;de_ch&#39;</span>;
+<span style="color:#000;font-weight:bold">if</span> (i18n.resbundle[Env.locale.toLowerCase().replace(<span style="color:#d14">&#39;-&#39;</span>, <span style="color:#d14">&#39;_&#39;</span>)]) {
+  locale <span style="color:#000;font-weight:bold">=</span> Env.locale.toLowerCase().replace(<span style="color:#d14">&#39;-&#39;</span>, <span style="color:#d14">&#39;_&#39;</span>);
+}
+Init.translateStaticTypeMessages(locale);
+
+
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="compatibility-table">
+  Compatibility Table
+  <a class="anchor" href="#compatibility-table">#</a>
+</h2>
+<p>
+  <img src="/compat.png" alt="compat" /></p>
+<h2 id="package-structure">
+  Package Structure
+  <a class="anchor" href="#package-structure">#</a>
+</h2>
+<p>The packages structured and named like the modules from 
+  <a href="https://components.furo.pro">components.furo.pro</a>.
+This module contains some additional files like <code>DOMFBP.js</code> which is needed when you want the fbp features on <code>&lt;body&gt;</code>.</p>
+<h3 id="addtional-files">
+  Addtional files:
+  <a class="anchor" href="#addtional-files">#</a>
+</h3>
+<ul>
+<li><strong>fixed-tooltip-display.js</strong> Tooltip display for pages which scrolls the hole page.</li>
+<li><strong>DOMFBP.js</strong> Append FPB to any dom node, even <em>body</em></li>
+<li><strong>light-bulb.js</strong>  A nice example component used in the docs</li>
+<li><strong>ui5DisplayRegistry.js</strong> A UI5 display registry for the dynamic type renderers.</li>
+<li><strong>ui5Icons.js</strong> The complete iconset, because we can not expose them individually (sorry)</li>
+</ul>
+<h3 id="collectionjs">
+  collection.js
+  <a class="anchor" href="#collectionjs">#</a>
+</h3>
+<p>This file contains the full set of the precompiled package and is huge.</p>
+<h3 id="appjs">
+  app.js
+  <a class="anchor" href="#appjs">#</a>
+</h3>
+<p>A collection of elements, that can be used to structure your app’s layout.</p>
+<h4 id="elements">
+  Elements
+  <a class="anchor" href="#elements">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroAppBarTop">furo-app-bar-top</a> Toolbar to place on top</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroAppDrawer">furo-app-drawer</a> Application drawer</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroCard">furo-card</a> Material design card element</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroLoadingIndicator">furo-loading-indicator-bar</a> An ugly progress bar</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroTooltip">furo-tooltip</a> displays a tooltip</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroTooltipDisplay">furo-tooltip-display</a> helper component for tooltip</li>
+</ul>
+<h3 id="configjs">
+  config.js
+  <a class="anchor" href="#configjs">#</a>
+</h3>
+<p>Furo config components</p>
+<h4 id="elements-1">
+  Elements
+  <a class="anchor" href="#elements-1">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroConfig">furo-config</a> access config data</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroConfigLoader">furo-config-loader</a> load config files</li>
+</ul>
+<h3 id="datajs">
+  data.js
+  <a class="anchor" href="#datajs">#</a>
+</h3>
+<p>This package contains the furo data components.</p>
+<h4 id="elements-2">
+  Elements
+  <a class="anchor" href="#elements-2">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroApiFetch">furo-api-fetch</a> fetch data from network</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroCollectionAgent">furo-collection-agent</a> interface component to handle collection requests</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroCustomMethod">furo-custom-method</a> interface component to handle custom methods</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataObject">furo-data-object</a> Typed data object, the heart of all furo-data related components</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDeepLink">furo-deep-link</a> Resolve deep links HATEOAS based on  query params</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroEntityAgent">furo-entity-agent</a> interface component to handle entity requests</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroRelExists">furo-rel-exists</a> checks for a specific rel in links</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroReverseDeepLink">furo-reverse-deep-link</a> create query param object from HATEOAS</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroSortbyContainer">furo-sortby-container</a> create query param object for sort</li>
+<li>&hellip;</li>
+</ul>
+<h3 id="data-inputjs">
+  data-input.js
+  <a class="anchor" href="#data-inputjs">#</a>
+</h3>
+<p>This package contains the furo data input components.
+The @furo/data-input components are mostly wrappers around the @furo/input components with
+an API to simplify the work with @furo/data (something like two way data binding) to create Forms and interact with a REST API.</p>
+<h4 id="elements-3">
+  Elements
+  <a class="anchor" href="#elements-3">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataBoolIcon">furo-data-bool-icon</a>  Displays a icon/symbol for a boolean value</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataCheckboxInput">furo-data-checkbox-input</a> binds to a furo data checkbox input element</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataCollectionDropdown">furo-data-collection-dropdown</a> bindable dropdown</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataColorInput">furo-data-color-input</a> Binds a entityObject field to a furo-color-input field</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataDateInput">furo-data-date-input</a> Bind a entityObject.field to a date input</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataDisplay">furo-data-display</a> Displays a data field</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataFileInput">furo-data-file-input</a> Binds a entityObject field to a furo-file-input field</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataMoneyInput">furo-data-money-input</a>  Binds a entityObject field google.type.Money to a furo-number-input and currency dropdown fields</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataNumberInput">furo-data-number-input</a> Bind a entityObject.field to a number input</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataPasswordInput">furo-data-password-input</a> Bind a entityObject.field to a password input</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataProperty">furo-data-property</a> display and bind types of type any</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataPropertyDisplay">furo-data-property-display</a> helper for furo-data-property</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataRadioButtonInput">furo-data-radio-buton-input</a> furo data radio-button input element</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataRangeInput">furo-data-range-input</a> Bind a entityObject.field to a range input</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataReferenceSearch">furo-data-reference-search</a> autocomplete searcher for referenced types</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataRepeat">furo-data-repeat</a> automatic display of repeated fields</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataSearchInput">furo-data-search-input</a> Bind a entityObject.field to a search input</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataSignPad">furo-data-sign-pad</a> Bind a entityObject.field to a sign-pad input</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataTextInput">furo-data-text-input</a> Bind a entityObject.field to a text input</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataTextareaInput">furo-data-textarea-input</a>  Bind a entityObject.field to a textarea input</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataTimeInput">furo-data-time-input</a>  Bind a entityObject.field to a time input</li>
+<li>&hellip;</li>
+</ul>
+<h3 id="data-uijs">
+  data-ui.js
+  <a class="anchor" href="#data-uijs">#</a>
+</h3>
+<p>UI elements for furo data</p>
+<h4 id="elements-4">
+  Elements
+  <a class="anchor" href="#elements-4">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataContextMenu">furo-data-context-menu</a> a context menu</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataTable">furo-data-table</a> type based data table</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataTableToggle">furo-data-table-toggle</a> helper for furo-data-table</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDataHideContent">furo-data-hide-content</a> hide content container with boolean fields</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroTypeRenderer">furo-type-renderer</a> display component to render fields according of the type</li>
+<li>&hellip;</li>
+</ul>
+<h3 id="data-utiljs">
+  data-util.js
+  <a class="anchor" href="#data-utiljs">#</a>
+</h3>
+<p>Utility components for data</p>
+<h4 id="elements-5">
+  Elements
+  <a class="anchor" href="#elements-5">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroAppendObject">furo-append-object</a>  append data to object literals</li>
+</ul>
+<h3 id="doc-helperjs">
+  doc-helper.js
+  <a class="anchor" href="#doc-helperjs">#</a>
+</h3>
+<p>Utils for the documentation system.</p>
+<h3 id="experimentsjs">
+  experiments.js
+  <a class="anchor" href="#experimentsjs">#</a>
+</h3>
+<p>Experimental components. APIs and location of the elements itself can change.</p>
+<p>This components does not have any <strong>tests</strong>.</p>
+<ul>
+<li>furo-capture-audio</li>
+<li>furo-capture-video</li>
+<li>furo-catalog</li>
+<li>furo-qr-scanner</li>
+<li>furo-speech-recognition</li>
+</ul>
+<h3 id="formjs">
+  form.js
+  <a class="anchor" href="#formjs">#</a>
+</h3>
+<p>This package contains the furo form components, which are helpers to make the
+creation of forms simpler.</p>
+<h4 id="elements-6">
+  Elements
+  <a class="anchor" href="#elements-6">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroButtonBar">furo-button-bar</a> automatic button bar</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroCollapsibleBox">furo-collapsible-box</a> collapsible box with head</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroForm">furo-form</a> form container</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroFormLayouter">furo-form-layouter</a> form auto layouter</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroInputRow">furo-input-row</a> <em>DEPRECATED</em> label slot layout</li>
+<li>&hellip;</li>
+</ul>
+<h3 id="frameworkjs">
+  framework.js
+  <a class="anchor" href="#frameworkjs">#</a>
+</h3>
+<p>This package contains the furo &ldquo;framework&rdquo; classes.</p>
+<h3 id="classes">
+  Classes
+  <a class="anchor" href="#classes">#</a>
+</h3>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=Env">Env</a> stores your environment data</li>
+<li><strong>furo.js</strong> Export bundle for all framework classes</li>
+<li>
+  <a href="https://components.furo.pro/?t=i18n">i18n</a> Base i18n class</li>
+<li>
+  <a href="https://components.furo.pro/?t=Iconset">iconset</a> Icon set loader</li>
+<li>
+  <a href="https://components.furo.pro/?t=Sys">Sys</a> Set your locale</li>
+<li>
+  <a href="https://components.furo.pro/?t=Init">Init</a> App init stuff</li>
+<li>
+  <a href="https://components.furo.pro/?t=Theme">Theme</a> Theming stuff</li>
+</ul>
+<h3 id="furo-fbpjs">
+  furo-fbp.js
+  <a class="anchor" href="#furo-fbpjs">#</a>
+</h3>
+<p>The core furo FBP packages and classes. Read more on 
+  <a href="fbp.furo.pro">fbp.furo.pro</a></p>
+<h3 id="iconjs">
+  icon.js
+  <a class="anchor" href="#iconjs">#</a>
+</h3>
+<p>(Material Design)</p>
+<p>This package supplies the icons used in the other components of furo.</p>
+<p>If you want to create a iconset by your own, look at the examples in the repo.</p>
+<h4 id="elements-7">
+  Elements
+  <a class="anchor" href="#elements-7">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroIcon">furo-icon</a> displays an icon</li>
+</ul>
+<h3 id="inputjs">
+  input.js
+  <a class="anchor" href="#inputjs">#</a>
+</h3>
+<p>Input components for furo. With this components you can design your form or any other data input for your app.</p>
+<p>If you look for input components with data binding, look at the @furo/data-input components. This are the components used there.</p>
+<h4 id="elements-8">
+  Elements
+  <a class="anchor" href="#elements-8">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroButton">furo-button</a> a md button</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroCheckbox">furo-checkbox</a> checkbox input box</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroCheckboxInput">furo-checkbox-input</a> checkbox input element with label
+<ul>
+<li>
+  <img src="https://components.furo.pro/assets/furo-input/checkbox-input.png" alt="checkbox input" /></li>
+</ul>
+</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroChip">furo-chip</a> chips</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroColorInput">furo-color-input</a> color input element</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDateInput">furo-date-input</a> date input element</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroFileDialog">furo-file-dialog</a> file input element</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroFileDrop">furo-file-drop</a> dropzone for files</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroIconButton">furo-icon-button</a> icon button element</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroInputChip">furo-input-chip</a> input chips</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroNumberInput">furo-number-input</a> number input element
+<ul>
+<li>
+  <img src="https://components.furo.pro/assets/furo-input/number-input.png" alt="number input" /></li>
+</ul>
+</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroPasswordInput">furo-password-input</a> password input element</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroRadioButton">furo-radio-button</a> radio input circle</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroRadioButtonInput">furo-radio-button-input</a> radio input with label</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroRangeInput">furo-range-input</a> range slider</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroSearchInput">furo-search-input</a> search input element</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroSelectInput">furo-select-input</a> select input (dropdown)</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroSignPad">furo-sign-pad</a> draw or sign</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroTextInput">furo-text-input</a> text input element</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroTextareaInput">furo-textarea-input</a> textarea input element</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroTimeInput">furo-time-input</a> time input element</li>
+<li>&hellip;</li>
+</ul>
+<h3 id="layoutjs">
+  layout.js
+  <a class="anchor" href="#layoutjs">#</a>
+</h3>
+<p>Layout components. Sometimes it is hard to describe the elements with text.
+Just take a look at the demos and you will get the idea.</p>
+<h4 id="elements-9">
+  Elements
+  <a class="anchor" href="#elements-9">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroSnackbar">furo-snackbar</a> a snackbar</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroEmptySpacer">furo-empty-spacer</a> fill the space in a furo-xxxx-flex</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroHorizontalFlex">furo-horizontal-flex</a> horizontal alignment</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroPanel">furo-panel</a> content panel with predefined margins</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroRipple">furo-ripple</a> add a ripple effect</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroSplitView">furo-split-view</a> splitted layout</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroVerticalFlex">furo-vertical-flex</a> vertical alignment of stuff</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroVerticalScroller">furo-vertical-scroller</a> vertical scroll</li>
+<li>&hellip;</li>
+</ul>
+<h3 id="navigationjs">
+  navigation.js
+  <a class="anchor" href="#navigationjs">#</a>
+</h3>
+<p>Furo navigation components</p>
+<p><strong>needs a furo spec to work</strong></p>
+<h4 id="elements-10">
+  Elements
+  <a class="anchor" href="#elements-10">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroPanelCoordinatorTabs">furo-panel-coordinator-tabs</a> tab navigation for panel-coordinator</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroPanelHead">furo-panel-head</a>  dislay a navigationNode as title</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroTree">furo-tree</a>  tree navigation menu</li>
+</ul>
+<h3 id="notificationjs">
+  notification.js
+  <a class="anchor" href="#notificationjs">#</a>
+</h3>
+<p>notification components for furo</p>
+<h4 id="elements-11">
+  Elements
+  <a class="anchor" href="#elements-11">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroSnackbar">furo-snackbar</a> a snackbar</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroSnackbarDisplay">furo-snackbar-display</a> helper component to show a snackbar</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroBanner">furo-banner</a> a banner</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroBannerDisplay">furo-banner-display</a> helper component to show a banner</li>
+<li>&hellip;</li>
+</ul>
+<h3 id="routejs">
+  route.js
+  <a class="anchor" href="#routejs">#</a>
+</h3>
+<p>Furo routing components</p>
+<h4 id="elements-12">
+  Elements
+  <a class="anchor" href="#elements-12">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroAppFlow">furo-app-flow</a>  Application Flow =&gt; routing</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroAppFlowRouter">furo-app-flow-router</a>  Application Flow =&gt; routing</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroLocation">furo-location</a> url watcher</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroPages">furo-pages</a> Simple content switcher</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroPanelCoordinator">furo-panel-coordinator</a> Complex content switcher based on furo-tree</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroQpChanger">furo-qp-changer</a> deep linking helper</li>
+<li>&hellip;</li>
+</ul>
+<h3 id="timingjs">
+  timing.js
+  <a class="anchor" href="#timingjs">#</a>
+</h3>
+<p>Furo timing related components.</p>
+<h4 id="elements-13">
+  Elements
+  <a class="anchor" href="#elements-13">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroDeBounce">furo-de-bounce</a> event de bouncer</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroIntervalPulse">furo-interval-pulse</a> trigger an event in intervals</li>
+<li>&hellip;</li>
+</ul>
+<h3 id="utiljs">
+  util.js
+  <a class="anchor" href="#utiljs">#</a>
+</h3>
+<p>A collection of utility elements.</p>
+<h4 id="elements-14">
+  Elements
+  <a class="anchor" href="#elements-14">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroFetchJson">furo-fetch-json</a> fetch json data</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroGetClipboard">furo-get-clipboard</a> get clipboard content</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroHeadTail">furo-head-tail</a> split an array</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroKeyFilter">furo-key-filter</a> keyboard event filter</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroKeydown">furo-keydown</a> keyboard event listener</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroMarkdown">furo-markdown</a> renders markdown data</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroNavigationPad">furo-navigation-pad</a> keyboard navigation helper</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroPrettyJson">furo-pretty-json</a> pretty prints json data</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroPutClipboard">furo-put-clipboard</a> write content to clipboard</li>
+<li>&hellip;</li>
+</ul>
+<h3 id="ui5js">
+  ui5.js
+  <a class="anchor" href="#ui5js">#</a>
+</h3>
+<p>Enterprise-flavored sugar on top of native APIs!</p>
+<p>Compliant to SAP Fiori design language. Rich feature set. Includes all enterprise standards, such as accessibility, i18n, theming, etc</p>
+<ul>
+<li>
+  <a href="https://sap.github.io/ui5-webcomponents/">https://sap.github.io/ui5-webcomponents/</a></li>
+<li>
+  <a href="https://github.com/SAP/ui5-webcomponents">https://github.com/SAP/ui5-webcomponents</a></li>
+</ul>
+<h2 id="what-is-inside">
+  What is inside
+  <a class="anchor" href="#what-is-inside">#</a>
+</h2>
+<p>For seamless integration into the Furo environment, we have slightly extended some UI5 components.</p>
+<blockquote>
+<p>All not listed components can be obtained directly from SAP</p>
+</blockquote>
+<h4 id="elements-15">
+  Elements
+  <a class="anchor" href="#elements-15">#</a>
+</h4>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataTextInput">furo-ui5-data-text-input</a> a text input component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataTextareaInput">furo-ui5-data-textarea-input</a> a text area input component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataNumberInput">furo-ui5-data-number-input</a> a number input component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataPasswordInput">furo-ui5-data-password-input</a> a password input component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataDatePicker">furo-ui5-data-date-picker</a> a date input component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataCollectionDropdown">furo-ui5-data-collection-dropdown</a> a dropdown component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataCheckboxInput">furo-ui5-data-checkbox-input</a> a checkbox component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataRadioButton">furo-ui5-data-radio-button</a> a radio button component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataMoneyInput">furo-ui5-data-money-input</a> a type money input component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataProperty">furo-ui5-data-property</a> a dynamic property component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataRadioButton">furo-ui5-data-radio-button</a> a radio button component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataReferenceSearch">furo-ui5-data-reference-search</a> a reference search component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataSegmentedButton">furo-ui5-data-segmented-button</a> a segmented button component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataToggleButton">furo-ui5-data-toggle-button</a> a toggle button component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataDisplay">furo-ui5-data-display</a> a display field component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5Button">furo-ui5-button</a> a simple button with convenience functions</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5Busyindicator">furo-ui5-busyindicator</a> component to signal that some operation is going on</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataTable">furo-ui5-data-table</a> component to display data in tabular form</li>
+</ul>
+<h3 id="compositions">
+  Compositions
+  <a class="anchor" href="#compositions">#</a>
+</h3>
+<ul>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUI5Pagination">furo-ui5-pagination</a> a pagination bar</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataTextInputLabeled">furo-ui5-data-text-input-labeled</a> a labeled text input component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataTextareaInputLabeled">furo-ui5-data-textarea-input-labeled</a> a labeled text area input component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataNumberInputLabeled">furo-ui5-data-number-input-labeled</a> a labeled number input component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataPasswordInputLabeled">furo-ui5-data-password-input-labeled</a> a labeled password input component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5FormFieldContainer">furo-ui5-form-field-container</a> a form field container</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5DataRadioButtonGroup">furo-ui5-data-radio-button-group</a> a radio button group component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5RadioButtonGroup">furo-ui5-radio-button-group</a> a radio button group component</li>
+<li>
+  <a href="https://components.furo.pro/?t=FuroUi5NotificationList">furo-ui5-notification-list</a> a notification component</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/1dfeda4f12a4ecefe958ce6cfbdeb5b5837a80f4" title='Last modified by veith | July 14, 2021' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>July 14, 2021</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#furoprecompiled">@furo/precompiled</a>
+      <ul>
+        <li><a href="#demo">Demo</a></li>
+        <li><a href="#installation">Installation</a>
+          <ul>
+            <li><a href="#cdn">CDN</a></li>
+            <li><a href="#npm">NPM</a></li>
+            <li><a href="#build-by-your-self-and-using-dist">Build by your self and using <code>/dist</code></a></li>
+          </ul>
+        </li>
+        <li><a href="#usage">Usage</a></li>
+        <li><a href="#the-init-file-optional">The init file [optional]</a></li>
+        <li><a href="#compatibility-table">Compatibility Table</a></li>
+        <li><a href="#package-structure">Package Structure</a>
+          <ul>
+            <li><a href="#addtional-files">Addtional files:</a></li>
+            <li><a href="#collectionjs">collection.js</a></li>
+            <li><a href="#appjs">app.js</a></li>
+            <li><a href="#configjs">config.js</a></li>
+            <li><a href="#datajs">data.js</a></li>
+            <li><a href="#data-inputjs">data-input.js</a></li>
+            <li><a href="#data-uijs">data-ui.js</a></li>
+            <li><a href="#data-utiljs">data-util.js</a></li>
+            <li><a href="#doc-helperjs">doc-helper.js</a></li>
+            <li><a href="#experimentsjs">experiments.js</a></li>
+            <li><a href="#formjs">form.js</a></li>
+            <li><a href="#frameworkjs">framework.js</a></li>
+            <li><a href="#classes">Classes</a></li>
+            <li><a href="#furo-fbpjs">furo-fbp.js</a></li>
+            <li><a href="#iconjs">icon.js</a></li>
+            <li><a href="#inputjs">input.js</a></li>
+            <li><a href="#layoutjs">layout.js</a></li>
+            <li><a href="#navigationjs">navigation.js</a></li>
+            <li><a href="#notificationjs">notification.js</a></li>
+            <li><a href="#routejs">route.js</a></li>
+            <li><a href="#timingjs">timing.js</a></li>
+            <li><a href="#utiljs">util.js</a></li>
+            <li><a href="#ui5js">ui5.js</a></li>
+          </ul>
+        </li>
+        <li><a href="#what-is-inside">What is inside</a>
+          <ul>
+            <li></li>
+            <li><a href="#compositions">Compositions</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

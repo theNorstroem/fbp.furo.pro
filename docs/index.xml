@@ -13,8 +13,19 @@
       
       <guid>http://fbp.furo.pro/docs/installation/</guid>
       <description>Installation #  You can use furo FBP directly in your HTML documents or within your own web-components.
-FBP within HTML #  You can use furo FBP inside your HTML by using furo-fbp. Make sure that you have imported the web-components that you want to use correctly.
-furo-fbp is a web-component which will generate and register the defined component. These components can be directly used in your HTML documents.  You can import furo-fbp from the CDN or npm.</description>
+FBP and eclipsefuro-web in HTML without a installation #  You can use furo-fbp and the furo-web-components without a direct installation by using the precompiled variant of the furo web components.
+This is the simplest way to get up and running.
+ Read more about that here.
+Install the npm module #  To work with lit or native web components you need the npm module @furo/fbp.</description>
+    </item>
+    
+    <item>
+      <title>Precompiled</title>
+      <link>http://fbp.furo.pro/docs/precompiled/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fbp.furo.pro/docs/precompiled/</guid>
+      <description>@furo/precompiled #  The @furo/precompiled package is for those who want to use the furo componetnt directly in HTML. There is no build step needed. It is a convenient way to use the components to prototype some ideas or just play around with FBP without a complex installation procedure. When you know that your ideas work, transfer them 1:1 to a web component, so others can install, use and extend them.</description>
     </item>
     
     <item>
