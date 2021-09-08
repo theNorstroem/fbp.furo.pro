@@ -129,6 +129,16 @@ For the events they use the dashed-case notation, because you can not write @-ca
     </item>
     
     <item>
+      <title>Visual analysis</title>
+      <link>http://fbp.furo.pro/docs/visual-analysis/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fbp.furo.pro/docs/visual-analysis/</guid>
+      <description>Visual Application Analysis #  Inspect your application logic visually by using viz.
+Starting a viz.furo.pro session #  Start from body #  To start a viz session just type viz() in your browser console. This will open and connect your current browser tab to viz.furo.pro where you can see your application flow. By a double click on a component, viz will request the component from your application and render it.</description>
+    </item>
+    
+    <item>
       <title>Credits</title>
       <link>http://fbp.furo.pro/docs/cred-morrison/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>

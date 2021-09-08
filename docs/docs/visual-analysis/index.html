@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@1.4.3/dist/input.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@1.4.3/dist/doc-helper.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Visual Application Analysis #  Inspect your application logic visually by using viz.
+Starting a viz.furo.pro session #  Start from body #  To start a viz session just type viz() in your browser console. This will open and connect your current browser tab to viz.furo.pro where you can see your application flow. By a double click on a component, viz will request the component from your application and render it.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Visual analysis" />
+<meta property="og:description" content="Visual Application Analysis #  Inspect your application logic visually by using viz.
+Starting a viz.furo.pro session #  Start from body #  To start a viz session just type viz() in your browser console. This will open and connect your current browser tab to viz.furo.pro where you can see your application flow. By a double click on a component, viz will request the component from your application and render it." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fbp.furo.pro/docs/visual-analysis/" />
+<meta property="article:modified_time" content="2021-09-08T09:14:17+02:00" />
+<title>Visual analysis | フロー FBP</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.d917efb76f69f2afa7b6886371b327a3f18051eaa11d48b3ffe6a21842c74412.css" integrity="sha256-2Rfvt29p8q&#43;ntohjcbMno/GAUeqhHUiz/&#43;aiGELHRBI=">
+<script defer src="/en.search.min.b911a6fec63680a4209e127457331e70b2f7f3b7fb2a95e001321b03894590a8.js" integrity="sha256-uRGm/sY2gKQgnhJ0VzMecLL387f7KpXgATIbA4lFkKg="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+</head>
+
+<body dir=>
+<fixed-tooltip-display></fixed-tooltip-display>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <div ></div>
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>フロー FBP</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/installation/" class="">Installlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-basics/" class="">Getting Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-data/" class="">Wire Data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-more/" class="">Compatibility</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-events/" class="">Custom Events</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-scripting/" class="">Script interaction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-bestpractice/" class="">Best Practice</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-debugging/" class="">Debugging</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/visual-analysis/" class=" active">Visual analysis</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/cred-morrison/" class="">Credits</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://furo.pro" target="_blank" rel="noopener">
+        フロー Furo
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Visual analysis</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#visual-application-analysis">Visual Application Analysis</a>
+      <ul>
+        <li><a href="#starting-a-vizfuropro-session">Starting a viz.furo.pro session</a>
+          <ul>
+            <li><a href="#start-from-body">Start from <strong>body</strong></a></li>
+            <li><a href="#start-from-a-particular-component">Start from a particular component</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#how-to-read-the-flow-graph">How to read the flow graph</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="visual-application-analysis">
+  Visual Application Analysis
+  <a class="anchor" href="#visual-application-analysis">#</a>
+</h1>
+<p>Inspect your application logic visually by using viz.</p>
+<h2 id="starting-a-vizfuropro-session">
+  Starting a viz.furo.pro session
+  <a class="anchor" href="#starting-a-vizfuropro-session">#</a>
+</h2>
+<h3 id="start-from-body">
+  Start from <strong>body</strong>
+  <a class="anchor" href="#start-from-body">#</a>
+</h3>
+<p>To start a viz session just type <code>viz()</code> in your browser console.
+This will open and connect your current browser tab to viz.furo.pro where you can see your application flow.
+By a double click on a component, viz will request the component from your application and render it.</p>
+<h3 id="start-from-a-particular-component">
+  Start from a particular component
+  <a class="anchor" href="#start-from-a-particular-component">#</a>
+</h3>
+<p>Instead of clicking down until you have reached the component you are interested in, you can start viz with a reference to your component.</p>
+<ul>
+<li>example with chrome*</li>
+</ul>
+<ul>
+<li>Use the picker to select an element in the page</li>
+<li>it will be highlighted in the element view and a reference is available with <strong>$0</strong></li>
+<li>start viz with a reference to the element by typing <code>viz($0)</code></li>
+</ul>
+<h3 id="examples">
+  Examples
+  <a class="anchor" href="#examples">#</a>
+</h3>
+<p>
+  <img src="/viz-from-root.png#max" alt="viz-from-root" />
+<em>viz started from root</em></p>
+<p>
+  <img src="/app-shell.png#max" alt="viz-from-root" />
+<em>component: app-shell</em></p>
+<p>
+  <img src="/unconnected.png#max" alt="viz-from-root" />
+<em>A wire which has no connection to target will be displayed as a red circle</em></p>
+<h3 id="how-to-read-the-flow-graph">
+  How to read the flow graph
+  <a class="anchor" href="#how-to-read-the-flow-graph">#</a>
+</h3>
+<p>If you are familiar with fbp, you should not have any problem to read the graph.</p>
+<ul>
+<li>
+<p>The <strong>boxes</strong> represent the used components.
+
+  <img src="/component.png" alt="viz-from-root" />
+<em>The name of the component is on the top left (furo-app-flow)</em></p>
+<ul>
+<li>Boxes with dashed lines have a comment in the source. Hover on the box to read the comment</li>
+</ul>
+</li>
+<li>
+<p>The <strong>blue lines</strong> are the wires.</p>
+<ul>
+<li>Hover on them to read the wire name, like <code>--unauthorized</code>.</li>
+</ul>
+</li>
+<li>
+<p>The <strong>small blue boxes</strong> with an <strong>@-</strong> are the catched events.</p>
+<ul>
+<li>Hover on them to read the used name and more.</li>
+</ul>
+</li>
+<li>
+<p>The <strong>small green boxes</strong> with an <strong>ƒ-</strong> are the triggerer for the methods of the component.</p>
+</li>
+<li>
+<p>The <strong>small black boxes</strong> are attributes without a value assignment.</p>
+<ul>
+<li>These are often boolean flags like <code>hidden</code> or <code>readonly</code> which are setted.</li>
+</ul>
+</li>
+<li>
+<p>The <strong>small orange boxes</strong> are string attributes of the component which are setted.</p>
+<ul>
+<li>Hover on them to read the setted string.</li>
+</ul>
+</li>
+<li>
+<p>The <strong>orange dots</strong> are indicating a wire from nowhere or a wire which was triggered from the source (like this._FBPTriggerWire(&quot;&ndash;dataReceived&quot;,data)) or from outside (like &ndash;pageEntered from furo-pages).</p>
+<ul>
+<li>If you trigger a wire from the source and use the prefix <code>|--</code> on the wire, the dot will turn <strong>green</strong></li>
+</ul>
+</li>
+<li>
+<p>The <strong>red dots</strong> are indicating a wire which goes nowhere or a wire which is cathced in the source (like this._FBPAddWireHook(&quot;&ndash;wireName&quot;,(e)=&gt;{ &hellip; });</p>
+</li>
+</ul>
+<h4 id="keyboard-shortcuts">
+  Keyboard shortcuts
+  <a class="anchor" href="#keyboard-shortcuts">#</a>
+</h4>
+<ul>
+<li><strong>f</strong> on the buttons toggles the fullscreen mode. Press &ldquo;esc&rdquo; to get back.</li>
+<li><strong>ctrl v</strong> or <strong>cmd v</strong> renders the clipboard content. Do not forget to allow your browser to accept the clipboard content.</li>
+<li><strong>arrow-left</strong>, <strong>arrow-right</strong> ◀, ▶ re renders the last pasted content.</li>
+<li><strong>Backspace</strong> removes the current view.</li>
+</ul>
+<h4 id="mouse-controls">
+  Mouse controls
+  <a class="anchor" href="#mouse-controls">#</a>
+</h4>
+<ul>
+<li><strong>scroll down</strong> zooms the flow in.</li>
+<li><strong>scroll up</strong> zooms  out.</li>
+<li><strong>moving the mouse with mousedown</strong> pans the flow.</li>
+</ul>
+<h4 id="touch-controls">
+  Touch controls
+  <a class="anchor" href="#touch-controls">#</a>
+</h4>
+<ul>
+<li>pinch in zooms the flow in.</li>
+<li>pinch out zooms the flow out.</li>
+<li>paning (with 2 fingers) pans the flow.</li>
+</ul>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/6564c70468800c45e522335c86c98bd3058175aa" title='Last modified by veith | September 8, 2021' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>September 8, 2021</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#visual-application-analysis">Visual Application Analysis</a>
+      <ul>
+        <li><a href="#starting-a-vizfuropro-session">Starting a viz.furo.pro session</a>
+          <ul>
+            <li><a href="#start-from-body">Start from <strong>body</strong></a></li>
+            <li><a href="#start-from-a-particular-component">Start from a particular component</a></li>
+            <li><a href="#examples">Examples</a></li>
+            <li><a href="#how-to-read-the-flow-graph">How to read the flow graph</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
