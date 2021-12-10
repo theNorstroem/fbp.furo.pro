@@ -2,8 +2,8 @@
 <html lang="en" dir=>
 
 <head>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@1.4.3/dist/input.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@1.4.3/dist/doc-helper.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.13/dist/util.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.13/dist/doc-helper.js"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,12 +14,12 @@ Furo FBP 101 #  In furo-FBP you connect events from one component to methods of 
 Furo FBP 101 #  In furo-FBP you connect events from one component to methods of anohter component." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://fbp.furo.pro/docs/fbp-basics/" />
-<meta property="article:modified_time" content="2021-09-08T09:14:17+02:00" />
+<meta property="article:modified_time" content="2021-12-10T15:46:32+01:00" />
 <title>Getting Started | フロー FBP</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.d917efb76f69f2afa7b6886371b327a3f18051eaa11d48b3ffe6a21842c74412.css" integrity="sha256-2Rfvt29p8q&#43;ntohjcbMno/GAUeqhHUiz/&#43;aiGELHRBI=">
-<script defer src="/en.search.min.b911a6fec63680a4209e127457331e70b2f7f3b7fb2a95e001321b03894590a8.js" integrity="sha256-uRGm/sY2gKQgnhJ0VzMecLL387f7KpXgATIbA4lFkKg="></script>
+<script defer src="/en.search.min.96b9010d16aaae055a7d6d93e95bd7a453cad76c5fceae04267f38b176941292.js" integrity="sha256-lrkBDRaqrgVafW2T6VvXpFPK12xfzq4EJn84sXaUEpI="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -318,8 +318,8 @@ connected by the <strong>wire</strong> <code>--lightSwitchClicked</code>.</p>
 <furo-demo-snippet flow>
 <template>
   <!-- This button acts as a light switch -->
-  <furo-button @-click="--lightSwitchClicked" label="i am a lightswitch"></furo-button>
   <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>  
+  <button @-click="--lightSwitchClicked">i am a lightswitch</button>
 </template>
 </furo-demo-snippet>
 <p><em>This doesnt look very impressive in the first moment.
@@ -345,7 +345,7 @@ But as you can see, there is no scripting involved and there are no id&rsquo;s a
   <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
   <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
   <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
-  <furo-button @-click="--lightSwitchClicked" label="i am a lightswitch"></furo-button> 
+  <button @-click="--lightSwitchClicked">i am a lightswitch</button> 
   <light-bulb ƒ-toggle="--noSource"></light-bulb>
 </template>
 </furo-demo-snippet>
@@ -390,8 +390,8 @@ THIS IS NOT a good idea and will result in unreadable flows.</p>
 <furo-demo-snippet flow style="height:400px">
 <template>
   <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
-  <furo-button @-click="--lightSwitchClicked" label="i am a light switch"></furo-button> 
-  <furo-button @-click="--lightSwitchClicked" label="i am a light switch too"></furo-button>  
+  <button @-click="--lightSwitchClicked">lightswitch 1</button>
+  <button @-click="--lightSwitchClicked">lightswitch 2</button>
 </template>
 </furo-demo-snippet>
 <p><em>It doesn&rsquo;t matter if you press the first or the second light switch.
@@ -406,10 +406,10 @@ have multiple targets.</p>
 <template>
   <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
   <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
-  <furo-button @-click="--lightSwitchClicked" label="i am a lightswitch"></furo-button> 
-  <furo-button @-click="--lightSwitchClicked" label="i am a lightswitch too"></furo-button>  
   <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
   <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
+  <button @-click="--lightSwitchClicked">lightswitch</button>
+  <button @-click="--lightSwitchClicked">lightswitch 2</button>  
 </template>
 </furo-demo-snippet>
 <p><em>If you look at the source of this example, it doesn&rsquo;t look very complex,
@@ -426,9 +426,9 @@ You can do this by separating them with a comma.
   <light-bulb ƒ-toggle="--lightSwitchClicked, --intervallPulse"></light-bulb>  
   <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
   <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
-  <furo-button @-click="--lightSwitchClicked, --blinkerClicked" label="i am a lightswitch"></furo-button>   
-  <furo-interval-pulse ƒ-start="--blinkerClicked" ƒ-stop="--stopBlinkerClicked" @-tick="--intervallPulse" interval="500"></furo-interval-pulse>
-  <furo-button danger  @-click="--stopBlinkerClicked" label="Stop the blinking"></furo-button>   
+  <button @-click="--lightSwitchClicked,--blinkerClicked">lightswitch</button> 
+  <furo-interval-pulse ƒ-start="--blinkerClicked" ƒ-stop="--stopBlinkerClicked" @-tick="--intervallPulse" interval="500"></furo-interval-pulse> 
+  <button @-click="--stopBlinkerClicked">Stop the blinking</button>
 </template>
 </furo-demo-snippet>
 <p><em>When you press the button, it will trigger the <code>--lightSwitchClicked</code> and the <code>--blinkerClicked</code> wire.</em></p>
@@ -439,12 +439,12 @@ You can do this by separating them with a comma.
 <p>You can receive from multiple wires by comma separating them.</p>
 <furo-demo-snippet flow style="height:400px">
 <template>
-  <furo-button @-click="--lightSwitchClicked" label="i am a lightswitch"></furo-button>   
-  <furo-button @-click="--blinkerClicked" label="i am a blinkswitch"></furo-button>   
+<light-bulb ƒ-toggle="--lightSwitchClicked, --intervallPulse"></light-bulb>  
+  <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>
+  <button @-click="--lightSwitchClicked">i am a lightswitch</button>   
+<button @-click="--blinkerClicked">blinkswitch</button>
   <furo-interval-pulse ƒ-start="--blinkerClicked" ƒ-stop="--stopBlinkerClicked" @-tick="--intervallPulse" interval="500"></furo-interval-pulse>
-  <furo-button danger  @-click="--stopBlinkerClicked" label="Stop the blinking"></furo-button>   
-  <light-bulb ƒ-toggle="--lightSwitchClicked, --intervallPulse"></light-bulb>  
-  <light-bulb ƒ-toggle="--lightSwitchClicked"></light-bulb>  
+<button style="color:red" @-click="--stopBlinkerClicked">Stop the blinking</button>
 </template>
 </furo-demo-snippet>
 <p>*The light bulb on the top right will be triggered by the <code>--lightSwitchClicked</code> and <code>--intervallPulse</code> wire *</p>
@@ -458,9 +458,9 @@ You can do this by separating them with a comma.
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/6564c70468800c45e522335c86c98bd3058175aa" title='Last modified by veith | September 8, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/ee2f98b491bb7d89e07cc1f6219ee6cba8d849b0" title='Last modified by veith | December 10, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>September 8, 2021</span>
+      <span>December 10, 2021</span>
     </a>
   </div>
 
