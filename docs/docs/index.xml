@@ -14,10 +14,9 @@
       
       <guid>http://fbp.furo.pro/docs/installation/</guid>
       <description>Installation #  You can use furo FBP directly in your HTML documents or within your own web-components.
-FBP and eclipsefuro-web in HTML without a installation #  You can use furo-fbp and the furo-web-components without a direct installation by using the precompiled variant of the furo web components.
+From CDN #  FBP and eclipsefuro-web in HTML without installation #  You can use furo-fbp and the furo-web-components without a direct installation by using the precompiled variant of the furo web components.
 This is the simplest way to get up and running.
- Read more about that here.
-Install the npm module #  To work with lit or native web components you need the npm module @furo/fbp.</description>
+1 2 3 4 5 6  &amp;lt;script&amp;gt; import(&amp;#34;https://cdn.</description>
     </item>
     
     <item>
