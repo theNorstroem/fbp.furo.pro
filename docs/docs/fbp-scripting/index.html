@@ -8,18 +8,20 @@
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Interaction with javascript #  The wires can be hooked and triggered from the script part of your component. This also comes very handy when you are writing tests.
-Trigger a wire imperatively #  To trigger a wire from the javascript part of your component or from a test, call the _FBPTriggerWire method. You can also trigger the wire in the constructor, then the wire will be queued until the flow is parsed and ready.">
+Trigger a wire imperatively #  To trigger a wire from the javascript part of your component, call the _FBPTriggerWire method.
+You can also trigger the wire in the constructor, in this case the wire will be queued until the flow is parsed and ready.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Script interaction" />
 <meta property="og:description" content="Interaction with javascript #  The wires can be hooked and triggered from the script part of your component. This also comes very handy when you are writing tests.
-Trigger a wire imperatively #  To trigger a wire from the javascript part of your component or from a test, call the _FBPTriggerWire method. You can also trigger the wire in the constructor, then the wire will be queued until the flow is parsed and ready." />
+Trigger a wire imperatively #  To trigger a wire from the javascript part of your component, call the _FBPTriggerWire method.
+You can also trigger the wire in the constructor, in this case the wire will be queued until the flow is parsed and ready." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://fbp.furo.pro/docs/fbp-scripting/" />
-<meta property="article:modified_time" content="2021-12-10T15:46:32+01:00" />
+<meta property="article:modified_time" content="2021-12-13T11:14:29+01:00" />
 <title>Script interaction | フロー FBP</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.d917efb76f69f2afa7b6886371b327a3f18051eaa11d48b3ffe6a21842c74412.css" integrity="sha256-2Rfvt29p8q&#43;ntohjcbMno/GAUeqhHUiz/&#43;aiGELHRBI=">
-<script defer src="/en.search.min.96b9010d16aaae055a7d6d93e95bd7a453cad76c5fceae04267f38b176941292.js" integrity="sha256-lrkBDRaqrgVafW2T6VvXpFPK12xfzq4EJn84sXaUEpI="></script>
+<script defer src="/en.search.min.dc2cb5519a97ac2046603843ba7ec87d268142bbbb22eb7460d3e6e6635feeaa.js" integrity="sha256-3Cy1UZqXrCBGYDhDun7IfSaBQru7Iut0YNPm5mNf7qo="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -140,6 +142,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://fbp.furo.pro/docs/fbp-scripting/" class=" active">Script interaction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-scope/" class="">Scope</a>
   
 
         </li>
@@ -299,8 +314,8 @@ This also comes very handy when you are writing tests.</p>
   Trigger a wire imperatively
   <a class="anchor" href="#trigger-a-wire-imperatively">#</a>
 </h2>
-<p>To trigger a wire from the javascript part of your component or from a test, call the <strong>_FBPTriggerWire</strong> method.
-You can also trigger the wire in the constructor, then the wire will be queued until the flow is parsed and ready.</p>
+<p>To trigger a wire from the javascript part of your component, call the <strong>_FBPTriggerWire</strong> method.</p>
+<p>You can also trigger the wire in the constructor, in this case the wire will be queued until the flow is parsed and ready.</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1
@@ -334,7 +349,7 @@ You can also trigger the wire in the constructor, then the wire will be queued u
       <span style="color:#000;font-weight:bold">super</span>();
       <span style="color:#000;font-weight:bold">this</span>.data <span style="color:#000;font-weight:bold">=</span> <span style="color:#d14">&#34;Test&#34;</span>;
       <span style="color:#998;font-style:italic">// this wire will be queued
-</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="color:#998;font-style:italic"></span>      <span style="color:#000;font-weight:bold">this</span>._FBPTriggerWire(<span style="color:#d14">&#34;--wireName&#34;</span>, <span style="color:#000;font-weight:bold">this</span>.data);
+</span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="color:#998;font-style:italic"></span>      <span style="color:#000;font-weight:bold">this</span>._FBPTriggerWire(<span style="color:#d14">&#34;|--wireName&#34;</span>, <span style="color:#000;font-weight:bold">this</span>.data);
 </span>    }
     
     <span style="color:#998;font-style:italic">/**
@@ -342,7 +357,7 @@ You can also trigger the wire in the constructor, then the wire will be queued u
 </span><span style="color:#998;font-style:italic">     */</span>
     _FBPReady(){
       <span style="color:#000;font-weight:bold">super</span>._FBPReady();
-<span style="display:block;width:100%;background-color:#e5e5e5">      <span style="color:#000;font-weight:bold">this</span>._FBPTriggerWire(<span style="color:#d14">&#39;--wireName&#39;</span>, <span style="color:#000;font-weight:bold">this</span>.data);
+<span style="display:block;width:100%;background-color:#e5e5e5">      <span style="color:#000;font-weight:bold">this</span>._FBPTriggerWire(<span style="color:#d14">&#34;|--wireName&#34;</span>, <span style="color:#000;font-weight:bold">this</span>.data);
 </span>    }
     
     <span style="color:#998;font-style:italic">/**
@@ -350,7 +365,7 @@ You can also trigger the wire in the constructor, then the wire will be queued u
 </span><span style="color:#998;font-style:italic">     * 
 </span><span style="color:#998;font-style:italic">     */</span>
     fetchRecord(src){
-<span style="display:block;width:100%;background-color:#e5e5e5">      <span style="color:#000;font-weight:bold">this</span>._FBPTriggerWire(<span style="color:#d14">&#39;--fetchRequested&#39;</span>, src);
+<span style="display:block;width:100%;background-color:#e5e5e5">      <span style="color:#000;font-weight:bold">this</span>._FBPTriggerWire(<span style="color:#d14">&#34;|--fetchRequested&#34;</span>, src);
 </span>    }
 }
 </code></pre></td></tr></table>
@@ -380,8 +395,8 @@ data, because the component doesnt send it like an other component needs it.</p>
     constructor() {
         <span style="color:#000;font-weight:bold">super</span>();
         
-<span style="display:block;width:100%;background-color:#e5e5e5">        <span style="color:#000;font-weight:bold">this</span>._FBPAddWireHook(<span style="color:#d14">&#34;--pathChanged&#34;</span>,(d)=&gt;{
-</span><span style="display:block;width:100%;background-color:#e5e5e5">          <span style="color:#998;font-style:italic">// d contains the full content of the event, not only the d.detail        
+<span style="display:block;width:100%;background-color:#e5e5e5">        <span style="color:#000;font-weight:bold">this</span>._FBPAddWireHook(<span style="color:#d14">&#34;--pathChanged&#34;</span>,(e)=&gt;{
+</span><span style="display:block;width:100%;background-color:#e5e5e5">          <span style="color:#998;font-style:italic">// On hooks `e` contains the complete event, not only the `e.detail`        
 </span></span><span style="display:block;width:100%;background-color:#e5e5e5"><span style="color:#998;font-style:italic"></span>      })
 </span>    }
 }
@@ -389,7 +404,7 @@ data, because the component doesnt send it like an other component needs it.</p>
 </div>
 </div><blockquote>
 <p>The most @-events of the furo base components will fit the ƒ-methods of the corresponding components.
-It is like playing domino. Read the api guide to learn what which component sends or expects.</p>
+It is like playing domino.</p>
 </blockquote>
 </article>
  
@@ -401,9 +416,9 @@ It is like playing domino. Read the api guide to learn what which component send
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/ee2f98b491bb7d89e07cc1f6219ee6cba8d849b0" title='Last modified by veith | December 10, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/6505a6fa742ba9b76d5a73a266161af2a7641433" title='Last modified by veith | December 13, 2021' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>December 10, 2021</span>
+      <span>December 13, 2021</span>
     </a>
   </div>
 

@@ -40,16 +40,6 @@ Furo FBP 101 #  In furo-FBP you connect events from one component to methods of 
     </item>
     
     <item>
-      <title>furo web</title>
-      <link>http://fbp.furo.pro/docs/web-components/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>http://fbp.furo.pro/docs/web-components/</guid>
-      <description>フロー Furo Web Components #  Furo Web Components provides an enterprise ready set of web components which play seamlessly with Furo. Based on web standards and future proved. Compliant with any technology of choice. With minimal footprint it includes all enterprise standards, i18n, theming and much more.
-The furo web components are a wide set of components which covers everything you need to write a web application. They consume the same types which are defined with furo.</description>
-    </item>
-    
-    <item>
       <title>Wire Data</title>
       <link>http://fbp.furo.pro/docs/fbp-wires-data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -91,7 +81,19 @@ Furo also provides a notation for events which allows you to specify events in a
       
       <guid>http://fbp.furo.pro/docs/fbp-scripting/</guid>
       <description>Interaction with javascript #  The wires can be hooked and triggered from the script part of your component. This also comes very handy when you are writing tests.
-Trigger a wire imperatively #  To trigger a wire from the javascript part of your component or from a test, call the _FBPTriggerWire method. You can also trigger the wire in the constructor, then the wire will be queued until the flow is parsed and ready.</description>
+Trigger a wire imperatively #  To trigger a wire from the javascript part of your component, call the _FBPTriggerWire method.
+You can also trigger the wire in the constructor, in this case the wire will be queued until the flow is parsed and ready.</description>
+    </item>
+    
+    <item>
+      <title>Scope</title>
+      <link>http://fbp.furo.pro/docs/fbp-scope/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fbp.furo.pro/docs/fbp-scope/</guid>
+      <description>Scope #  The scope of a FBP program is COMPONENT SCOPE. All wires inside a component can be used.
+Parked data is set on the component.
+Everything inside of a Template tag is not accessible through the wires.</description>
     </item>
     
     <item>
@@ -125,8 +127,8 @@ For the events they use the dashed-case notation, because you can not write @-ca
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>http://fbp.furo.pro/docs/fbp-lifecycle/</guid>
-      <description>FBP Lifecycle #  _FBPReady() #  _FBPReady() is called, when the wires are registered and the components are able to receive wire data. This is also the earliest point to enable the tracing.
-1 2 3 4 5 6 7 8 9  class MyComponent extends FBP(LitElement) { // trace all wires  _FBPReady(){ this._FBPTraceWires(); super._FBPReady(); } } window.customElements.define(&amp;#39;my-component&amp;#39;, MyComponent);   The &amp;ndash;FBPready magic wire #  The wire --FBPready is also triggered when your component is ready.</description>
+      <description>FBP Lifecycle #  _FBPReady() #  _FBPReady() is called, when the wires are registered and the components are able to receive wire data.
+1 2 3 4 5 6 7 8 9 10 11  class MyComponent extends FBP(LitElement) { /** * flow is ready lifecycle method */ _FBPReady() { super._FBPReady() this._FBPTraceWires() } } window.customElements.define(&amp;#39;my-component&amp;#39;, MyComponent);   The |&amp;ndash;FBPready magic wire #  The wire |--FBPready is triggered when your component is ready.</description>
     </item>
     
     <item>

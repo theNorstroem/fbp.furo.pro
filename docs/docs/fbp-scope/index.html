@@ -7,21 +7,17 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Debugging strategies #  You can use the debugging tools you always used for web development. The eventListeners from furo-fbp are the same eventListeners you have had before.
- img[src*=&#34;#max&#34;]{max-width:600px} $0 is the selected element from the elements tab.
-  getEventListeners($0) shows you the attached eventListeners
- Show the fbp listeners on a host #  Use $0.__FBPEventlistener to show all listeners on the host component
- Show the wires on a host #  Use $0.">
-<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Debugging" />
-<meta property="og:description" content="Debugging strategies #  You can use the debugging tools you always used for web development. The eventListeners from furo-fbp are the same eventListeners you have had before.
- img[src*=&#34;#max&#34;]{max-width:600px} $0 is the selected element from the elements tab.
-  getEventListeners($0) shows you the attached eventListeners
- Show the fbp listeners on a host #  Use $0.__FBPEventlistener to show all listeners on the host component
- Show the wires on a host #  Use $0." />
+<meta name="description" content="Scope #  The scope of a FBP program is COMPONENT SCOPE. All wires inside a component can be used.
+Parked data is set on the component.
+Everything inside of a Template tag is not accessible through the wires.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Scope" />
+<meta property="og:description" content="Scope #  The scope of a FBP program is COMPONENT SCOPE. All wires inside a component can be used.
+Parked data is set on the component.
+Everything inside of a Template tag is not accessible through the wires." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://fbp.furo.pro/docs/fbp-debugging/" />
+<meta property="og:url" content="http://fbp.furo.pro/docs/fbp-scope/" />
 <meta property="article:modified_time" content="2021-12-13T11:14:29+01:00" />
-<title>Debugging | フロー FBP</title>
+<title>Scope | フロー FBP</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.d917efb76f69f2afa7b6886371b327a3f18051eaa11d48b3ffe6a21842c74412.css" integrity="sha256-2Rfvt29p8q&#43;ntohjcbMno/GAUeqhHUiz/&#43;aiGELHRBI=">
@@ -158,7 +154,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://fbp.furo.pro/docs/fbp-scope/" class="">Scope</a>
+    <a href="http://fbp.furo.pro/docs/fbp-scope/" class=" active">Scope</a>
   
 
         </li>
@@ -184,7 +180,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   
-    <a href="http://fbp.furo.pro/docs/fbp-debugging/" class=" active">Debugging</a>
+    <a href="http://fbp.furo.pro/docs/fbp-debugging/" class="">Debugging</a>
   
 
         </li>
@@ -276,7 +272,7 @@ https://github.com/alex-shpak/hugo-book
     <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
   </label>
 
-  <strong>Debugging</strong>
+  <strong>Scope</strong>
 
   <label for="toc-control">
     
@@ -291,14 +287,7 @@ https://github.com/alex-shpak/hugo-book
     
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#debugging-strategies">Debugging strategies</a>
-      <ul>
-        <li><a href="#show-the-fbp-listeners-on-a-host">Show the fbp listeners on a host</a></li>
-        <li><a href="#show-the-wires-on-a-host">Show the wires on a host</a></li>
-        <li><a href="#debugging-a-single-wire">Debugging a single wire</a></li>
-        <li><a href="#tracing">Tracing</a></li>
-      </ul>
-    </li>
+    <li><a href="#scope">Scope</a></li>
   </ul>
 </nav>
 
@@ -310,57 +299,14 @@ https://github.com/alex-shpak/hugo-book
 
       
       
-  <article class="markdown"><h1 id="debugging-strategies">
-  Debugging strategies
-  <a class="anchor" href="#debugging-strategies">#</a>
+  <article class="markdown"><h1 id="scope">
+  Scope
+  <a class="anchor" href="#scope">#</a>
 </h1>
-<p>You can use the debugging tools you always used for web development.
-The eventListeners from furo-fbp are the same eventListeners you have had before.</p>
-<style> img[src*="#max"]{max-width:600px}</style>
-<p><code>$0</code> is the selected element from the elements tab.</p>
-<p>
-  <img src="/debug.png#max" alt="debug" /></p>
-<blockquote>
-<p><code>getEventListeners($0)</code> shows you the attached eventListeners</p>
-</blockquote>
-<h2 id="show-the-fbp-listeners-on-a-host">
-  Show the fbp listeners on a host
-  <a class="anchor" href="#show-the-fbp-listeners-on-a-host">#</a>
-</h2>
-<p>Use <code>$0.__FBPEventlistener</code> to show all listeners on the host component</p>
-<p>
-  <img src="/fbpEventListeners.png#max" alt="debug" /></p>
-<h2 id="show-the-wires-on-a-host">
-  Show the wires on a host
-  <a class="anchor" href="#show-the-wires-on-a-host">#</a>
-</h2>
-<p>Use <code>$0.__wirebundle</code> to show all registered wires.</p>
-<p>
-  <img src="/wirebundle.png#max" alt="debug" /></p>
-<blockquote>
-<p>Keep in mind that wires without receivers will <strong>not</strong> show in this list.</p>
-</blockquote>
-<h2 id="debugging-a-single-wire">
-  Debugging a single wire
-  <a class="anchor" href="#debugging-a-single-wire">#</a>
-</h2>
-<p>To debug a single wire write <code>$0._FBPDebug(&quot;--markdown&quot;)</code>.</p>
-<p>
-  <img src="/fbpDebug.png#max" alt="debug" /></p>
-<blockquote>
-<p>Every time this wire triggers, you will see the following information in your console.</p>
-</blockquote>
-<h2 id="tracing">
-  Tracing
-  <a class="anchor" href="#tracing">#</a>
-</h2>
-<p>To trace all wires in a host use <code>$0._FBPTraceWires()</code>.</p>
-<p>
-  <img src="/fbpTrace.png#max" alt="debug" /></p>
-<blockquote>
-<p>This will log every triggering wire to the console.
-In most of the cases, the problems you have to solve, are caused by typos in wire names.</p>
-</blockquote>
+<p>The scope of a FBP program is <strong>COMPONENT SCOPE</strong>.
+All wires inside a component can be used.</p>
+<p>Parked data is set on the component.</p>
+<p>Everything inside of a <code>Template</code> tag is not accessible through the wires.</p>
 </article>
  
       
@@ -401,14 +347,7 @@ In most of the cases, the problems you have to solve, are caused by typos in wir
       
   <nav id="TableOfContents">
   <ul>
-    <li><a href="#debugging-strategies">Debugging strategies</a>
-      <ul>
-        <li><a href="#show-the-fbp-listeners-on-a-host">Show the fbp listeners on a host</a></li>
-        <li><a href="#show-the-wires-on-a-host">Show the wires on a host</a></li>
-        <li><a href="#debugging-a-single-wire">Debugging a single wire</a></li>
-        <li><a href="#tracing">Tracing</a></li>
-      </ul>
-    </li>
+    <li><a href="#scope">Scope</a></li>
   </ul>
 </nav>
 
