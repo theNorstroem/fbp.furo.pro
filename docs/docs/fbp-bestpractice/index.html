@@ -2,29 +2,29 @@
 <html lang="en" dir=>
 
 <head>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.13/dist/util.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.13/dist/doc-helper.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.29/dist/util.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.29/dist/doc-helper.js"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Best Practice #  The best practices are a result from the feedback of our users, thanks to them.
 Feel free to give us your feedback.
 Wire and event naming #  In fact you can use any string to name wires, but most of the users are using two dashes in front of the wire name and for the name they use camelCase notation.
-For the events they use the dashed-case notation, because you can not write @-camelCase.">
+For the events they use the dashed-case notation, because you can not write at-camelCase.">
 <meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Best Practice" />
 <meta property="og:description" content="Best Practice #  The best practices are a result from the feedback of our users, thanks to them.
 Feel free to give us your feedback.
 Wire and event naming #  In fact you can use any string to name wires, but most of the users are using two dashes in front of the wire name and for the name they use camelCase notation.
-For the events they use the dashed-case notation, because you can not write @-camelCase." />
+For the events they use the dashed-case notation, because you can not write at-camelCase." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://fbp.furo.pro/docs/fbp-bestpractice/" />
 <meta property="article:published_time" content="2017-04-17T14:02:04+02:00" />
-<meta property="article:modified_time" content="2021-12-13T13:58:22+01:00" />
+<meta property="article:modified_time" content="2022-02-21T10:28:00+01:00" />
 <title>Best Practice | フロー FBP</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.d917efb76f69f2afa7b6886371b327a3f18051eaa11d48b3ffe6a21842c74412.css" integrity="sha256-2Rfvt29p8q&#43;ntohjcbMno/GAUeqhHUiz/&#43;aiGELHRBI=">
-<script defer src="/en.search.min.04a3df6b6392c3ac669e4eb5b762d239cde54636c97f7363152d6f23fce961e7.js" integrity="sha256-BKPfa2OSw6xmnk61t2LSOc3lRjbJf3NjFS1vI/zpYec="></script>
+<script defer src="/en.search.min.940b04a2a52663e036f491e6287cc8cb9547a678442a74e3dcb1bd7bbe381f3c.js" integrity="sha256-lAsEoqUmY&#43;A29JHmKHzIy5VHpnhEKnTj3LG9e744Hzw="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -93,6 +93,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://fbp.furo.pro/docs/fbp-basics/" class="">Getting Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-cheatsheet/" class="">Cheat Sheet</a>
   
 
         </li>
@@ -319,13 +332,13 @@ https://github.com/alex-shpak/hugo-book
   <a class="anchor" href="#wire-and-event-naming">#</a>
 </h2>
 <p>In fact you can use any string to name wires, but most of the users are using two dashes in front of the wire name and for the name they use camelCase notation.</p>
-<p>For the events they use the dashed-case notation, because you can not write <code>@-camelCase</code>.</p>
+<p>For the events they use the dashed-case notation, because you can not write <code>at-camelCase</code>.</p>
 <div class="highlight"><div style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4">
 <table style="border-spacing:0;padding:0;margin:0;border:0;width:auto;overflow:auto;display:block;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-button</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--buttonClicked, ^^fired-event&#34;</span>&gt;&lt;/<span style="color:#000080">furo-button</span>&gt;
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-button</span> <span style="color:#008080">at-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--buttonClicked, ^^fired-event&#34;</span>&gt;&lt;/<span style="color:#000080">furo-button</span>&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p>With this notation they can see the difference between a <strong>&ndash;wire</strong> to an <strong>event</strong> they fire directly.</p>
@@ -342,9 +355,9 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-button</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeView&#34;</span>&gt;&lt;/<span style="color:#000080">furo-button</span>&gt;
-&lt;<span style="color:#000080">my-view</span> <span style="color:#008080">ƒ-close</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeView&#34;</span>&gt;&lt;/<span style="color:#000080">my-view</span>&gt;
-&lt;<span style="color:#000080">data-component</span> <span style="color:#008080">ƒ-save</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeView&#34;</span>&gt;&lt;/<span style="color:#000080">data-component</span>&gt;
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-button</span> <span style="color:#008080">at-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeView&#34;</span>&gt;&lt;/<span style="color:#000080">furo-button</span>&gt;
+&lt;<span style="color:#000080">my-view</span> <span style="color:#008080">fn-close</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeView&#34;</span>&gt;&lt;/<span style="color:#000080">my-view</span>&gt;
+&lt;<span style="color:#000080">data-component</span> <span style="color:#008080">fn-save</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeView&#34;</span>&gt;&lt;/<span style="color:#000080">data-component</span>&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p><strong>good example</strong></p>
@@ -355,9 +368,9 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-button</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeButtonClicked&#34;</span>&gt;&lt;/<span style="color:#000080">furo-button</span>&gt;
-&lt;<span style="color:#000080">my-view</span> <span style="color:#008080">ƒ-close</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeButtonClicked&#34;</span>&gt;&lt;/<span style="color:#000080">my-view</span>&gt;
-&lt;<span style="color:#000080">data-component</span> <span style="color:#008080">ƒ-save</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeButtonClicked&#34;</span>&gt;&lt;/<span style="color:#000080">data-component</span>&gt;
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#000080">furo-button</span> <span style="color:#008080">at-click</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeButtonClicked&#34;</span>&gt;&lt;/<span style="color:#000080">furo-button</span>&gt;
+&lt;<span style="color:#000080">my-view</span> <span style="color:#008080">fn-close</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeButtonClicked&#34;</span>&gt;&lt;/<span style="color:#000080">my-view</span>&gt;
+&lt;<span style="color:#000080">data-component</span> <span style="color:#008080">fn-save</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--closeButtonClicked&#34;</span>&gt;&lt;/<span style="color:#000080">data-component</span>&gt;
 </code></pre></td></tr></table>
 </div>
 </div><p><em>It is a subtile but relevant difference between this two examles.</em></p>
@@ -380,12 +393,12 @@ https://github.com/alex-shpak/hugo-book
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
 <pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#000080">div</span> &gt;
-      &lt;<span style="color:#000080">mole-hole</span> <span style="color:#008080">key</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;a&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-closed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--moleClosed&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-continue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--continue&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-miss</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--missed&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-whack</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--whacked&#34;</span>&gt;&lt;/<span style="color:#000080">mole-hole</span>&gt;
-      &lt;<span style="color:#000080">mole-hole</span> <span style="color:#008080">key</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;s&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-closed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--moleClosed&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-continue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--continue&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-miss</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--missed&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-whack</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--whacked&#34;</span>&gt;&lt;/<span style="color:#000080">mole-hole</span>&gt;
-      &lt;<span style="color:#000080">mole-hole</span> <span style="color:#008080">key</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;d&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-closed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--moleClosed&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-continue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--continue&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-miss</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--missed&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-whack</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--whacked&#34;</span>&gt;&lt;/<span style="color:#000080">mole-hole</span>&gt;
-      &lt;<span style="color:#000080">mole-hole</span> <span style="color:#008080">key</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;f&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-closed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--moleClosed&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-continue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--continue&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-miss</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--missed&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-whack</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--whacked&#34;</span>&gt;&lt;/<span style="color:#000080">mole-hole</span>&gt;
-      &lt;<span style="color:#000080">mole-hole</span> <span style="color:#008080">key</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;g&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-closed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--moleClosed&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-continue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--continue&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-miss</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--missed&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-whack</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--whacked&#34;</span>&gt;&lt;/<span style="color:#000080">mole-hole</span>&gt;
-      &lt;<span style="color:#000080">mole-hole</span> <span style="color:#008080">key</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;w&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-closed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--moleClosed&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-continue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--continue&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-miss</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--missed&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-whack</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--whacked&#34;</span>&gt;&lt;/<span style="color:#000080">mole-hole</span>&gt;
+      &lt;<span style="color:#000080">mole-hole</span> <span style="color:#008080">key</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;a&#34;</span> <span style="color:#008080">at-closed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--moleClosed&#34;</span> <span style="color:#008080">at-continue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--continue&#34;</span> <span style="color:#008080">at-miss</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--missed&#34;</span> <span style="color:#008080">at-whack</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--whacked&#34;</span>&gt;&lt;/<span style="color:#000080">mole-hole</span>&gt;
+      &lt;<span style="color:#000080">mole-hole</span> <span style="color:#008080">key</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;s&#34;</span> <span style="color:#008080">at-closed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--moleClosed&#34;</span> <span style="color:#008080">at-continue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--continue&#34;</span> <span style="color:#008080">at-miss</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--missed&#34;</span> <span style="color:#008080">at-whack</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--whacked&#34;</span>&gt;&lt;/<span style="color:#000080">mole-hole</span>&gt;
+      &lt;<span style="color:#000080">mole-hole</span> <span style="color:#008080">key</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;d&#34;</span> <span style="color:#008080">at-closed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--moleClosed&#34;</span> <span style="color:#008080">at-continue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--continue&#34;</span> <span style="color:#008080">at-miss</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--missed&#34;</span> <span style="color:#008080">at-whack</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--whacked&#34;</span>&gt;&lt;/<span style="color:#000080">mole-hole</span>&gt;
+      &lt;<span style="color:#000080">mole-hole</span> <span style="color:#008080">key</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;f&#34;</span> <span style="color:#008080">at-closed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--moleClosed&#34;</span> <span style="color:#008080">at-continue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--continue&#34;</span> <span style="color:#008080">at-miss</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--missed&#34;</span> <span style="color:#008080">at-whack</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--whacked&#34;</span>&gt;&lt;/<span style="color:#000080">mole-hole</span>&gt;
+      &lt;<span style="color:#000080">mole-hole</span> <span style="color:#008080">key</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;g&#34;</span> <span style="color:#008080">at-closed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--moleClosed&#34;</span> <span style="color:#008080">at-continue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--continue&#34;</span> <span style="color:#008080">at-miss</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--missed&#34;</span> <span style="color:#008080">at-whack</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--whacked&#34;</span>&gt;&lt;/<span style="color:#000080">mole-hole</span>&gt;
+      &lt;<span style="color:#000080">mole-hole</span> <span style="color:#008080">key</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;w&#34;</span> <span style="color:#008080">at-closed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--moleClosed&#34;</span> <span style="color:#008080">at-continue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--continue&#34;</span> <span style="color:#008080">at-miss</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--missed&#34;</span> <span style="color:#008080">at-whack</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--whacked&#34;</span>&gt;&lt;/<span style="color:#000080">mole-hole</span>&gt;
     &lt;/<span style="color:#000080">div</span>&gt;
 </code></pre></td></tr></table>
 </div>
@@ -404,7 +417,7 @@ https://github.com/alex-shpak/hugo-book
 </span><span style="margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">8
 </span></code></pre></td>
 <td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#000080">div</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-closed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--moleClosed&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-continue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--continue&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-miss</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--missed&#34;</span> <span style="color:#a61717;background-color:#e3d2d2">@</span><span style="color:#008080">-whack</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--whacked&#34;</span>&gt;
+<pre style="background-color:#fff;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">    &lt;<span style="color:#000080">div</span> <span style="color:#008080">at-closed</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--moleClosed&#34;</span> <span style="color:#008080">at-continue</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--continue&#34;</span> <span style="color:#008080">at-miss</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--missed&#34;</span> <span style="color:#008080">at-whack</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;--whacked&#34;</span>&gt;
       &lt;<span style="color:#000080">mole-hole</span> <span style="color:#008080">key</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;a&#34;</span>&gt;&lt;/<span style="color:#000080">mole-hole</span>&gt;
       &lt;<span style="color:#000080">mole-hole</span> <span style="color:#008080">key</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;s&#34;</span>&gt;&lt;/<span style="color:#000080">mole-hole</span>&gt;
       &lt;<span style="color:#000080">mole-hole</span> <span style="color:#008080">key</span><span style="color:#000;font-weight:bold">=</span><span style="color:#d14">&#34;d&#34;</span>&gt;&lt;/<span style="color:#000080">mole-hole</span>&gt;
@@ -426,9 +439,9 @@ https://github.com/alex-shpak/hugo-book
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/172f4ae60fba5016149006d5a4bba254f0e07002" title='Last modified by veith | December 13, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/5e4d7e536e99f5db097d8b843735ad1dca4c2a91" title='Last modified by veith | February 21, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>December 13, 2021</span>
+      <span>February 21, 2022</span>
     </a>
   </div>
 

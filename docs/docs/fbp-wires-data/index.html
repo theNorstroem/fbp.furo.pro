@@ -2,8 +2,8 @@
 <html lang="en" dir=>
 
 <head>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.13/dist/util.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.13/dist/doc-helper.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.29/dist/util.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.29/dist/doc-helper.js"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,12 +20,12 @@ By default the content of EVENT.detail is passed to the target. If an event does
 Send the complete event instead of event." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://fbp.furo.pro/docs/fbp-wires-data/" />
-<meta property="article:modified_time" content="2021-12-13T13:58:22+01:00" />
+<meta property="article:modified_time" content="2022-02-21T10:28:00+01:00" />
 <title>Wire Data | フロー FBP</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
 <link rel="stylesheet" href="/book.min.d917efb76f69f2afa7b6886371b327a3f18051eaa11d48b3ffe6a21842c74412.css" integrity="sha256-2Rfvt29p8q&#43;ntohjcbMno/GAUeqhHUiz/&#43;aiGELHRBI=">
-<script defer src="/en.search.min.04a3df6b6392c3ac669e4eb5b762d239cde54636c97f7363152d6f23fce961e7.js" integrity="sha256-BKPfa2OSw6xmnk61t2LSOc3lRjbJf3NjFS1vI/zpYec="></script>
+<script defer src="/en.search.min.940b04a2a52663e036f491e6287cc8cb9547a678442a74e3dcb1bd7bbe381f3c.js" integrity="sha256-lAsEoqUmY&#43;A29JHmKHzIy5VHpnhEKnTj3LG9e744Hzw="></script>
 <!--
 Made with Book Theme
 https://github.com/alex-shpak/hugo-book
@@ -94,6 +94,19 @@ https://github.com/alex-shpak/hugo-book
 
   
     <a href="http://fbp.furo.pro/docs/fbp-basics/" class="">Getting Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-cheatsheet/" class="">Cheat Sheet</a>
   
 
         </li>
@@ -296,8 +309,8 @@ https://github.com/alex-shpak/hugo-book
         <li><a href="#passing-useful-data-to-target">Passing useful data to target</a></li>
         <li><a href="#send-the-complete-event-instead-of-eventdetail">Send the complete <em>event</em> instead of <em>event.detail</em></a>
           <ul>
-            <li><a href="#producer--">Producer (@-)</a></li>
-            <li><a href="#receiver-ƒ-">Receiver (ƒ-)</a></li>
+            <li><a href="#producer-at-">Producer (at-)</a></li>
+            <li><a href="#receiver-fn-">Receiver (fn-)</a></li>
           </ul>
         </li>
         <li><a href="#storing-event-data-on-a-class-member-property--aka-parking">Storing event data on a class member property  (aka parking)</a></li>
@@ -333,8 +346,8 @@ receiver will get a <code>undefined</code>.</p>
 </h2>
 <furo-demo-snippet flow>
 <template>
-  <input type="color" label="choose a color"  @-input="--newColor(*.path.0.value)"></input> 
-  <light-bulb on  ƒ-set-color="--newColor"></light-bulb>
+  <input type="color" label="choose a color"  at-input="--newColor(*.path.0.value)"></input> 
+  <light-bulb on  fn-set-color="--newColor"></light-bulb>
 </template>
 </furo-demo-snippet>
 <p><em>The color picker dispatches a <code>value-changed</code> event, with the color as payload.</em></p>
@@ -344,23 +357,23 @@ receiver will get a <code>undefined</code>.</p>
 </h2>
 <p>You can put the complete <em>event</em> or any <em>sub.property</em> of the event on the wire by defining the details
 at the producer / triggerer.</p>
-<h3 id="producer--">
-  Producer (@-)
-  <a class="anchor" href="#producer--">#</a>
+<h3 id="producer-at-">
+  Producer (at-)
+  <a class="anchor" href="#producer-at-">#</a>
 </h3>
 <p>You can define exactly what you want to put on the wire on the producing side.</p>
 <ul>
-<li><strong>@-event=&quot;&ndash;wireName(*)&quot;</strong> will send the complete event.</li>
-<li><strong>@-event=&quot;&ndash;wireName(*.key)&quot;</strong> will send the property key of the event.</li>
+<li><strong>at-event=&quot;&ndash;wireName(*)&quot;</strong> will send the complete event.</li>
+<li><strong>at-event=&quot;&ndash;wireName(*.key)&quot;</strong> will send the property key of the event.</li>
 </ul>
-<h3 id="receiver-ƒ-">
-  Receiver (ƒ-)
-  <a class="anchor" href="#receiver-%c6%92-">#</a>
+<h3 id="receiver-fn-">
+  Receiver (fn-)
+  <a class="anchor" href="#receiver-fn-">#</a>
 </h3>
 <p>You can pass a subset of the data on a wire to a receiver.</p>
 <ul>
-<li><strong>ƒ-doit=&quot;&ndash;wireName(*.title)&quot;</strong> will call <code>doit(wiredata.title)</code>on the receiver.</li>
-<li><strong>ƒ-doit=&quot;&ndash;wireName(*.page.2.title)&quot;</strong> will call <code>doit(wiredata.page[2].title)</code> on the receiver with checks that index 2 and the sub property really exist.</li>
+<li><strong>fn-doit=&quot;&ndash;wireName(*.title)&quot;</strong> will call <code>doit(wiredata.title)</code>on the receiver.</li>
+<li><strong>fn-doit=&quot;&ndash;wireName(*.page.2.title)&quot;</strong> will call <code>doit(wiredata.page[2].title)</code> on the receiver with checks that index 2 and the sub property really exist.</li>
 </ul>
 <h2 id="storing-event-data-on-a-class-member-property--aka-parking">
   Storing event data on a class member property  (aka parking)
@@ -369,7 +382,7 @@ at the producer / triggerer.</p>
 <p>Sometimes you want to store data for later usage. To store data from an event
 write the property that you want to update in a double bracket  <code>((targetProperty))</code>.</p>
 <ul>
-<li><strong>@-value-changed=&quot;((color1))</strong> will update the component property <code>color1</code> with the value of <code>EVENT.detail</code>.</li>
+<li><strong>at-value-changed=&quot;((color1))</strong> will update the component property <code>color1</code> with the value of <code>EVENT.detail</code>.</li>
 </ul>
 <blockquote class="book-hint danger">
   <p><strong>Note</strong></p>
@@ -380,7 +393,7 @@ write the property that you want to update in a double bracket  <code>((targetPr
 <furo-demo-snippet flow style="height:200px">
 <template>
   <!-- the color input will store the value on the varable color -->
-  <input type="color" label="choose color 1" @-input="^color-changed(*.path.0.value)" @-value-changed="((color))"></input>
+  <input type="color" label="choose color 1" at-input="^color-changed(*.path.0.value)" at-value-changed="((color))"></input>
 </template>
 </furo-demo-snippet>
 <p><em>Look at the example below to see how you can use parked data</em></p>
@@ -390,15 +403,15 @@ write the property that you want to update in a double bracket  <code>((targetPr
 </h2>
 <p>To send parked data, write the property name in brackets after the wire.</p>
 <ul>
-<li><strong>@-click=&quot;&ndash;newColor(color1)&quot;</strong> will put the value of <code>color1</code> on the wire <code>--newColor</code> instead of the detail value of the click event.</li>
+<li><strong>at-click=&quot;&ndash;newColor(color1)&quot;</strong> will put the value of <code>color1</code> on the wire <code>--newColor</code> instead of the detail value of the click event.</li>
 </ul>
 <furo-demo-snippet flow style="height:300px">
 <template>
   <!-- the color input will store the value on the varable color -->
-  <input type="color" label="choose color 1" @-change="^color-changed(*.path.0.value)" @-color-changed="((color))"></input>
+  <input type="color" label="choose color 1" at-change="^color-changed(*.path.0.value)" at-color-changed="((color))"></input>
   <!-- the button will put the value of color on the wire --newColor -->
-  <button @-click="--newColor(color)">setColor</button>
-  <light-bulb ƒ-set-color="--newColor" on></light-bulb>
+  <button at-click="--newColor(color)">setColor</button>
+  <light-bulb fn-set-color="--newColor" on></light-bulb>
 </template>
 </furo-demo-snippet>
 </article>
@@ -411,9 +424,9 @@ write the property that you want to update in a double bracket  <code>((targetPr
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/172f4ae60fba5016149006d5a4bba254f0e07002" title='Last modified by veith | December 13, 2021' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/5e4d7e536e99f5db097d8b843735ad1dca4c2a91" title='Last modified by veith | February 21, 2022' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>December 13, 2021</span>
+      <span>February 21, 2022</span>
     </a>
   </div>
 
@@ -446,8 +459,8 @@ write the property that you want to update in a double bracket  <code>((targetPr
         <li><a href="#passing-useful-data-to-target">Passing useful data to target</a></li>
         <li><a href="#send-the-complete-event-instead-of-eventdetail">Send the complete <em>event</em> instead of <em>event.detail</em></a>
           <ul>
-            <li><a href="#producer--">Producer (@-)</a></li>
-            <li><a href="#receiver-ƒ-">Receiver (ƒ-)</a></li>
+            <li><a href="#producer-at-">Producer (at-)</a></li>
+            <li><a href="#receiver-fn-">Receiver (fn-)</a></li>
           </ul>
         </li>
         <li><a href="#storing-event-data-on-a-class-member-property--aka-parking">Storing event data on a class member property  (aka parking)</a></li>

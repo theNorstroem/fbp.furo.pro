@@ -38,6 +38,17 @@ Furo FBP 101 #  In furo-FBP you connect events from one component to methods of 
     </item>
     
     <item>
+      <title>Cheat Sheet</title>
+      <link>http://fbp.furo.pro/docs/fbp-cheatsheet/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://fbp.furo.pro/docs/fbp-cheatsheet/</guid>
+      <description>Cheat Sheet #  Furo fbp only knows a few of keywords to control the application flow.
+  at-  fn-  set-  at-fnret-  ^  ^^  -^  (( ))  Adding event listeners #  The at- keyword let you bind a wire to an event. This can be any browser event or custom event.
+at-click=&amp;quot;--lightSwitchClicked&amp;quot; Assign a wire which should be triggered when the event happens.</description>
+    </item>
+    
+    <item>
       <title>Wire Data</title>
       <link>http://fbp.furo.pro/docs/fbp-wires-data/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -57,7 +68,7 @@ Send the complete event instead of event.</description>
       
       <guid>http://fbp.furo.pro/docs/fbp-wires-more/</guid>
       <description>Working with suboptimal components #  Some components that you may want or have to use are not dispatching events or receiving data by methods. Therefore, furo FBP has some features to work with them too.
-Setting a member value #  To set a value of a component you use can be done with the ƒ-.property.
+Setting a member value #  To set a value of a component you use can be done with the set-property.
  A click counter   Note, a property is not an attribute.</description>
     </item>
     
@@ -103,7 +114,7 @@ Everything inside of a Template tag is not accessible through the wires.</descri
       <description>Best Practice #  The best practices are a result from the feedback of our users, thanks to them.
 Feel free to give us your feedback.
 Wire and event naming #  In fact you can use any string to name wires, but most of the users are using two dashes in front of the wire name and for the name they use camelCase notation.
-For the events they use the dashed-case notation, because you can not write @-camelCase.</description>
+For the events they use the dashed-case notation, because you can not write at-camelCase.</description>
     </item>
     
     <item>

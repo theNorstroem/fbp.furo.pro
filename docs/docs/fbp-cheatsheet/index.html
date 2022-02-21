@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en" dir=>
+
+<head>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.29/dist/util.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.29/dist/doc-helper.js"></script>
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Cheat Sheet #  Furo fbp only knows a few of keywords to control the application flow.
+  at-  fn-  set-  at-fnret-  ^  ^^  -^  (( ))  Adding event listeners #  The at- keyword let you bind a wire to an event. This can be any browser event or custom event.
+at-click=&quot;--lightSwitchClicked&quot; Assign a wire which should be triggered when the event happens.">
+<meta name="theme-color" content="#FFFFFF"><meta property="og:title" content="Cheat Sheet" />
+<meta property="og:description" content="Cheat Sheet #  Furo fbp only knows a few of keywords to control the application flow.
+  at-  fn-  set-  at-fnret-  ^  ^^  -^  (( ))  Adding event listeners #  The at- keyword let you bind a wire to an event. This can be any browser event or custom event.
+at-click=&quot;--lightSwitchClicked&quot; Assign a wire which should be triggered when the event happens." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://fbp.furo.pro/docs/fbp-cheatsheet/" />
+<meta property="article:modified_time" content="2022-02-21T10:28:00+01:00" />
+<title>Cheat Sheet | フロー FBP</title>
+<link rel="manifest" href="/manifest.json">
+<link rel="icon" href="/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="/book.min.d917efb76f69f2afa7b6886371b327a3f18051eaa11d48b3ffe6a21842c74412.css" integrity="sha256-2Rfvt29p8q&#43;ntohjcbMno/GAUeqhHUiz/&#43;aiGELHRBI=">
+<script defer src="/en.search.min.940b04a2a52663e036f491e6287cc8cb9547a678442a74e3dcb1bd7bbe381f3c.js" integrity="sha256-lAsEoqUmY&#43;A29JHmKHzIy5VHpnhEKnTj3LG9e744Hzw="></script>
+<!--
+Made with Book Theme
+https://github.com/alex-shpak/hugo-book
+-->
+
+  
+
+</head>
+
+<body dir=>
+<fixed-tooltip-display></fixed-tooltip-display>
+  <input type="checkbox" class="hidden toggle" id="menu-control" />
+  <input type="checkbox" class="hidden toggle" id="toc-control" />
+  <div ></div>
+  <main class="container flex">
+    <aside class="book-menu">
+      
+  <nav>
+<h2 class="book-brand">
+  <a href="/"><span>フロー FBP</span>
+  </a>
+</h2>
+
+
+<div class="book-search">
+  <input type="text" id="book-search-input" placeholder="Search" aria-label="Search" maxlength="64" data-hotkeys="s/" />
+  <div class="book-search-spinner hidden"></div>
+  <ul id="book-search-results"></ul>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <ul>
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/installation/" class="">Installlation</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-basics/" class="">Getting Started</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-cheatsheet/" class=" active">Cheat Sheet</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-data/" class="">Wire Data</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-wires-more/" class="">Compatibility</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-events/" class="">Custom Events</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-scripting/" class="">Script interaction</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-scope/" class="">Scope</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-bestpractice/" class="">Best Practice</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-debugging/" class="">Debugging</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/fbp-lifecycle/" class="">Lifecycle</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/visual-analysis/" class="">Visual analysis</a>
+  
+
+        </li>
+      
+    
+      
+        <li>
+          
+  
+  
+
+  
+    <a href="http://fbp.furo.pro/docs/cred-morrison/" class="">Credits</a>
+  
+
+        </li>
+      
+    
+  </ul>
+
+
+
+
+
+
+
+
+
+
+
+  
+<ul>
+  
+  <li>
+    <a href="https://furo.pro" target="_blank" rel="noopener">
+        フロー Furo
+      </a>
+  </li>
+  
+</ul>
+
+
+
+
+
+
+</nav>
+
+
+
+
+  <script>(function(){var menu=document.querySelector("aside.book-menu nav");addEventListener("beforeunload",function(event){localStorage.setItem("menu.scrollTop",menu.scrollTop);});menu.scrollTop=localStorage.getItem("menu.scrollTop");})();</script>
+
+
+ 
+    </aside>
+
+    <div class="book-page">
+      <header class="book-header">
+        
+  <div class="flex align-center justify-between">
+  <label for="menu-control">
+    <img src="/svg/menu.svg" class="book-icon" alt="Menu" />
+  </label>
+
+  <strong>Cheat Sheet</strong>
+
+  <label for="toc-control">
+    
+    <img src="/svg/toc.svg" class="book-icon" alt="Table of Contents" />
+    
+  </label>
+</div>
+
+
+  
+  <aside class="hidden clearfix">
+    
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cheat-sheet">Cheat Sheet</a>
+      <ul>
+        <li><a href="#adding-event-listeners">Adding event listeners</a></li>
+        <li><a href="#execute-exposed-methods">Execute exposed methods</a></li>
+        <li><a href="#set-member-variables-of-a-component">Set member variables of a component</a></li>
+        <li><a href="#setting-member-variables-of-the-host-component">Setting member variables of the host component</a></li>
+        <li><a href="#emitting-events">Emitting events</a>
+          <ul>
+            <li><a href="#non-bubbling-events">Non bubbling events</a></li>
+            <li><a href="#bubbling-events">Bubbling events</a></li>
+            <li><a href="#non-bubbling-host-events">Non bubbling host events</a></li>
+          </ul>
+        </li>
+        <li><a href="#receiving-the-return-values-from-fn--calls">Receiving the return values from fn- calls</a></li>
+        <li><a href="#stop-propagation">Stop propagation</a></li>
+        <li><a href="#prevent-default">Prevent default</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+
+  </aside>
+  
+ 
+      </header>
+
+      
+      
+  <article class="markdown"><h1 id="cheat-sheet">
+  Cheat Sheet
+  <a class="anchor" href="#cheat-sheet">#</a>
+</h1>
+<p>Furo fbp only knows a few of keywords to control the application flow.</p>
+<ul>
+<li>
+  <a href="/docs/fbp-cheatsheet/#adding-event-listeners"><strong>at-</strong></a></li>
+<li>
+  <a href="/docs/fbp-cheatsheet/#execute-exposed-methods"><strong>fn-</strong></a></li>
+<li>
+  <a href="/docs/fbp-cheatsheet/#set-member-variables-of-a-component"><strong>set-</strong></a></li>
+<li>
+  <a href="/docs/fbp-cheatsheet/#receiving-the-return-values-from-fn--calls"><strong>at-fnret-</strong></a></li>
+<li>
+  <a href="/docs/fbp-cheatsheet/#non-bubbling-events"><strong>^</strong></a></li>
+<li>
+  <a href="/docs/fbp-cheatsheet/#bubbling-events"><strong>^^</strong></a></li>
+<li>
+  <a href="/docs/fbp-cheatsheet/#non-bubbling-host-events"><strong>-^</strong></a></li>
+<li>
+  <a href="/docs/fbp-cheatsheet/#setting-member-variables-of-the-host-component"><strong>(( ))</strong></a></li>
+</ul>
+<h2 id="adding-event-listeners">
+  Adding event listeners
+  <a class="anchor" href="#adding-event-listeners">#</a>
+</h2>
+<p>The <strong>at-</strong> keyword let you bind a wire to an event.
+This can be any browser event or custom event.</p>
+<p><code>at-click=&quot;--lightSwitchClicked&quot;</code> Assign a wire which should be triggered when the event happens.
+By default the <code>event.detail</code> property is put as data on the wire.</p>
+<p>To put the event root on the wire, use <code>at-click=&quot;--lightSwitchClicked(*)&quot;</code>.</p>
+<h2 id="execute-exposed-methods">
+  Execute exposed methods
+  <a class="anchor" href="#execute-exposed-methods">#</a>
+</h2>
+<p>The <strong>fn-</strong> keyword let you trigger methods with the data which was put on the wire as argument.</p>
+<p>If a method needs multiple arguments you have to put a array on the wire data, otherwise only the first argument is filled.</p>
+<furo-demo-snippet flow>
+<template>
+  <light-bulb fn-toggle="--lightSwitchClicked" fn-set-color="--newColor"></light-bulb>
+  <!-- This button acts as a light switch -->
+  <button at-click="--lightSwitchClicked">i am a lightswitch</button>
+  <input type="color"  at-input="--newColor(*.path.0.value)">
+</template>
+</furo-demo-snippet>
+<blockquote>
+<p>The classic notation for <strong>at-</strong> is <strong>@-</strong>. The classic notation for <strong>fn-</strong> is <strong>ƒ-</strong>.</p>
+</blockquote>
+<h2 id="set-member-variables-of-a-component">
+  Set member variables of a component
+  <a class="anchor" href="#set-member-variables-of-a-component">#</a>
+</h2>
+<p>The <strong>set-</strong> keyword let you set member variables (not the attributes) of element.</p>
+<p><code>&lt;span set-inner-text=&quot;--labelReceived&quot;&gt; initial label &lt;/span&gt;</code> Will set the attribute <code>innerText</code> on the span,
+as soon the wire <code>--labelReceived</code> is triggered.</p>
+<blockquote>
+<p>The classic notation for <strong>set-</strong> is <strong>ƒ-.</strong>.</p>
+</blockquote>
+<h2 id="setting-member-variables-of-the-host-component">
+  Setting member variables of the host component
+  <a class="anchor" href="#setting-member-variables-of-the-host-component">#</a>
+</h2>
+<p>The <strong>(( ))</strong> keyword let you store data from events on member variables of the host component.</p>
+<p><code>&lt;my-component at-event-name=&quot;((color))&quot;&gt;</code> This will store the data of the event <code>event-name</code> on the
+host member variable <code>color</code>.</p>
+<h2 id="emitting-events">
+  Emitting events
+  <a class="anchor" href="#emitting-events">#</a>
+</h2>
+<h3 id="non-bubbling-events">
+  Non bubbling events
+  <a class="anchor" href="#non-bubbling-events">#</a>
+</h3>
+<p>Non bubbling events will, as the name says, not bubble and stop at the next dom parent.
+To fire a non-bubbling-event use <strong>^event-name</strong>.</p>
+<h3 id="bubbling-events">
+  Bubbling events
+  <a class="anchor" href="#bubbling-events">#</a>
+</h3>
+<p>To fire a bubbling-event use <strong>^^event-name</strong>.
+Bubbling is useful if you want or have to use the event in a parent component.</p>
+<h3 id="non-bubbling-host-events">
+  Non bubbling host events
+  <a class="anchor" href="#non-bubbling-host-events">#</a>
+</h3>
+<p>With <strong>-^</strong> you can dispatch an event, which is available on the host only, but does not bubble.</p>
+<furo-demo-snippet flow>
+<template>
+  <light-bulb on="" fn-toggle="--lightSwitchClicked" fn-set-color="--colorSetClicked"></light-bulb>
+  <button at-click="--lightSwitchClicked">i am a lightswitch</button>
+  <!-- we put the host member variable color on the wire, --colorSetClicked(color) -->
+  <button at-click="--colorSetClicked(color)">setcolor</button>
+  <!-- We catch a deep property of the input event and emit this value as new event color-changed.
+    We store the value on the host variable color.-->  
+  <input type="color" at-input="^color-changed(*.path.0.value)" at-color-changed="((color))">
+</template>
+</furo-demo-snippet>
+<h2 id="receiving-the-return-values-from-fn--calls">
+  Receiving the return values from fn- calls
+  <a class="anchor" href="#receiving-the-return-values-from-fn--calls">#</a>
+</h2>
+<p>The <strong>at-fnret-</strong> keyword let you wire the response of a method call.
+The data which is put on the wire is the response of the method.</p>
+<h2 id="stop-propagation">
+  Stop propagation
+  <a class="anchor" href="#stop-propagation">#</a>
+</h2>
+<p>The keyword <strong>:STOP</strong>  is used to stop the event propagation to parent elements.</p>
+<h2 id="prevent-default">
+  Prevent default
+  <a class="anchor" href="#prevent-default">#</a>
+</h2>
+<p>The keyword <strong>:PREVENTDEFAULT</strong> will set the prevent default on the event.</p>
+</article>
+ 
+      
+
+      <footer class="book-footer">
+        
+  <div class="flex flex-wrap justify-between">
+
+
+
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/5e4d7e536e99f5db097d8b843735ad1dca4c2a91" title='Last modified by veith | February 21, 2022' target="_blank" rel="noopener">
+      <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
+      <span>February 21, 2022</span>
+    </a>
+  </div>
+
+
+
+</div>
+
+ 
+        
+      </footer>
+
+      
+  
+  <div class="book-comments">
+
+</div>
+  
+ 
+
+      <label for="menu-control" class="hidden book-menu-overlay"></label>
+    </div>
+
+    
+    <aside class="book-toc">
+      
+  <nav id="TableOfContents">
+  <ul>
+    <li><a href="#cheat-sheet">Cheat Sheet</a>
+      <ul>
+        <li><a href="#adding-event-listeners">Adding event listeners</a></li>
+        <li><a href="#execute-exposed-methods">Execute exposed methods</a></li>
+        <li><a href="#set-member-variables-of-a-component">Set member variables of a component</a></li>
+        <li><a href="#setting-member-variables-of-the-host-component">Setting member variables of the host component</a></li>
+        <li><a href="#emitting-events">Emitting events</a>
+          <ul>
+            <li><a href="#non-bubbling-events">Non bubbling events</a></li>
+            <li><a href="#bubbling-events">Bubbling events</a></li>
+            <li><a href="#non-bubbling-host-events">Non bubbling host events</a></li>
+          </ul>
+        </li>
+        <li><a href="#receiving-the-return-values-from-fn--calls">Receiving the return values from fn- calls</a></li>
+        <li><a href="#stop-propagation">Stop propagation</a></li>
+        <li><a href="#prevent-default">Prevent default</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+
+ 
+    </aside>
+    
+  </main>
+
+  
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
