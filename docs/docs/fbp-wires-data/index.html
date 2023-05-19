@@ -2,8 +2,8 @@
 <html lang="en" dir=>
 
 <head>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.29/dist/util.js"></script>
-  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0-rc.29/dist/doc-helper.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/util.js"></script>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@furo/precompiled@2.0.0/dist/doc-helper.js"></script>
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -20,7 +20,7 @@ By default the content of EVENT.detail is passed to the target. If an event does
 Send the complete event instead of event." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://fbp.furo.pro/docs/fbp-wires-data/" />
-<meta property="article:modified_time" content="2022-02-21T10:28:00+01:00" />
+<meta property="article:modified_time" content="2023-05-19T10:06:41+02:00" />
 <title>Wire Data | フロー FBP</title>
 <link rel="manifest" href="/manifest.json">
 <link rel="icon" href="/favicon.png" type="image/x-icon">
@@ -346,7 +346,7 @@ receiver will get a <code>undefined</code>.</p>
 </h2>
 <furo-demo-snippet flow>
 <template>
-  <input type="color" label="choose a color"  at-input="--newColor(*.path.0.value)"></input> 
+  <input type="color" label="choose a color"  at-input="--newColor(*.target.value)"></input>
   <light-bulb on  fn-set-color="--newColor"></light-bulb>
 </template>
 </furo-demo-snippet>
@@ -393,7 +393,7 @@ write the property that you want to update in a double bracket  <code>((targetPr
 <furo-demo-snippet flow style="height:200px">
 <template>
   <!-- the color input will store the value on the varable color -->
-  <input type="color" label="choose color 1" at-input="^color-changed(*.path.0.value)" at-value-changed="((color))"></input>
+  <input type="color" label="choose color 1" at-input="^color-changed(*.target.value)" at-value-changed="((color))"></input>
 </template>
 </furo-demo-snippet>
 <p><em>Look at the example below to see how you can use parked data</em></p>
@@ -408,7 +408,7 @@ write the property that you want to update in a double bracket  <code>((targetPr
 <furo-demo-snippet flow style="height:300px">
 <template>
   <!-- the color input will store the value on the varable color -->
-  <input type="color" label="choose color 1" at-change="^color-changed(*.path.0.value)" at-color-changed="((color))"></input>
+  <input type="color" label="choose color 1" at-change="^color-changed(*.target.value)" at-color-changed="((color))"></input>
   <!-- the button will put the value of color on the wire --newColor -->
   <button at-click="--newColor(color)">setColor</button>
   <light-bulb fn-set-color="--newColor" on></light-bulb>
@@ -424,9 +424,9 @@ write the property that you want to update in a double bracket  <code>((targetPr
 
 
 
-  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/5e4d7e536e99f5db097d8b843735ad1dca4c2a91" title='Last modified by veith | February 21, 2022' target="_blank" rel="noopener">
+  <div><a class="flex align-center" href="https://github.com/theNorstroem/furo/documentation/commit/b8795c8740ccef6c7fe9abf639be33238ba65eb4" title='Last modified by veith | May 19, 2023' target="_blank" rel="noopener">
       <img src="/svg/calendar.svg" class="book-icon" alt="Calendar" />
-      <span>February 21, 2022</span>
+      <span>May 19, 2023</span>
     </a>
   </div>
 
